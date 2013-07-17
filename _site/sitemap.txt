@@ -3,6 +3,7 @@ http://farseer90718.github.com/tags.html
 http://farseer90718.github.com/atom.xml
 http://farseer90718.github.com/pages.html
 http://farseer90718.github.com/rss.xml
+http://farseer90718.github.com/404.html
 http://farseer90718.github.com/categories.html
 http://farseer90718.github.com/archive.html
 http://farseer90718.github.com/index.html
