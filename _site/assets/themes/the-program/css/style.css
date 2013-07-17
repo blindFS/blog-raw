@@ -131,7 +131,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: monospace, serif;
+  font-family: monaco, monospace, serif;
   _font-family: 'courier new', monospace;
   font-size: 1em;
 }
@@ -401,7 +401,7 @@ Calculation should be done via  http://j.mp/rNg5uA
 No styleguide reference.
 */
 body {
-  font-family: consolas, monaco, monospace;
+  font-family: UbuntuMono-B, consolas, monaco, monospace;
   font-size: 1em;
   line-height: 1.625em;
 }
@@ -507,9 +507,20 @@ No styleguide reference.
 @font-face {
   font-family: 'UbuntuMono-B';
   src: url('/assets/themes/the-program/font/UbuntuMono-B-webfont.eot');
-  src: url('/assets/themes/the-program/font/UbuntuMono-B-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/themes/the-program/font/UbuntuMono-B-webfont.woff') format('woff'), url('/assets/themes/the-program/font/UbuntuMono-B-webfont.ttf') format('truetype'), url('/assets/themes/the-program/font/UbuntuMono-B-webfont.svg#UbuntuMono-B') format('svg');
+  src: url('/assets/themes/the-program/font/UbuntuMono-B-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/themes/the-program/font/UbuntuMono-B-webfont.woff') format('woff'), url('/assets/themes/the-program/font/monaco-webfont.ttf') format('truetype'), url('/assets/themes/the-program/font/UbuntuMono-B-webfont.svg#UbuntuMono-B') format('svg');
   font-weight: normal !important;
   font-style: normal;
+}
+
+@font-face {
+    font-family: 'monaco';
+    src: url('/assets/themes/the-program/font/monaco-webfont.eot');
+    src: url('/assets/themes/the-program/font/monaco-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/themes/the-program/font/monaco-webfont.woff') format('woff'),
+         url('/assets/themes/the-program/font/monaco-webfont.ttf') format('truetype'),
+         url('/assets/themes/the-program/font/monaco-webfont.svg#monacoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 /*
 LESS helper
@@ -577,7 +588,7 @@ pre {
   color: #f2f2f2;
   background-color: #393939;
   border: 1px solid #393939;
-  font-family: consolas, monaco, monospace;
+  font-family: consolas, monospace, monaco;
   margin-left: 0;
   margin-right: 0;
   padding: 1.625em;
@@ -590,11 +601,11 @@ pre {
 /* HEADER
 --------------------------------------------------------------------------------- */
 .the-header .logo {
-  font-family: UbuntuMono-B, consolas, monaco, monospace;
+  font-family: UbuntuMono-B, monaco, consolas, monospace;
   margin: 0;
 }
 .the-header .logo a:visited {
-  color: #2d2d2d;
+  color: #204b56;
 }
 .the-header .nav-global {
   text-transform: uppercase;
@@ -900,12 +911,13 @@ pre {
   padding: 26px;
 }
 .the-header .unit-head .nav-global .logo {
+  font-family: monaco;
   display: block;
   width: auto;
 }
 .the-header .unit-head .nav-global .logo a {
   display: block;
-  font-size: 30px;
+  font-size: 50px;
   line-height: 52px;
   padding-bottom: 26px;
 }
@@ -965,7 +977,7 @@ pre {
     height: 26px;
   }
   .the-header .unit-head .nav-global li a:hover {
-    background-color: #fff04a;
+    background-color: #9ff0aa;
     color: #474747;
   }
   .the-header .unit-head .nav-global li:nth-child(2) {
@@ -981,10 +993,11 @@ pre {
     width: 100%;
   }
   .the-header .unit-head .nav-global .logo a {
-    font-size: 30px;
+    font-size: 50px;
     line-height: normal;
   }
   .the-header .unit-head .nav-global .logo a:hover {
+    color: #209ba6;
     background-color: transparent;
   }
 }
@@ -1054,7 +1067,7 @@ pre {
   }
   .the-header .unit-head .nav-global .logo a {
     display: block;
-    font-size: 30px;
+    font-size: 50px;
     line-height: 52px;
     margin-bottom: 26px;
     padding-left: 5px;
