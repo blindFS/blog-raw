@@ -53,11 +53,17 @@
                     <a href="http://{{ site.author.deviantart}}.deviantart.com/" rel="me"><img class="social" src="/assets/themes/the-program/image/Deviantart.png" height="50" width="50" Title="DeviantArt" ></a>
                     <a href="/rss.xml"><img class="social" src="/assets/themes/the-program/image/RSS.png" height="50" width="50" Title="RSS"></a>
 				</div>
+                <h4>tags</h4>
                 <ul class="tag_box inline">
                 {% assign tags_list = site.tags %}  
                 {% include JB/tags_list %}
                 </ul>
                 <br/>
+                <h4>recent articles</h4>
+                {% for post in site.posts limit:10 %}
+                <div class="side_post_list"><a class="post_title" href="{{post.url}}">{{post.title}} - {{post.date}}</a></div>
+                <hr />
+                {% endfor %} 
                 <!-- hitwebcounter Code START -->
                 <a href="http://www.hitwebcounter.com/" target="_blank">
                     <img src="http://hitwebcounter.com/counter/counter.php?page=5021769&style=0010&nbdigits=5&type=ip&initCount=0" title="" Alt=""   border="0" >
