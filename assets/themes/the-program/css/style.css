@@ -384,7 +384,7 @@ No styleguide reference.
 }
 /*
 Frameless			<http://framelessgrid.com/>
-by Joni Korpi 		<http://jonikorpi.com/>
+by Joni Korpi		<http://jonikorpi.com/>
 licensed under CC0	<http://creativecommons.org/publicdomain/zero/1.0/>
 
 No styleguide reference.
@@ -601,14 +601,15 @@ pre {
   color: #f2f2f2;
   background-color: #393939;
   border: 1px solid #393939;
-  font-family: consolas, monospace, monaco;
+  border-radius: 10px;
+  font-family: monaco, consolas, monospace;
   margin-left: 0;
   margin-right: 0;
   padding: 1.625em;
   overflow: auto;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.6);
-  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.6);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.6);
+  -webkit-box-shadow: 0px 0px 20px #309b36;
+  -moz-box-shadow: 0px 0px 20px #309b36;
+  box-shadow: 0px 0px 20px #309b36;
 }
 /* meta */
 /* HEADER
@@ -961,7 +962,7 @@ pre {
   margin-top: 0;
 }
 /*
- 	IE
+	IE
 */
 /*
 	Smartphone
@@ -1021,7 +1022,7 @@ pre {
   }
 }
 /*
-	Not that old computer layout 
+	Not that old computer layout
 */
 @media only screen and (min-width: 1280px) {
   .the-header .unit-head .nav-global .logo {
@@ -1056,7 +1057,7 @@ pre {
   }
 }
 /*
-	Huge-screen layout 
+	Huge-screen layout
 */
 @media only screen and (min-width: 1410px) {
   .the-header {
@@ -1102,9 +1103,9 @@ pre {
     margin-right: -450px;
   }
   .body .unit-body {
-    -webkit-box-shadow: 0px 0px 30px #00203b;  
-    -moz-box-shadow: 0px 0px 30px #00203b;  
-    box-shadow: 0px 0px 30px #00203b; */
+    -webkit-box-shadow: 0px 0px 30px #00203b;
+    -moz-box-shadow: 0px 0px 30px #00203b;
+    box-shadow: 0px 0px 30px #00203b;
     margin-right: 450px;
     padding: 26px 52px;
     min-height: 1050px;
@@ -1512,4 +1513,3 @@ hr {
   *display: inline;
   float: right;
 }
-/* vim: set ts=2 sw=2 tw=78 ft=css fdm=marker*/

@@ -1,13 +1,11 @@
 ---
-layout: default
-title: Your New Jekyll Site
+layout: page
+title: Don't panic!
 ---
-
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+{% include JB/setup %}
+{% for post in site.posts limit:5 %}
+<h2><a class="post_title" href="{{post.url}}">{{post.title}}</a></h2>
+<div class="post-content">{{post.content}}</div>
+<hr />
+{% endfor %} 
+<a href='/categories.html'>more</a>
