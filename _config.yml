@@ -9,7 +9,7 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : Don't panic
-tagline: tags
+tagline: Site Tagline
 author :
   name : Farseer He
   email : farseer90718@gmail.com
@@ -85,7 +85,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
+      short_name : githubio
     livefyre :
       site_id : 123
     intensedebate :
@@ -103,7 +103,7 @@ JB :
   analytics :
     provider : google 
     google : 
-        tracking_id : 'UA-123-12'
+        tracking_id : 'UA-40313156-2'
     getclicky :
       site_id : 
     mixpanel :

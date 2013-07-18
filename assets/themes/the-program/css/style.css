@@ -456,6 +456,19 @@ img {
   margin-top: 0;
   margin-bottom: 1.625em;
 }
+img.social{
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+}
+
+img.social:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
 small,
 .small,
 aside {
@@ -919,7 +932,7 @@ pre {
   display: block;
   font-size: 50px;
   line-height: 52px;
-  padding-bottom: 26px;
+  padding-bottom: 10px;
 }
 .body .unit-body {
   border-top: 1px solid rgba(255, 255, 255, 0.6);
@@ -995,10 +1008,16 @@ pre {
   .the-header .unit-head .nav-global .logo a {
     font-size: 50px;
     line-height: normal;
+    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
   }
   .the-header .unit-head .nav-global .logo a:hover {
     color: #209ba6;
     background-color: transparent;
+    border-radius: 6px;
+    box-shadow: 0 0 0 5px #304050;
   }
 }
 /*
@@ -1013,7 +1032,7 @@ pre {
   .the-header .unit-head .nav-global .logo a {
     line-height: 18px;
     margin-bottom: 0;
-    padding-left: 52px;
+    padding-left: 45px;
   }
   .body {
     float: left;
@@ -1056,6 +1075,9 @@ pre {
     display: block;
     padding: 2px 5px;
     height: auto;
+    -webkit-transition: all 0.8s ease-out;
+    -moz-transition: all 0.8s ease-out;
+    -o-transition: all 0.8s ease-out;
   }
   .the-header .unit-head .nav-global li:nth-child(2) {
     border-width: 0;
@@ -1070,24 +1092,19 @@ pre {
     font-size: 50px;
     line-height: 52px;
     margin-bottom: 26px;
-    padding-left: 5px;
+    padding-left: 45px;
     position: relative;
     top: auto;
   }
   .body {
-    border-left: 1px solid rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: #ffffff 0px 0px 2px;
-    -moz-box-shadow: #ffffff 0px 0px 2px;
-    -o-box-shadow: #ffffff 0px 0px 2px;
     float: left;
     width: 81%;
     margin-right: -450px;
   }
   .body .unit-body {
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: #ffffff 0px 0px 2px;
-    -moz-box-shadow: #ffffff 0px 0px 2px;
-    -o-box-shadow: #ffffff 0px 0px 2px;
+    -webkit-box-shadow: 0px 0px 30px #00203b;  
+    -moz-box-shadow: 0px 0px 30px #00203b;  
+    box-shadow: 0px 0px 30px #00203b; */
     margin-right: 450px;
     padding: 26px 52px;
     min-height: 1050px;
@@ -1495,3 +1512,4 @@ hr {
   *display: inline;
   float: right;
 }
+/* vim: set ts=2 sw=2 tw=78 ft=css fdm=marker*/
