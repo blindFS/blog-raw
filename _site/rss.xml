@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+        <title>Don't panic</title>
+        <description>Don't panic - Farseer He</description>
+        <link>http://farseer90718.github.com</link>
+        <link>http://farseer90718.github.com</link>
+        <lastBuildDate>2013-07-18T12:46:12+08:00</lastBuildDate>
+        <pubDate>2013-07-18T12:46:12+08:00</pubDate>
+        <ttl>1800</ttl>
+
+
+        <item>
+                <title>vimwiki</title>
+                <description>&lt;p&gt;&lt;a href='https://code.google.com/p/vimwiki/'&gt;&lt;img alt='vimwiki' src='https://code.google.com/p/vimwiki/logo?cct=1362287937' /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id='my_global_setup'&gt;my global setup&lt;/h2&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='vim'&gt;    &lt;span class='k'&gt;let&lt;/span&gt; &lt;span class='k'&gt;g&lt;/span&gt;:vimwiki_CJK_length &lt;span class='p'&gt;=&lt;/span&gt; &lt;span class='m'&gt;1&lt;/span&gt;
+    &lt;span class='k'&gt;let&lt;/span&gt; &lt;span class='k'&gt;g&lt;/span&gt;:calendar_diary     &lt;span class='p'&gt;=&lt;/span&gt; &lt;span class='s1'&gt;&amp;#39;~/vimwiki/diary&amp;#39;&lt;/span&gt;
+    &lt;span class='k'&gt;let&lt;/span&gt; &lt;span class='k'&gt;g&lt;/span&gt;:vimwiki_list       &lt;span class='p'&gt;=&lt;/span&gt; [{&lt;span class='s1'&gt;&amp;#39;path&amp;#39;&lt;/span&gt;: &lt;span class='s1'&gt;&amp;#39;~/vimwiki/&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='s1'&gt;&amp;#39;path_html&amp;#39;&lt;/span&gt;: &lt;span class='s1'&gt;&amp;#39;~/vimwiki/html/&amp;#39;&lt;/span&gt;}]
+    &lt;span class='k'&gt;let&lt;/span&gt; &lt;span class='k'&gt;g&lt;/span&gt;:vimwiki_valid_html_tags &lt;span class='p'&gt;+=&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;div,script&amp;#39;&lt;/span&gt;
+
+&lt;span class='c'&gt;    &amp;quot; tagbar&lt;/span&gt;
+    &lt;span class='k'&gt;let&lt;/span&gt; &lt;span class='k'&gt;g&lt;/span&gt;:tagbar_type_vimwiki &lt;span class='p'&gt;=&lt;/span&gt; {
+        \ &lt;span class='s1'&gt;&amp;#39;ctagstype&amp;#39;&lt;/span&gt; : &lt;span class='s1'&gt;&amp;#39;wiki&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;
+        \ &lt;span class='s1'&gt;&amp;#39;kinds&amp;#39;&lt;/span&gt;     : [
+            \ &lt;span class='s1'&gt;&amp;#39;h:headers&amp;#39;&lt;/span&gt;
+        \ ]
+        \ }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id='ctags'&gt;.ctags&lt;/h2&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='text'&gt;--langdef=wiki
+--langmap=wiki:.wiki
+--regex-wiki=/^=[ \t]+(.+)[ \t]+=$/\1/h,header/
+--regex-wiki=/^==[ \t]+(.+)[ \t]+==$/. \1/h,header/
+--regex-wiki=/^===[ \t]+(.+)[ \t]+===$/.   \1/h,header/
+--regex-wiki=/^====[ \t]+(.+)[ \t]+====$/.     \1/h,header/
+--regex-wiki=/^=====[ \t]+(.+)[ \t]+=====$/.       \1/h,header/
+--regex-wiki=/^======[ \t]+(.+)[ \t]+======$/.         \1/h,header/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id='basic_vimwiki_syntax'&gt;basic vimwiki syntax&lt;/h2&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='moin'&gt;    = head1 =
+    == head2 ==
+    === head3 ==
+    *bold text*
+    _italic text_
+    &lt;span class='c'&gt;~~&lt;/span&gt;strikeout text&lt;span class='c'&gt;~~&lt;/span&gt;
+    `code (no syntax) text`
+    super&lt;span class='c'&gt;^&lt;/span&gt;script&lt;span class='c'&gt;^&lt;/span&gt;
+    sub&lt;span class='c'&gt;,,&lt;/span&gt;script&lt;span class='c'&gt;,,&lt;/span&gt;
+    %% Link with spaces in it:
+    &lt;span class='k'&gt;[[This is a link]]&lt;/span&gt;
+    %% or:
+    &lt;span class='k'&gt;[[This is a link source|Description of the link]]&lt;/span&gt;
+
+    %% Links to directories (ending with a &amp;quot;/&amp;quot;) are also supported:
+    &lt;span class='k'&gt;[[/home/somebody/|Home&lt;/span&gt;&lt;span class='s'&gt; Directory&lt;/span&gt;&lt;span class='k'&gt;]&lt;/span&gt;]
+    %% Inline link:
+    &lt;span class='k'&gt;[Looks&lt;/span&gt;&lt;span class='s'&gt; like this&lt;/span&gt;&lt;span class='k'&gt;]&lt;/span&gt;(URL)
+
+    %% Image link:
+    &lt;span class='k'&gt;!&lt;/span&gt;[Looks like this](URL)
+
+    %%lists
+    &lt;span class='nb'&gt;-&lt;/span&gt; Bulleted list item 1
+    &lt;span class='nb'&gt;-&lt;/span&gt; Bulleted list item 2
+    &lt;span class='nb'&gt;*&lt;/span&gt; Bulleted list sub item 1
+    &lt;span class='nb'&gt;*&lt;/span&gt; Bulleted list sub item 2
+
+    %%numbered list
+    # Numbered list item 1
+    # Numbered list item 2
+    # Numbered list sub item 1
+    # Numbered list sub item 2
+
+    %% Definition lists:
+    Term 1:: Definition 1
+    Term 2::
+    :: Definition 2
+    :: Definition 3
+
+    %% tables
+    %% If you set &amp;gt; in a cell, the cell spans the left column.
+    %% If you set \/ in a cell, the cell spans the above row.
+    %% text objects
+    %% a\                      A cell in a table.
+    %% i\                      An inner cell in a table.
+    %% ac                      A column in a table.
+    %% ic                      An inner column in a table.
+    For example: &amp;gt;
+
+    | 1  | 2  | 3 | 4 |
+    |----|----|---|---|
+    | a  | b  | c | d |
+    | \/ | e  | &amp;gt; | f |
+    | \/ | \/ | &amp;gt; | g |
+    | h  | &amp;gt;  | &amp;gt; | &amp;gt; |
+    %% Mathematical formulae are highlighted, and can be rendered in HTML 
+    %% using the powerful open source display engine MathJax (http://www.mathjax.org/).
+    %% MathJax server for rendering
+    %% add this to html template &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; 
+    %% :h vimwiki-syntax-math for detail
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+                <link>http://farseer90718.github.com/cheatsheet/2013/07/18/vimwiki</link>
+                <guid>http://farseer90718.github.com/cheatsheet/2013/07/18/vimwiki</guid>
+                <pubDate>2013-07-18T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>Welcome to Jekyll!</title>
+                <description>&lt;p&gt;You&amp;#8217;ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes! To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;&lt;span class='k'&gt;def&lt;/span&gt; &lt;span class='nf'&gt;print_hi&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nb'&gt;name&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
+  &lt;span class='nb'&gt;puts&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class='si'&gt;#{&lt;/span&gt;&lt;span class='nb'&gt;name&lt;/span&gt;&lt;span class='si'&gt;}&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;&lt;/span&gt;
+&lt;span class='k'&gt;end&lt;/span&gt;
+&lt;span class='n'&gt;print_hi&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
+&lt;span class='c1'&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Check out the &lt;a href='http://jekyllrb.com'&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href='https://github.com/mojombo/jekyll'&gt;Jekyll&amp;#8217;s GitHub repo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='test' src='http://jekyllrb.com/img/logo-2x.png' /&gt;&lt;/p&gt;</description>
+                <link>http://farseer90718.github.com/jekyll/2013/07/17/welcome-to-jekyll</link>
+                <guid>http://farseer90718.github.com/jekyll/2013/07/17/welcome-to-jekyll</guid>
+                <pubDate>2013-07-17T18:24:09+08:00</pubDate>
+        </item>
+
+
+</channel>
+</rss>
