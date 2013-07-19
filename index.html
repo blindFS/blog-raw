@@ -5,7 +5,14 @@ title: Don't panic!
 {% include JB/setup %}
 {% for post in site.posts limit:5 %}
 <h2><a class="post_title" href="{{post.url}}">{{post.title}}</a></h2>
-<div class="post-content">{{post.content}}</div>
+<div class="post-content">
+    {% if post.content contains '<!--more-->' %}
+        {{ post.content | split:'<!--more-->' | first }}
+        <br/>
+        <a href='{{post.url}}'>read more</a>
+    {% else %}
+        {{ post.content }}
+        {% endif %}
+</div>
 <hr />
 {% endfor %} 
-<a href='/categories.html'>more</a>
