@@ -133,7 +133,6 @@ kbd,
 samp {
   font-family: monaco, monospace, serif;
   _font-family: 'courier new', monospace;
-  font-size: 0.95em;
 }
 /* Improve readability of pre-formatted text in all browsers */
 pre {
@@ -402,7 +401,7 @@ No styleguide reference.
 */
 body {
   font-family: monospace, monaco, UbuntuMono-B;
-  font-size: 1em;
+  font-size: 0.8em;
   line-height: 1.625em;
 }
 /*
@@ -569,20 +568,17 @@ No styleguide reference.
 /* GLOBAL
 --------------------------------------------------------------------------------- */
 html {
-  color: #2d2d2d;
+  color: #002b36;
 }
 #page {
-  background: url('/assets/themes/the-program/skin/100-90-5-monochrome.png');
-  background-repeat: repeat;
-  background-position: 0 0;
-  background-color: #e2e2de;
+  background-color: #002b36;
 }
 .body .unit-body {
-  background-color: #9a9a9a;
+  background-color: #839496;
 }
 /* LINK */
 a:link {
-  color: #2d2d2d;
+  color: #002b36;
   text-decoration: none;
 }
 a:visited {
@@ -618,7 +614,7 @@ pre {
   margin: 0;
 }
 .the-header .logo a:visited {
-  color: #204b56;
+  color: #268bd2;
 }
 .the-header .nav-global {
   text-transform: uppercase;
@@ -629,6 +625,9 @@ pre {
 .the-header .nav-global .forkme {
   position: relative;
   top: 2px;
+}
+.the-header .nav-global li a{
+  color: #2aa198;
 }
 /* MAIN
 --------------------------------------------------------------------------------- */
@@ -647,7 +646,7 @@ pre {
 .unit-article .entry-content h4,
 .unit-article .entry-content h5,
 .unit-article .entry-content h6 {
-  color: #2d2d2d;
+  color: #002b36;
 }
 .unit-article .entry-content h2 a:link,
 .unit-article .entry-content h3 a:link,
@@ -817,7 +816,6 @@ pre {
 }
 /* post & page */
 .tag_box {
-  background: url('/assets/themes/the-program/skin/100-90-5-monochrome.png') repeat 0 0 #777777;
   list-style: none;
   padding: 6px 6px 6px 6px;
   -webkit-border-radius: 3px;
@@ -826,9 +824,9 @@ pre {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.4);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.4);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2), 0 0 0 rgba(255, 255, 255, 0.4);
+  -moz-box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2), 0 0 0 rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.4);
 }
 .tag_box li {
   display: block;
@@ -1014,9 +1012,6 @@ pre {
     padding-bottom: 50px;
     transition: all 0.2s ease-out;
   }
-  .the-header .unit-head .nav-global .logo a:hover {
-    color: #209ba6;
-  }
 }
 /*
 	Not that old computer layout
@@ -1044,7 +1039,7 @@ pre {
   }
   .the-footer {
     background-color: transparent;
-    color: #2d2d2d;
+    color: #839496;
     position: relative;
     top: auto;
     display: block;
@@ -1073,9 +1068,9 @@ pre {
     display: block;
     padding: 2px 5px;
     height: auto;
-    -webkit-transition: all 0.8s ease-out;
-    -moz-transition: all 0.8s ease-out;
-    -o-transition: all 0.8s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
   }
   .the-header .unit-head .nav-global li:nth-child(2) {
     border-width: 0;
@@ -1098,6 +1093,7 @@ pre {
     background-color: transparent;
     border-radius: 6px;
     box-shadow: 0 0 0 5px #304050;
+    color: #b58900;
   }
   .body {
     float: left;
