@@ -40,7 +40,9 @@ Liquid::Template.register_tag('raw', Jekyll::RawTag)
 之后就可以使用
 {{"{%raw%"}}}
 {{"{%endraw%"}}}来转义了(看不懂ruby，以后再说)
+
 <!--more-->
+
 pelican有article summary的功能，jekyll没有找到啥现成的
 搜索之后发现一个挺2的方法
 {% highlight html linenos=table %}

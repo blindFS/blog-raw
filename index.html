@@ -8,11 +8,11 @@ title: Don't panic!
 <div class="post-content">
     {% if post.content contains '<!--more-->' %}
         {{ post.content | split:'<!--more-->' | first }}
-        <br/>
+        <br />
         <a href='{{post.url}}'>read more</a>
     {% else %}
         {{ post.content }}
         {% endif %}
 </div>
-<hr />
+<br />
 {% endfor %} 
