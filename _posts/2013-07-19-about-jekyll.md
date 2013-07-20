@@ -11,7 +11,7 @@ jekll用的是liquid template
 其中最蛋疼的事情就是转义。
 {{'{{"raw content"'}}}} 或者 {{"{{'raw content'"}}}}
 而且content里不不能出现'}'
-总之是很麻烦就对了
+总之是很麻烦就对了。
 _Don't panic!_
 添加
 {% highlight ruby linenos=table %}
