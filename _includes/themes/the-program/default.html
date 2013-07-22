@@ -13,8 +13,23 @@
 	<link href='{{ ASSET_PATH }}/css/solarized.css' rel="stylesheet" media="all">
 	<link href="/rss.xml" rel="alternate" title="{{ page.title }}" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" 	src="js/jquery.smint.js"></script>
 </head>
 <body>
+
+<script type="text/javascript">
+	
+
+$(document).ready( function() {
+    $('.tag_box').smint({
+    	'scrollSpeed' : 1000
+    });
+});
+
+
+</script>
+
 
 <div id="page" class="hentry">
 	<header class="the-header">
@@ -54,12 +69,6 @@
                     <a href="http://{{ site.author.deviantart}}.deviantart.com/" rel="me"><img class="social" src="/assets/themes/the-program/image/Deviantart.png" height="50" width="50" Title="DeviantArt" ></a>
                     <a href="/rss.xml"><img class="social" src="/assets/themes/the-program/image/RSS.png" height="50" width="50" Title="RSS"></a>
 				</div>
-                <h4>tags</h4>
-                <ul class="tag_box inline">
-                {% assign tags_list = site.tags %}  
-                {% include JB/tags_list %}
-                </ul>
-                <br/>
                 <h4>recent articles</h4>
                 {% for post in site.posts limit:10 %}
                 <div class="side_post_list"><a class="post_title" href="{{post.url}}">{{post.title}} - {{post.date}}</a></div>

@@ -823,6 +823,8 @@ pre {
 }
 /* post & page */
 .tag_box {
+    right: 50px;
+    width: 300px;
     list-style: none;
     padding: 6px 6px 6px 6px;
     -webkit-border-radius: 3px;
@@ -841,11 +843,11 @@ pre {
     vertical-align: middle;
 }
 .tag_box a {
-    font-size: 1.6em;
+    font-size: 1.1em;
     background-color: #99cc99;
     float: left;
     border: 1px solid #448844;
-    padding: 3px 6px 3px 6px;
+    padding: 3px 3px 3px 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -893,9 +895,8 @@ pre {
     display: inline-block;
     position: relative;
     vertical-align: middle;
-    top: -2px;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 10px;
     -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -1075,6 +1076,10 @@ Not that old computer layout
         float: left;
         padding: 0 0 0 26px;
         width: 420px;
+    }
+    .tag_box {
+        right: 480px;
+        width: 310px;
     }
 }
 /*
