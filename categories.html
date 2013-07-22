@@ -12,11 +12,11 @@ group: navigation
 </ul>
 
 
-{% for category in site.categories %} 
+{% for category in site.categories %}
 <div class="section {{ category[0] }}">
     <h2>{{ category[0] | join: "/" }}</h2>
     <ul>
-        {% assign pages_list = category[1] %}  
+        {% assign pages_list = category[1] %}
         {% include JB/pages_list %}
     </ul>
 </div>
