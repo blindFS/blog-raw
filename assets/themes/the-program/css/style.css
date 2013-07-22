@@ -400,7 +400,7 @@ Calculation should be done via  http://j.mp/rNg5uA
 No styleguide reference.
  */
 body {
-    font-family: monospace, monaco, UbuntuMono-B;
+    font-family: monospace, monaco;
     font-size: 0.8em;
     line-height: 1.625em;
 }
@@ -417,7 +417,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: UbuntuMono-B, monaco, monospace;
+    font-family: Moderno Rounded Regular, monaco, monospace;
 }
 h1,
 .h1 {
@@ -517,23 +517,22 @@ No styleguide reference.
  * http://www.fontsquirrel.com/fonts/Comfortaa
  */
 @font-face {
-    font-family: 'UbuntuMono-B';
-    src: url('/assets/themes/the-program/font/UbuntuMono-B-webfont.eot');
-    src: url('/assets/themes/the-program/font/UbuntuMono-B-webfont.eot?#iefix') format('embedded-opentype'), 
-    url('/assets/themes/the-program/font/UbuntuMono-B-webfont.woff') format('woff'), 
-    url('/assets/themes/the-program/font/UbuntuMono-B-webfont.ttf') format('truetype'), 
-    url('/assets/themes/the-program/font/UbuntuMono-B-webfont.svg#UbuntuMono-B') format('svg');
-    font-weight: normal !important;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'monaco';
     src: url('/assets/themes/the-program/font/monaco-webfont.eot');
     src: url('/assets/themes/the-program/font/monaco-webfont.eot?#iefix') format('embedded-opentype'),
     url('/assets/themes/the-program/font/monaco-webfont.woff') format('woff'),
     url('/assets/themes/the-program/font/monaco-webfont.ttf') format('truetype'),
     url('/assets/themes/the-program/font/monaco-webfont.svg#monacoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Moderno Rounded Regular";
+    src: url("/assets/themes/the-program/font/moderno_rounded.eot?") format("eot"),
+    url("/assets/themes/the-program/font/moderno_rounded.woff") format("woff"),
+    url("/assets/themes/the-program/font/moderno_rounded.ttf") format("truetype"),
+    url("/assets/themes/the-program/font/moderno_rounded.svg#Moderno-Rounded") format("svg");
     font-weight: normal;
     font-style: normal;
 }
@@ -615,7 +614,7 @@ pre {
 /* HEADER
 --------------------------------------------------------------------------------- */
 .the-header .logo {
-    font-family: monaco, UbuntuMono-B, consolas, monospace;
+    font-family: monaco, consolas, monospace;
     margin: 0;
 }
 .the-header .logo a:visited {
