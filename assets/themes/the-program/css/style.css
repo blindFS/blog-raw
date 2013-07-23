@@ -577,6 +577,10 @@ html {
     background-color: #002b36;
 }
 .body .unit-body {
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 26px;
+}
+.body .unit-body {
     background-color: #839496;
 }
 /* LINK */
@@ -633,6 +637,29 @@ pre {
 }
 .the-header .nav-global li a{
     color: #2aa198;
+}
+.the-header .unit-head {
+    padding: 26px;
+}
+.the-header .unit-head .nav-global .logo {
+    font-family: monaco;
+    display: block;
+    width: auto;
+}
+.the-header .unit-head .nav-global .logo a {
+    display: block;
+    font-size: 30px;
+    line-height: 52px;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+.the-header .nav-menu {
+    display: none;
+}
+.the-header .navhover hr {
+    border-top: 6px solid #839496
 }
 /* MAIN
 --------------------------------------------------------------------------------- */
@@ -929,27 +956,6 @@ pre {
 .the-footer .license p {
     margin-bottom: 0;
 }
-.the-header .unit-head {
-    padding: 26px;
-}
-.the-header .unit-head .nav-global .logo {
-    font-family: monaco;
-    display: block;
-    width: auto;
-}
-.the-header .unit-head .nav-global .logo a {
-    display: block;
-    font-size: 30px;
-    line-height: 52px;
-    -webkit-transition: all 1s ease-out;
-    -moz-transition: all 1s ease-out;
-    -o-transition: all 1s ease-out;
-    transition: all 1s ease-out;
-}
-.body .unit-body {
-    border-top: 1px solid rgba(255, 255, 255, 0.6);
-    padding: 26px;
-}
 .the-footer {
     background-color: #1a1a1a;
     background-color: rgba(21, 25, 25, 0.8);
@@ -1147,7 +1153,7 @@ Huge-screen layout
         display: block;
         font-size: 50px;
         line-height: 52px;
-        margin-bottom: 26px;
+        margin-top: 10px;
         padding: 10px 10px 15px 10px;
         position: relative;
         top: auto;
