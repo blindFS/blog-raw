@@ -659,7 +659,7 @@ pre {
     display: none;
 }
 .the-header .navhover hr {
-    border-top: 6px solid #839496
+    border-top: 10px solid #839496
 }
 /* MAIN
 --------------------------------------------------------------------------------- */
@@ -1013,89 +1013,12 @@ Smartphone
     }
 }
 /*
-Tablet
- */
-@media only screen and (min-width: 768px) {
-    .the-header .unit-head {
-        padding: 0;
-    }
-    .the-header .unit-head .nav-global li {
-        float: left;
-        border: 1px solid rgba(0, 0, 0, 0.05);
-        border-width: 0 1px 0 0;
-    }
-    .the-header .unit-head .nav-global li a,
-    .the-header .unit-head .nav-global li div {
-        display: block;
-        padding: 10px;
-    }
-    .the-header .unit-head .nav-global li a:hover {
-        background-color: #9ff0aa;
-        color: #474747;
-    }
-    .the-header .unit-head .nav-global li:nth-child(2) {
-        border-width: 0 1px;
-    }
-    .the-header .unit-head .nav-global li:last-child {
-        border-width: 0;
-    }
-    .the-header .unit-head .nav-global .logo {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        border-right: none 0;
-        display: block;
-        width: 100%;
-    }
-    .the-header .unit-head .nav-global .logo a {
-        font-size: 30px;
-        line-height: normal;
-    }
-}
-/*
-Not that old computer layout
- */
-@media only screen and (min-width: 1280px) {
-    .the-header .unit-head .nav-global .logo {
-        border-bottom: 0 none;
-        display: block;
-        width: auto;
-    }
-    .the-header .unit-head .nav-global .logo a {
-        line-height: 18px;
-        margin-bottom: 0;
-        padding-left: 45px;
-    }
-    .body {
-        float: left;
-        width: 100%;
-        margin-right: -450px;
-    }
-    .body .unit-body {
-        border-top: 0 none;
-        margin-right: 450px;
-        padding: 26px 52px;
-    }
-    .the-footer {
-        background-color: transparent;
-        color: #839496;
-        position: relative;
-        top: auto;
-        display: block;
-        float: left;
-        padding: 0 0 0 26px;
-        width: 420px;
-    }
-    .tag_box {
-        right: 480px;
-        width: 310px;
-    }
-}
-/*
 Huge-screen layout
  */
 @media only screen and (min-width: 1410px) {
     .the-header {
         float: left;
-        width: 19%;
+        width: 16%;
     }
     .the-header .unit-head {
         padding: 26px;
@@ -1103,8 +1026,8 @@ Huge-screen layout
     .the-header .unit-head .nav-global {
         position: fixed;
         width: 210px;
-        top: 30px;
-        left: 30px;
+        top: 15px;
+        left: 20px;
         padding: 8px;
         -webkit-border-radius: 6px;
         -moz-border-radius: 6px;
@@ -1131,6 +1054,8 @@ Huge-screen layout
         transform-origin: 0% 0%;
     }
     .the-header .unit-head .nav-global .head_link a:hover {
+        background-color: #9ff0aa;
+        color: #474747;
         -webkit-transform: rotate3d( 80,70,10,20deg );
         -moz-transform: rotate3d( 80,70,10,20deg );
         -ms-transform: rotate3d( 80,70,10,20deg );
@@ -1153,7 +1078,6 @@ Huge-screen layout
         display: block;
         font-size: 50px;
         line-height: 52px;
-        margin-top: 10px;
         padding: 10px 10px 15px 10px;
         position: relative;
         top: auto;
@@ -1167,30 +1091,37 @@ Huge-screen layout
     }
     .body {
         float: left;
-        width: 81%;
-        margin-right: -450px;
+        width: 60%;
+        left: 16%;
+        right: 22%;
     }
     .body .unit-body {
         -webkit-box-shadow: 0px 0px 30px #268bd2;
         -moz-box-shadow: 0px 0px 30px #268bd2;
         box-shadow: 0px 0px 30px #268bd2;
-        margin-right: 450px;
         padding: 26px 52px;
         min-height: 1050px;
-    }
-    .the-footer {
-        position: relative;
-        top: auto;
-        display: block;
-        float: left;
-        padding: 26px 0 0 26px;
-        width: 420px;
     }
     .the-footer h4 {
         font-size: 30px;
         line-height: 52px;
         margin-top: 0;
         margin-bottom: 26px;
+    }
+    .the-footer {
+        background-color: transparent;
+        color: #839496;
+        position: relative;
+        top: auto;
+        display: block;
+        float: left;
+        padding: 26px 0 0 26px;
+        width: 22%;
+        right: 0;
+    }
+    .tag_box {
+        right: 480px;
+        width: 310px;
     }
 }
 /* Literal.Number.Integer.Long */

@@ -57,18 +57,6 @@ $(document).ready( function() {
         <div class="unit-head">
             <div class="unit-inner unit-head-inner">
                 <nav class="nav-global">
-                <div class="misc vcard">
-                    <select id="cd-dropdown" class="cd-select">
-                        <option value="-1" selected>follow me</option>
-                        <option value="1" addition='<a href="http://github.com/{{ site.author.github }}/" rel="me"><img class="social" src="/assets/themes/the-program/image/Github.png" height="50" width="50" Title="Github" ></a>'>github</option>
-                        <option value="2" addition='<a href="http://twitter.com/{{ site.author.twitter }}/" rel="me"><img class="social" src="/assets/themes/the-program/image/Twitter.png" height="50" width="50" Title="Twitter" ></a>'>twitter</option>
-                        <option value="3" addition='<a href="http://facebook.com/{{ site.author.facebook}}/" rel="me"><img class="social" src="/assets/themes/the-program/image/Facebook.png" height="50" width="50" Title="Facebook" ></a>'>facebook</option>
-                        <option value="4" addition='<a href="http://plus.google.com/{{ site.author.googleplus}}/posts/" rel="me"><img class="social" src="/assets/themes/the-program/image/Google+.png" height="50" width="50" Title="Google+" ></a>'>google+</option>
-                        <option value="5" addition='<a href="http://{{ site.author.tumblr}}.tumblr.com/" rel="me"><img class="social" src="/assets/themes/the-program/image/Tumblr.png" height="50" width="50" Title="Tumblr" ></a>'>tumblr</option>
-                        <option value="6" addition='<a href="http://{{ site.author.deviantart}}.deviantart.com/" rel="me"><img class="social" src="/assets/themes/the-program/image/Deviantart.png" height="50" width="50" Title="DeviantArt" ></a>'>deviart</option>
-                        <option value="7" addition='<a href="/rss.xml"><img class="social" src="/assets/themes/the-program/image/RSS.png" height="50" width="50" Title="RSS"></a>'>rss</option>
-                    </select>
-                </div>
                     <ul class="hover">
                         <li class="logo"><a href="/">{{ site.title }}</a></li>
                         <li class="navhover">
@@ -81,6 +69,18 @@ $(document).ready( function() {
                             </ul>
                         </li>
                     </ul>
+                    <div class="misc vcard">
+                        <select id="cd-dropdown" class="cd-select">
+                            <option value="-1" selected>follow me</option>
+                            <option value="1" addition='<a href="http://github.com/{{ site.author.github }}/" rel="me"><img class="social" src="/assets/themes/the-program/image/Github.png" height="50" width="50" Title="Github" ></a>'>github</option>
+                            <option value="2" addition='<a href="http://twitter.com/{{ site.author.twitter }}/" rel="me"><img class="social" src="/assets/themes/the-program/image/Twitter.png" height="50" width="50" Title="Twitter" ></a>'>twitter</option>
+                            <option value="3" addition='<a href="http://facebook.com/{{ site.author.facebook}}/" rel="me"><img class="social" src="/assets/themes/the-program/image/Facebook.png" height="50" width="50" Title="Facebook" ></a>'>facebook</option>
+                            <option value="4" addition='<a href="http://plus.google.com/{{ site.author.googleplus}}/posts/" rel="me"><img class="social" src="/assets/themes/the-program/image/Google+.png" height="50" width="50" Title="Google+" ></a>'>google+</option>
+                            <option value="5" addition='<a href="http://{{ site.author.tumblr}}.tumblr.com/" rel="me"><img class="social" src="/assets/themes/the-program/image/Tumblr.png" height="50" width="50" Title="Tumblr" ></a>'>tumblr</option>
+                            <option value="6" addition='<a href="http://{{ site.author.deviantart}}.deviantart.com/" rel="me"><img class="social" src="/assets/themes/the-program/image/Deviantart.png" height="50" width="50" Title="DeviantArt" ></a>'>deviart</option>
+                            <option value="7" addition='<a href="/rss.xml"><img class="social" src="/assets/themes/the-program/image/RSS.png" height="50" width="50" Title="RSS"></a>'>rss</option>
+                        </select>
+                    </div>
                 </nav>
             </div><!-- unit-inner -->
         </div><!-- unit-head -->
@@ -99,7 +99,7 @@ $(document).ready( function() {
             <div class="unit-inner unit-foot-inner">
                 <h4>recent articles</h4>
                 {% for post in site.posts limit:20 %}
-                <div class="side_post_list"><a class="post_title" href="{{post.url}}">{{post.title}} - {{post.date}}</a></div>
+                <div class="side_post_list"><a class="post_title" href="{{post.url}}">{{post.title}}</a></div>
                 {% endfor %}
                 <h4>licence</h4>
 
