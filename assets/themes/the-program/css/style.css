@@ -573,14 +573,14 @@ html {
     color: #002b36;
 }
 #page {
-    background-color: #002b36;
+    /* background-color: #002b36; */
 }
 .body .unit-body {
     border-top: 1px solid rgba(255, 255, 255, 0.6);
     padding: 26px;
 }
 .body .unit-body {
-    background-color: #839496;
+    background-color: rgba(131, 148, 150, 0.85);
 }
 /* LINK */
 a:link {
@@ -1033,6 +1033,9 @@ Huge-screen layout
         -moz-border-radius: 6px;
         border-radius: 6px;
         background-color: rgba(101, 123, 131, 0.21);
+        -webkit-box-shadow: 0 0 15px #aaaaaa;
+        -moz-box-shadow: 0 0 15px #aaaaaa;
+        box-shadow: 0 0 15px #aaaaaa;
     }
     .the-header .unit-head .nav-global li {
         float: none;
@@ -1102,9 +1105,9 @@ Huge-screen layout
         right: 22%;
     }
     .body .unit-body {
-        -webkit-box-shadow: 0px 0px 30px #268bd2;
-        -moz-box-shadow: 0px 0px 30px #268bd2;
-        box-shadow: 0px 0px 30px #268bd2;
+        -webkit-box-shadow: 0px 0px 20px #aaaaaa;
+        -moz-box-shadow: 0px 0px 20px #aaaaaa;
+        box-shadow: 0px 0px 20px #aaaaaa;
         padding: 26px 52px;
         min-height: 1050px;
     }
@@ -1115,15 +1118,19 @@ Huge-screen layout
         margin-bottom: 10px;
     }
     .the-footer {
-        background-color: transparent;
         color: #839496;
         position: relative;
-        top: auto;
         display: block;
-        float: left;
-        padding: 26px 0 0 26px;
+        float: right;
         width: 22%;
-        right: 0;
+        top: 15px;
+        right: 15px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-box-shadow: 0 0 15px #aaaaaa;
+        -moz-box-shadow: 0 0 15px #aaaaaa;
+        box-shadow: 0 0 15px #aaaaaa;
     }
     .tag_box {
         right: 26%;
