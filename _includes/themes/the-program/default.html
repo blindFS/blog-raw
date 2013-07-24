@@ -108,13 +108,15 @@ $(document).ready( function() {
     $('.tag_box').smint({
         'scrollSpeed' : 1000
     });
+    $('a[href=#page]').click(function(){
+            $('html, body').animate({scrollTop:0}, 'slow');
+    });
 });
 </script>
-
 <script type="text/javascript">
     $( function() {
         $( '#cd-dropdown' ).dropdown( {
-            gutter : 25,
+            gutter : 15,
             delay : 100,
             slidingIn : 100,
             random : true
@@ -133,8 +135,12 @@ $(document).ready( function() {
             );
     });
 </script>
-<script>
-  $.backstretch("/assets/images/Don't_panic.jpg");
+<script type='text/javascript'>
+    $.backstretch("/assets/images/Don't_panic.jpg");
+    $.backstretch([
+        "/assets/images/Don't_panic.jpg",
+        "/assets/images/42.jpg"
+    ], {fade: "slow", duration: "50000"});
 </script>
 
 </body>

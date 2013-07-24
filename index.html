@@ -7,12 +7,12 @@ title: Don't panic!
 <h2><a class="post_title" href="{{post.url}}">{{post.title}}</a></h2>
 <div class="post-content">
     {% if post.content contains '<!--more-->' %}
-        {{ post.content | split:'<!--more-->' | first }}
-        <br />
-        <a href='{{post.url}}'>read more</a>
+    {{ post.content | split:'<!--more-->' | first }}
+    <br />
+    <a href='{{post.url}}'>read more</a>
     {% else %}
-        {{ post.content }}
-        {% endif %}
+    {{ post.content }}
+    {% endif %}
 </div>
 <br />
 {% endfor %}

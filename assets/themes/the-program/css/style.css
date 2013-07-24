@@ -453,7 +453,7 @@ dl {
     margin-top: 0;
     margin-bottom: 1.625em;
 }
-img.social{
+img.social {
     float: right;
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
@@ -466,6 +466,25 @@ img.social:hover {
     -moz-transform: scale(1.2);
     -o-transform: scale(1.2);
     transform: scale(1.2);
+}
+img.back_to_top {
+    position: fixed;
+    right: 0;
+    bottom: 1%;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    z-index: 2;
+}
+img.back_to_top:hover {
+    -webkit-transform:rotate(360deg);
+    -ms-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+    transform:rotate(360deg);
+    -webkit-box-shadow: 0px 0px 7px #aaaaaa;
+    -moz-box-shadow: 0px 0px 7px #aaaaaa;
+    box-shadow: 0px 0px 7px #aaaaaa;
 }
 small,
 .small,
@@ -612,9 +631,9 @@ pre {
     margin-right: 0;
     padding: 1.625em;
     overflow: auto;
-    -webkit-box-shadow: 0px 0px 20px #309b36;
-    -moz-box-shadow: 0px 0px 20px #309b36;
-    box-shadow: 0px 0px 20px #309b36;
+    -webkit-box-shadow: 0px 0px 20px #b58900;
+    -moz-box-shadow: 0px 0px 20px #b58900;
+    box-shadow: 0px 0px 20px #b58900;
 }
 /* meta */
 /* HEADER
@@ -638,6 +657,7 @@ pre {
 .the-header .unit-head .nav-global .logo {
     display: block;
     width: auto;
+    margin-bottom: 20px;
 }
 .the-header .unit-head .nav-global .logo a {
     display: block;
@@ -774,7 +794,7 @@ pre {
     white-space: nowrap;
     background-color: #fff04a;
 }
-.unit-article img {
+.unit-article .entry-content img {
     display: block;
     margin-right: auto;
     -webkit-box-shadow: 0 0 15px #002b36;
@@ -1062,7 +1082,6 @@ Huge-screen layout
         border-width: 0;
     }
     .the-header .unit-head .nav-global .logo {
-        margin-bottom: 20px;
         width: auto;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
@@ -1113,7 +1132,7 @@ Huge-screen layout
         float: right;
         width: 22%;
         top: 15px;
-        right: 15px;
+        right: 1%;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         border-radius: 10px;
