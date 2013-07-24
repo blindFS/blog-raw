@@ -445,7 +445,6 @@ h4,
     font-size: 18.541px;
     line-height: 26px;
     margin-top: 26px;
-    margin-bottom: 26px;
 }
 p,
 ul,
@@ -657,6 +656,7 @@ pre {
 }
 .the-header .nav-menu {
     display: none;
+    padding-bottom: 20px;
 }
 .the-header .navhover hr {
     border-top: 10px solid #839496
@@ -1015,7 +1015,7 @@ Smartphone
 /*
 Huge-screen layout
  */
-@media only screen and (min-width: 1410px) {
+@media only screen and (min-width: 1280px) {
     .the-header {
         float: left;
         width: 16%;
@@ -1025,9 +1025,9 @@ Huge-screen layout
     }
     .the-header .unit-head .nav-global {
         position: fixed;
-        width: 210px;
+        width: 14%;
         top: 15px;
-        left: 20px;
+        left: 1%;
         padding: 8px;
         -webkit-border-radius: 6px;
         -moz-border-radius: 6px;
@@ -1068,6 +1068,7 @@ Huge-screen layout
     .the-header .unit-head .nav-global .logo {
         border-bottom: none 0;
         display: block;
+        margin-bottom: 20px;
         width: auto;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
@@ -1076,8 +1077,8 @@ Huge-screen layout
     }
     .the-header .unit-head .nav-global .logo a {
         display: block;
-        font-size: 50px;
-        line-height: 52px;
+        font-size: 45px;
+        line-height: 50px;
         padding: 10px 10px 15px 10px;
         position: relative;
         top: auto;
@@ -1088,6 +1089,11 @@ Huge-screen layout
         -webkit-box-shadow: 0px 0px 30px #bbbbbb;
         -moz-box-shadow: 0px 0px 30px #bbbbbb;
         box-shadow: 0px 0px 30px #bbbbbb;
+    }
+    
+    .the-header .cd-dropdown,
+    .the-header .cd-select {
+        width: 100%;
     }
     .body {
         float: left;
@@ -1105,8 +1111,8 @@ Huge-screen layout
     .the-footer h4 {
         font-size: 30px;
         line-height: 52px;
-        margin-top: 0;
-        margin-bottom: 26px;
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
     .the-footer {
         background-color: transparent;
@@ -1120,7 +1126,7 @@ Huge-screen layout
         right: 0;
     }
     .tag_box {
-        right: 480px;
+        right: 26%;
         width: 310px;
     }
 }

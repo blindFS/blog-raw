@@ -26,7 +26,7 @@ I choose to create a soft link of */usr/lib/nvidia-319/bin/nvidia-smi* to *~/bin
 
 so here is the script
 
-{% highlight bash linenos=table %}
+{% highlight bash linenos %}
 #!/bin/bash
 bumble_status=$(optirun --status|awk -F " " '{print $NF}')
 if [ "$bumble_status" = "off."  ]; then
@@ -44,7 +44,7 @@ the _--no-xorg_ argument of optirun means "do not start secondary X server" and 
 
 use the following to define a new popup with the name "cpusensors" and add gpu temp info to it
 
-{% highlight lua linenos=table %}
+{% highlight lua linenos %}
 local temppopup = nil
 local function get_tempinfo( cpu_color, safe_color, high_color, crit_color)
   str=awful.util.pread("gpu_temp&&sensors |grep Core|awk -F '(' '{print $1}'")
@@ -90,7 +90,7 @@ create a widget and hook it with the defined popup.
 
 done!
 
-{% highlight lua linenos=table %}
+{% highlight lua linenos %}
 tempicon       = widget ({ type = "imagebox" })
 tempicon.image = image(beautiful.widget_temp)
 blingbling.popups.cpusensors(tempicon,

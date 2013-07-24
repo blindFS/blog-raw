@@ -14,7 +14,7 @@ jekll用的是liquid template
 总之是很麻烦就对了。
 _Don't panic!_
 添加
-{% highlight ruby linenos=table %}
+{% highlight ruby linenos %}
 module Jekyll
   class RawTag < Liquid::Block
     def parse(tokens)
@@ -45,7 +45,7 @@ Liquid::Template.register_tag('raw', Jekyll::RawTag)
 
 pelican有article summary的功能，jekyll没有找到啥现成的
 搜索之后发现一个挺2的方法
-{% highlight html linenos=table %}
+{% highlight html linenos %}
 {% raw %}
 {% for post in site.posts limit:5 %}
 <h2><a class="post_title" href="{{post.url}}">{{post.title}}</a></h2>
