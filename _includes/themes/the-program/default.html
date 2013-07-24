@@ -21,42 +21,6 @@
     <script type="text/javascript" src="/js/jquery.backstretch.min.js"></script>
 </head>
 <body>
-
-<script>
-  $.backstretch("/assets/images/Don't_panic.jpg");
-</script>
-
-<script type="text/javascript">
-$(document).ready( function() {
-    $('.tag_box').smint({
-        'scrollSpeed' : 1000
-    });
-});
-</script>
-
-<script type="text/javascript">
-    $( function() {
-        $( '#cd-dropdown' ).dropdown( {
-            gutter : 35,
-            delay : 100,
-            slidingIn : 100,
-            random : true
-        } );
-    });
-</script>
-<script type='text/javascript'>
-    $(document).ready(function () {
-        $(".hoverli").hover(
-            function () {
-                $('ul.nav-menu').slideDown('medium');
-            }, 
-            function () {
-                $('ul.nav-menu').slideUp('medium');
-            }
-            );
-    });
-</script>
-
 <div id="page" class="hentry">
     <header class="the-header">
         <div class="unit-head">
@@ -65,7 +29,9 @@ $(document).ready( function() {
                     <ul class="hover">
                         <li class="hoverli">
                             <div class="logo">
-                                <a href="/">{{ site.title }}</a>
+                                <a href="/">
+                                    <img src="/assets/images/marvin.png" width="200px">
+                                </a>
                             </div>
                             <ul class="nav-menu">
                                 <li class="head_link"><a href="/archive.html">archive</a></li>
@@ -136,5 +102,40 @@ $(document).ready( function() {
 </script>
 
   {% include JB/analytics %}
+
+<script type="text/javascript">
+$(document).ready( function() {
+    $('.tag_box').smint({
+        'scrollSpeed' : 1000
+    });
+});
+</script>
+
+<script type="text/javascript">
+    $( function() {
+        $( '#cd-dropdown' ).dropdown( {
+            gutter : 25,
+            delay : 100,
+            slidingIn : 100,
+            random : true
+        } );
+    });
+</script>
+<script type='text/javascript'>
+    $(document).ready(function () {
+        $(".hoverli").hover(
+            function () {
+                $('ul.nav-menu').slideDown('medium');
+            }, 
+            function () {
+                $('ul.nav-menu').slideUp('medium');
+            }
+            );
+    });
+</script>
+<script>
+  $.backstretch("/assets/images/Don't_panic.jpg");
+</script>
+
 </body>
 </html>

@@ -17,7 +17,7 @@
     font-size: 17px;
     background: rgba(40, 105, 126, 0.6);
     display: block;
-    padding: 0 30px 0 30px;
+    padding: 0 30px 0 10px;
     position: relative;
     cursor: pointer;
 }
@@ -57,7 +57,7 @@
 }
 
 .cd-dropdown ul li span {
-    width: 80%;
+    width: 95%;
     background: rgba(40, 105, 126, 0.6);
     line-height: 40px;
     padding: 0 10px 0 10px;
@@ -81,11 +81,6 @@
     -webkit-box-shadow: 0px 0px 10px #309b36;
     -moz-box-shadow: 0px 0px 10px #309b36;
     box-shadow: 0px 0px 10px #309b36;
-}
-
-.cd-dropdown > span span[class^="icon-"],
-.cd-dropdown > span span[class*=" icon-"]{
-    padding: 0 30px 0 45px;
 }
 
 /* Select fallback styling */
