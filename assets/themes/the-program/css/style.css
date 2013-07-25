@@ -701,7 +701,7 @@ pre {
 .unit-article .entry-content h4 a:link,
 .unit-article .entry-content h5 a:link,
 .unit-article .entry-content h6 a:link {
-    color: #CB4B16;
+    color: #b83b20;
     border: 0;
 }
 .unit-article .entry-content h2 a:visited,
@@ -709,7 +709,7 @@ pre {
 .unit-article .entry-content h4 a:visited,
 .unit-article .entry-content h5 a:visited,
 .unit-article .entry-content h6 a:visited {
-    color: #CB4B16;
+    color: #b83b20;
     border: 0;
 }
 .unit-article .entry-content h2 a:hover,
@@ -734,10 +734,10 @@ pre {
     transition: all 0.5s ease-out;
 }
 .unit-article a:link {
-    border-bottom: 3px solid #c26164;
+    border-bottom: 2px solid #c26164;
 }
 .unit-article a:visited {
-    border-bottom: 3px solid #ad4346;
+    border-bottom: 2px solid #ad4346;
 }
 .unit-article .entry-content img {
     -webkit-transition: all 0.5s ease-out;
@@ -746,9 +746,9 @@ pre {
     transition: all 0.5s ease-out;
 }
 .unit-article .entry-content a img:hover {
-    -webkit-box-shadow: 5px 5px 5px #d33682;
-    -moz-box-shadow: 5px 5px 5px #d33682;
-    box-shadow: 5px 5px 5px #d33682;
+    -webkit-box-shadow: 0 0 30px #e44c26;
+    -moz-box-shadow: 0 0 30px #e44c26;
+    box-shadow: 0 0 30px #e44c26;
 }
 .unit-article blockquote {
     border-left: 1em solid rgba(21, 25, 25, 0.8);
