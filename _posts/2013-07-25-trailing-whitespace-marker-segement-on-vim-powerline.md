@@ -12,7 +12,7 @@ tags: vim powerline
 
 之前一直用的新版本的powerline，python实现，不光针对vim。但是后来发现跟vimscript的vim-powerline相比在vim下的功能差距太大，于是果断换回去。
 
-虽然可能很无聊，但是我觉得提示trailing whitespace是个挺实用的功能不明白为什么Lokaltog没有默认添加。
+虽然可能很无聊，但是我觉得提示trailing whitespace是个挺实用的功能，不明白为什么Lokaltog没有默认添加。
 whatever，好歹人家提供了实现的方法。其实实现起来很简单，但是要符合powerline的那套声明语法并且不重不漏还是略费劲。
 总之有 [现成的代码](https://github.com/Lokaltog/vim-powerline/commit/d885f900acfde8094f408b53ab61774bd0b83b13) 可以抄对我来说总是件好事。
 
@@ -50,13 +50,11 @@ ps:这个地方卡了俺好久，囧。
 {% highlight vim linenos %}
 command! TrimSpaces :call TrimSpaces()
     function! TrimSpaces()
-        normal mz
         %s/\s\+$//gec
-        normal 'z
-        delmarks z
+        normal ``
     endfunction
 {% endhighlight %}
 
 我觉得trim肯定是对全局，没必要加range所以就简单许多，另外我不喜欢替换完了之后光标移动到最后替换的地方。
-于是进行了添加mark，跳转，删除mark。严格意义上来说应该先记录原来的mark，但是我觉得一般人用不到z于是偷懒了。
+于是用\`\`跳转到之前的地方。
 anyway，能用就行。
