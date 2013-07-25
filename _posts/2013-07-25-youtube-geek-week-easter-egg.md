@@ -7,6 +7,7 @@ tags: ツッコミ youtube
 ---
 {% include JB/setup %}
 #### YouTube celebrates Geek Week with Unix overhaul, eyes flinch universally
+
 [ ![engaget](http://www.blogcdn.com/www.engadget.com/media/2013/07/youtube-geek-week-ascii-1374714439.png) ](http://www.engadget.com/2013/07/25/youtube-unix-geek-week/?utm_medium=feed&utm_source=Feed_Classic&utm_campaign=Engadget)
 
 官方twitter给的提示：
@@ -19,9 +20,11 @@ tags: ツッコミ youtube
 [用这个](http://www.branah.com/ascii-converter)
 就能看到结果了。
 
-其实我更想说的是配色的问题。我个人觉得配色的主要目的就是在于将相邻的独立内容进行区分。这要求各个颜色之间的色差合理(合适的对比度)。我觉得早期的配色，就像图片里头的那样，
-背景太过黑暗，于是导致前景色晃眼。另外#ff0000,#00ff00,#0000ff这种颜色不知道从什么时候起在我眼里变得巨丑无比。每当看到这种不偏不倚的配色就菊花一紧。所以现在流行的配色方案都
-会选择偏离这种颜色一定距离。我觉得从对比度最优化的角度出发，在确定总颜色数目的情况下应该可以找到一套比较科学的方法来求得一簇配色方案。以后无聊了再来思考这个问题。
+#### 关于配色
 
-btw:我是solarized的忠实粉丝。但是由于常年使用0.7-0.8的透明度，我觉得的背景太亮了。于是人为的调整为#000b10，至于为什么是这个数字。我觉得这里面有4个0，1个b，但是只有一个1。
-我觉得它比较吉利，蛤蛤。
+<div>其实我更想说的是配色的问题。我个人觉得配色的主要目的就是在于将相邻的独立内容进行区分。这要求各个颜色之间的色差合理(合适的对比度)。我觉得早期的配色，就像图片里头的那样，
+背景太过黑暗，于是导致前景色晃眼。另外<div style="display: inline;background-color:#ff0000;color:#aaaaaa">#ff0000</div>,<div style="display: inline;background-color:#00ff00;color:#000000">#ff0000</div>,<div style="display: inline;background-color:#0000ff;color:#aaaaaa">#0000ff</div>这种颜色不知道从什么时候起在我眼里变得巨丑无比。每当看到这种不偏不倚的配色就菊花一紧。所以现在流行的配色方案都
+会选择偏离这种颜色一定距离。我觉得从对比度最优化的角度出发，在确定总颜色数目的情况下应该可以找到一套比较科学的方法来求得一簇配色方案。以后无聊了再来思考这个问题。</div>
+
+<div>btw:我是solarized的忠实粉丝。但是由于常年使用0.7-0.8的透明度，我觉得它的背景<div style="display: inline;background-color:#002b36;color:#aaaaaa">#002b36</div>太亮了。于是人为的调整为<div style="display: inline;background-color:#000b10;color:#aaaaaa">#000b10</div>，至于为什么是这个数字。我觉得这里面有4个0，1个b，但是只有一个1。
+我觉得它比较吉利，蛤蛤。</div>
