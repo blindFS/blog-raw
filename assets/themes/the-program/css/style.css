@@ -470,7 +470,10 @@ img.social:hover {
 img.back_to_top {
     position: fixed;
     right: 0;
-    bottom: 1%;
+    bottom: 0;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
     -webkit-transition: all 0.5s ease-out;
     -moz-transition: all 0.5s ease-out;
     -o-transition: all 0.5s ease-out;
@@ -598,7 +601,7 @@ html {
     padding: 26px;
 }
 .body .unit-body {
-    background-color: rgba(131, 148, 150, 0.85);
+    background-color: rgba(131, 148, 150, 0.8);
 }
 .body .unit-body img {
     margin: 10px;
@@ -613,7 +616,7 @@ a:visited {
     text-decoration: none;
 }
 a:hover {
-    color: #474747;
+    color: #002f57;
     text-decoration: none;
 }
 /* HIGHLIGHTER */
@@ -724,6 +727,12 @@ pre {
 .unit-article .entry-content:first-child h6 {
     margin-top: 0;
 }
+.unit-article a {
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
 .unit-article a:link {
     border-bottom: 1px dashed #c26164;
 }
@@ -731,7 +740,8 @@ pre {
     border-bottom: 1px dashed #ad4346;
 }
 .unit-article a:hover {
-    border-bottom: 1px dashed #d08688;
+    padding: 1px 3px 1px 3px;
+    border: 2px solid #268bd2;
 }
 .unit-article blockquote {
     border-left: 1em solid rgba(21, 25, 25, 0.8);
@@ -992,6 +1002,9 @@ pre {
     margin-top: 0;
 }
 .the-footer .side_post_list a{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
     font-family: monaco;
     font-size: 1.3em;
     line-height: 2.5em;
@@ -1057,7 +1070,6 @@ Huge-screen layout
     .the-header .unit-head .nav-global li a,
     .the-header .unit-head .nav-global li div {
         display: block;
-        padding: 2px 5px;
         height: auto;
         -webkit-transition: all 600ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
         -moz-transition: all 600ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
@@ -1068,6 +1080,9 @@ Huge-screen layout
         -moz-transform-origin: 0% 0%;
         -o-transform-origin: 0% 0%;
         transform-origin: 0% 0%;
+    }
+    .the-header .unit-head .nav-global .head_link a{
+        padding: 2px 15px;
     }
     .the-header .unit-head .nav-global .head_link a:hover {
         background-color: #9ff0aa;
@@ -1100,8 +1115,11 @@ Huge-screen layout
         -webkit-box-shadow: 0px 0px 30px #bbbbbb;
         -moz-box-shadow: 0px 0px 30px #bbbbbb;
         box-shadow: 0px 0px 30px #bbbbbb;
+        -webkit-border-radius: 102px;
+        -moz-border-radius: 102px;
+        border-radius: 102px;
     }
-    
+
     .the-header .cd-dropdown,
     .the-header .cd-select {
         width: 100%;
