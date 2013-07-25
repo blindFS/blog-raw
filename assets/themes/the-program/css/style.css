@@ -746,9 +746,9 @@ pre {
     transition: all 0.5s ease-out;
 }
 .unit-article .entry-content a img:hover {
-    -webkit-box-shadow: 10px 10px 20px #d33682;
-    -moz-box-shadow: 10px 10px 20px #d33682;
-    box-shadow: 10px 10px 20px #d33682;
+    -webkit-box-shadow: 5px 5px 5px #d33682;
+    -moz-box-shadow: 5px 5px 5px #d33682;
+    box-shadow: 5px 5px 5px #d33682;
 }
 .unit-article blockquote {
     border-left: 1em solid rgba(21, 25, 25, 0.8);
@@ -904,7 +904,6 @@ pre {
     font-size: 1.1em;
     background-color: #99cc99;
     float: left;
-    border: 1px solid #448844;
     padding: 3px 3px 3px 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -934,17 +933,20 @@ pre {
     background: #336633;
     border: solid #336633;
 }
+.tag_box a:link {
+    border: none;
+}
+.tag_box a:visited {
+    border: none;
+}
 .tag_box a:hover {
     background-color: #77bb77;
-    border: 1px solid #336633;
 }
 .tag_box a:hover span {
     background-color: #e1e1e1;
-    border: 1px solid #77bb77;
 }
 .tag_box span {
     background-color: #fafafa;
-    border: 1px solid #99cc99;
     padding: 1px 5px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
