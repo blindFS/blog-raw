@@ -56,6 +56,12 @@
                 </nav>
             </div><!-- unit-inner -->
         </div><!-- unit-head -->
+        <div class="wallpaper_controller">
+            <img src='/assets/themes/the-program/image/previous.png' class='previous' width='35px' height='35px' />
+            <img src='/assets/themes/the-program/image/pause.png' class='pause' width='35px' height='35px' />
+            <img src='/assets/themes/the-program/image/resume.png' class='resume' width='35px' height='35px' />
+            <img src='/assets/themes/the-program/image/next.png' class='next' width='35px' height='35px' />
+        </div>
     </header>
     <div class="body" role="main">
         <div class="unit-body">
@@ -132,7 +138,7 @@ $(document).ready( function() {
         $(".hoverli").hover(
             function () {
                 $('ul.nav-menu').slideDown('medium');
-            }, 
+            },
             function () {
                 $('ul.nav-menu').slideUp('medium');
             }
@@ -145,6 +151,19 @@ $(document).ready( function() {
         "/assets/images/Don't_panic.jpg",
         "/assets/images/42.jpg"
     ], {fade: "slow", duration: "50000"});
+
+    $('.next').click(function(){
+        $.backstretch("next");
+    });
+    $('.previous').click(function(){
+        $.backstretch("prev");
+    });
+    $('.pause').click(function(){
+        $.backstretch("pause");
+    });
+    $('.resume').click(function(){
+        $.backstretch("resume");
+    });
 </script>
 
 </body>

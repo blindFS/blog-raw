@@ -72,7 +72,7 @@ self.controller.Add_Loop_Conf(area,"morph",'000000',color2)
 
 **Don't panic!**
 
-这种小事总是有办法的。写了个kbtoogle.py的简单脚本
+这种小事总是有办法的。写了个kbtoggle.py的简单脚本
 
 {% highlight python linenos %}
 #!/usr/bin/python

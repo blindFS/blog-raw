@@ -678,6 +678,22 @@ pre {
 .the-header .navhover hr {
     border-top: 10px solid #839496
 }
+.the-header .wallpaper_controller {
+    position: fixed;
+    bottom: 20px;
+    left: 1%;
+}
+.the-header .wallpaper_controller img {
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+.the-header .wallpaper_controller img:hover{
+    -webkit-box-shadow: 0px 0px 10px #2aa198;
+    -moz-box-shadow: 0px 0px 10px #2aa198;
+    box-shadow: 0px 0px 10px #2aa198;
+}
 /* MAIN
 --------------------------------------------------------------------------------- */
 .unit-article header {
