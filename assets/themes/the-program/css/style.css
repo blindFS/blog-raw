@@ -960,6 +960,7 @@ pre {
 .tag_box span {
     background-color: #fafafa;
     padding: 1px 5px;
+    margin-left: 3px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -968,7 +969,6 @@ pre {
     position: relative;
     vertical-align: middle;
     font-weight: bold;
-    font-size: 10px;
     -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -1178,7 +1178,7 @@ Huge-screen layout
     }
     .tag_box {
         right: 26%;
-        width: 310px;
+        width: 450px;
     }
 }
 /* Literal.Number.Integer.Long */
