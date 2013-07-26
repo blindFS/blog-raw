@@ -773,7 +773,7 @@ pre {
 .unit-article ul,
 .unit-article ol,
 .unit-article dl {
-    padding-left: 0;
+    padding-left: 10px;
 }
 .unit-article ul {
     list-style: square;
@@ -896,7 +896,7 @@ pre {
     right: 100px;
     width: 300px;
     list-style: none;
-    padding: 6px 6px 6px 6px;
+    padding: 6px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -916,11 +916,11 @@ pre {
     font-size: 1.1em;
     background-color: #99cc99;
     float: left;
-    padding: 3px 3px 3px 3px;
+    padding: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    margin: 10px;
+    margin: 6px;
     -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
