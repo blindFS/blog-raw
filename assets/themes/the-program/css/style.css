@@ -135,11 +135,6 @@ samp {
     _font-family: 'courier new', monospace;
 }
 /* Improve readability of pre-formatted text in all browsers */
-pre {
-    white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-}
 q {
     quotes: none;
 }
