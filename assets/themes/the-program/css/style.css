@@ -68,24 +68,6 @@ textarea {
     color: #fff;
     text-shadow: none;
 }
-::-webkit-scrollbar
-{
-    width: 5px;  /* for vertical scrollbars */
-    height: 5px; /* for horizontal scrollbars */
-}
-
-::-webkit-scrollbar-track
-{
-    background: transparent;
-}
-
-::-webkit-scrollbar-thumb
-{
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    background: #657b83
-}
 /*
 Links from [HTML5 Boilerplate](http://j.mp/rP0wmY)
 
