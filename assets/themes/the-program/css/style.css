@@ -68,6 +68,24 @@ textarea {
     color: #fff;
     text-shadow: none;
 }
+::-webkit-scrollbar
+{
+    width: 5px;  /* for vertical scrollbars */
+    height: 5px; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track
+{
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #657b83
+}
 /*
 Links from [HTML5 Boilerplate](http://j.mp/rP0wmY)
 
@@ -622,9 +640,9 @@ pre {
 pre {
     color: #93A1A1;
     border: 1px solid #393939;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
     font-family: monaco, consolas, monospace;
     margin-left: 0;
     margin-right: 0;
