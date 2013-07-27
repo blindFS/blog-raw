@@ -75,6 +75,7 @@ No styleguide reference.
  */
 a {
     color: #00e;
+    font-family: trackregular;
 }
 a:visited {
     color: #551a8b;
@@ -553,6 +554,16 @@ No styleguide reference.
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: "trackregular";
+    src: url("/assets/themes/the-program/font/track-webfont.eot?") format("eot"),
+    url("/assets/themes/the-program/font/track-webfont.woff") format("woff"),
+    url("/assets/themes/the-program/font/track-webfont.ttf") format("truetype"),
+    url("/assets/themes/the-program/font/track-webfont.svg#trackregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
 /*
 LESS helper
  */
@@ -1026,7 +1037,6 @@ pre {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    font-family: monaco;
     font-size: 1.3em;
     line-height: 2.5em;
     color: #859900;

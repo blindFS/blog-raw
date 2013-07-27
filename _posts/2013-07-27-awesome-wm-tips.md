@@ -16,7 +16,7 @@ tags: linux awesome shell
 一般情况下切换桌面的快捷键是**mod+num**，如果当标签不是数字时（我就不是），可能不能很快地反应过来对应的快捷键。
 但是这点小问题对于我这样最多只用5个桌面的人来说忽略不计。
 <br />
-下面那个很牛逼，就像是gnome下mod+w的预览功能。而且是对全部桌面下窗口的预览。像这样：
+下面那个很牛逼，就像是gnome下**mod+w**的预览功能。而且是对全部桌面下窗口的预览。像这样：
 ![revelation](http://awesome.naquadah.org/w/images/thumb/Revelation.png/600px-Revelation.png)
 
 这两个好东西还有个共同的有点就是配置及其简单。
@@ -105,7 +105,7 @@ echo $number > $WALLPAPERS/.last
 awsetbg $WALLPAPERS/${ALIST[$number]}
 {% endhighlight %}
 
-很简单而实用，但是我的wallpaper不多，我就把$RANDOM换成1了。我还在awesome wiki上看到一些 [蛋疼的东西](http://awesome.naquadah.org/wiki/Cycling_Random_Wallpaper_Or_Xscreensaver)
+很简单而实用，但是我的wallpaper不多，我就把$RANDOM换成1了。我还在awesome wiki上看到一些 [蛋疼的东西](http://awesome.naquadah.org/wiki/Cycling_Random_Wallpaper_Or_Xscreensaver)。
 我觉得相比之下写成bash对我来说更友爱。而且也没必要在后台跑着定时切换，占资源（虽然用不了多少，但是不爽）。
 
 #### 几个前段时间才发现的东西......
@@ -184,7 +184,7 @@ function alert {
 我是作为一个zsh plugin来用的，其实功能上来说完全可以不用这么麻烦，直接notify-send就行了。就当了解下naughty.notify和awesome-client了。
 这玩意对我来说没有意义，自从添加之后一次也没用到过。我想对高端大气的gentoo用户应该有点用，一不小心就把emerge给黑了......
 
-说起notify，顺便记录下两个跟awesome无关的好东西
+说起notify，顺便记录下两个跟awesome无关的好东西：
 
 * [mpdnotify](https://github.com/vehk/mpdnotify)
     <br />  对带空格的路径需要自行sed，然后在ncmpcpp的config里头添加execute_on_song_change="execute command"
