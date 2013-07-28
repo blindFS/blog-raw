@@ -3,7 +3,7 @@ layout: post
 title: "boring stuffs"
 description: ""
 category: config
-tags: vim regexp music ruby
+tags: vim regexp ruby jekyll liquid music 
 ---
 {% include JB/setup %}
 
