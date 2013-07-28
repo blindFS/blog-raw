@@ -478,10 +478,6 @@ img.back_to_top {
     z-index: 2;
 }
 img.back_to_top:hover {
-    -webkit-transform:rotate(360deg);
-    -ms-transform:rotate(360deg);
-    -o-transform:rotate(360deg);
-    transform:rotate(360deg);
     -webkit-box-shadow: 0px 0px 7px #aaaaaa;
     -moz-box-shadow: 0px 0px 7px #aaaaaa;
     box-shadow: 0px 0px 7px #aaaaaa;
@@ -1041,7 +1037,6 @@ pre {
     line-height: 2.5em;
     color: #859900;
     display: block;
-    padding-left: 10px;
     -webkit-transition: all 0.5s ease-out;
     -moz-transition: all 0.5s ease-out;
     -o-transition: all 0.5s ease-out;
@@ -1049,11 +1044,15 @@ pre {
 }
 .the-footer .side_post_list a:hover{
     color: #a5e560;
+    padding: 0 10px 0 10px;
     background-color: rgba(0, 24, 32, 0.66);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
     transform: scale(1.1);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
     -webkit-box-shadow: 0px 0px 10px #f3a682;
     -moz-box-shadow: 0px 0px 10px #f3a682;
     box-shadow: 0px 0px 10px #f3a682;
@@ -1091,15 +1090,10 @@ Huge-screen layout
     .the-header .unit-head .nav-global li div {
         display: block;
         height: auto;
-        -webkit-transition: all 600ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
-        -moz-transition: all 600ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
-        -o-transition: all 600ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
-        transition: all 600ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
-
-        -webkit-transform-origin: 0% 0%;
-        -moz-transform-origin: 0% 0%;
-        -o-transform-origin: 0% 0%;
-        transform-origin: 0% 0%;
+        -webkit-transition-duration: 1s;
+        -moz-transition-duration: 1s;
+        -o-transition-duration: 1s;
+        transition-duration: 1s;
     }
     .the-header .unit-head .nav-global .head_link a{
         padding: 2px 15px;
@@ -1107,11 +1101,6 @@ Huge-screen layout
     .the-header .unit-head .nav-global .head_link a:hover {
         background-color: #9ff0aa;
         color: #474747;
-        -webkit-transform: rotate3d( 80,70,10,20deg );
-        -moz-transform: rotate3d( 80,70,10,20deg );
-        -ms-transform: rotate3d( 80,70,10,20deg );
-        -o-transform: rotate3d( 80,70,10,20deg );
-        transform: rotate3d( 80,70,10,20deg );
     }
     .the-header .unit-head .nav-global li:nth-child(2) {
         border-width: 0;
@@ -1173,8 +1162,7 @@ Huge-screen layout
     }
     .the-footer {
         color: #839496;
-        position: relative;
-        display: block;
+        position: absolute;
         float: right;
         width: 22%;
         top: 15px;
