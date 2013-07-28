@@ -132,14 +132,11 @@
     } );
 </script>
 <script>
-    $(".hoverli").hover(
-        function () {
-            $('ul.nav-menu').slideDown('medium');
-        },
-        function () {
-            $('ul.nav-menu').slideUp('medium');
-        }
-    );
+    $(".hoverli").hover(function () {
+        $('ul.nav-menu').slideDown('medium');
+    },function () {
+        $('ul.nav-menu').slideUp('medium');
+    });
 </script>
 <script>
     $.backstretch("/assets/images/Don't_panic.jpg");
@@ -173,7 +170,7 @@
     $("pre").mCustomScrollbar({
         horizontalScroll:true,
         theme:"light",
-        mouseWheel:true,
+        mouseWheel:false,
         scrollInertia:300,
         autoHideScrollbar:true,
     });
@@ -181,14 +178,12 @@
 <script>
     $('.back_to_top').hover(function(){
         $(this).addClass('animated bounce');
-    });
-    $('.back_to_top').mouseleave(function(){
+    },function(){
         $(this).removeClass('animated bounce');
     });
     $('.head_link').hover(function(){
         $(this).addClass('animated swing');
-    });
-    $('.head_link').mouseleave(function(){
+    },function(){
         $(this).removeClass('animated swing');
     });
 </script>

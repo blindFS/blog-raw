@@ -152,9 +152,7 @@ function alert {
     DATE=`date`             # get time of completion
     LAST=$history[$HISTCMD] # get current command
     LAST=${LAST%[;&|]*}     # remove "; alert" from it
-
-    LAST=${LAST//\"/'\"'}   # replace " for \" to not break lua format
-
+    LAST=${LAST//\"/'\"'}   # "} # 拙计的pygement，不过vim有的时候也会这样，high regin太坑爹了。place slash in front of quotation mark in order not to break lua
     # check if the command was successful
     if [[ $RVAL == 0 ]]; then
         BG_COLOR="#000b10"
@@ -165,7 +163,6 @@ function alert {
         FG_COLOR="#000b10"
         RESAULT="fail"
     fi
-
     MESSAGE="naughty.notify({ \
             title = \"Command $RESAULT on: \t\t$DATE\", \
             text = \"$ $LAST\", \

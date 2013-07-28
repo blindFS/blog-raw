@@ -10,7 +10,7 @@ tags: awesome shell
 
 ![screenshot](/assets/images/gpu_popup.png)
 
-taken by "shutter -s=1200,1,400,200 -e"
+Taken by "shutter -s=1200,1,400,200 -e"
 
 #### Environments
 * awesome 3.4.14 with _[blingbling](http://awesome.naquadah.org/wiki/Blingbling)_
@@ -24,7 +24,7 @@ first if the discrete gpu is not in use,show it.
 else we could use the *nvidia-smi* tool to get gpu status info which is not included in $PATH by default.
 I choose to create a soft link of */usr/lib/nvidia-319/bin/nvidia-smi* to *~/bin/nvidia-smi*
 
-so here is the script
+So here is the script
 
 {% highlight bash linenos %}
 #!/bin/bash
@@ -42,7 +42,7 @@ the _--no-xorg_ argument of optirun means "do not start secondary X server" and 
 
 #### blingbling/popup.lua
 
-use the following to define a new popup with the name "cpusensors" and add gpu temp info to it
+Use the following to define a new popup with the name "cpusensors" and add gpu temp info to it
 
 {% highlight lua linenos %}
 local temppopup = nil
@@ -86,9 +86,9 @@ end
 
 #### rc.lua
 
-create a widget and hook it with the defined popup.
+Create a widget and hook it with the defined popup.
 
-done!
+Done!
 
 {% highlight lua linenos %}
 tempicon       = widget ({ type = "imagebox" })
