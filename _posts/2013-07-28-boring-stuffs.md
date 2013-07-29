@@ -3,7 +3,7 @@ layout: post
 title: "boring stuffs"
 description: ""
 category: config
-tags: vim regexp ruby jekyll liquid music 
+tags: vim regexp ruby jekyll liquid music
 ---
 {% include JB/setup %}
 
@@ -19,6 +19,11 @@ I mean even if I forget some of them which generally speaking,are not commonly u
 * I feel that if something is really easy to get by searching or reading documents,it will be a totally waste of time for me to put it here.
 * If it takes a bit of time to find while being very well stated elsewhere,I may put a link to help me redirect to the answer.
 * those stuffs I try/customize/modify(that means boring and no use) will be uploaded.
+
+#### vim syntastic css support
+
+I found out that the famous syntastic vim plugin has support for css.But ***csslint*** cli tool is needed.
+To installl it,simply execute **npm install -g csslint** as root.
 
 #### add css and html support for vim tagbar
 
@@ -36,7 +41,8 @@ Anyway,here is a section of my ~/.ctags file.It's just basic regexps which only 
     --regex-css=/^[ \t]*@font-face[ \t]*[,{][ \t]*$/font-face/f,font/
     --regex-css=/^[ \t]*@(-o-|-moz-|-webkit-){0,1}keyframes[ \t]*([A-Za-z0-9_-]+)[ \t]*[,{][ \t]*$/\1keyframes \2/k,keyframe/
 
-    --regex-html=/<[ \t]*([A-Za-z]+[^\/>]*)[ \t]*>/\1/t,tag/
+    --regex-html=/<[ \t]*[A-Za-z]+[^\/>]*class=['"]([^'"]*)['"][^\/>]*>/.\1/c,class/
+    --regex-html=/<[ \t]*[A-Za-z]+[^\/>]*id=['"]([^'"]*)['"][^\/>]*>/#\1/i,id/
 
 ctags version 5.9~svn20110310 does not support css filetype(there are patched ones which I thought are more useless),so I have to define it.Following are the regexps that I believe are not 100% correct.
 but if you use comments carefully,there will be probably no big deal.
@@ -63,7 +69,8 @@ let g:tagbar_type_css= {
 let g:tagbar_type_html= {
     \ 'ctagstype' : 'html',
     \ 'kinds'     : [
-        \ 't:tags'
+        \ 'i:ids',
+        \ 'c:classes',
     \ ]
 \ }
 {% endhighlight %}
@@ -79,7 +86,7 @@ Use something like this ***{% raw %}{% xiami musicid %}{% endraw %}*** to genera
 
 It is also meaningless because when you get the music id,there is already a fully functioning embed tag in front of your eyes.
 And it sucks because flash sucks.
-the only adventage of this is to put your markdown file neat.
+the only adventage of this is to keep your markdown file neat.
 However,the song above is awesome!
 Anyway,here's my xiami.rb:
 
