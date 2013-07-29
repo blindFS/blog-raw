@@ -77,7 +77,6 @@ ps:raw内双尖括号或者双单引号相连，这样：&lt;&lt;&gt;&gt;&apos;&
 
     &amp;lt;&amp;gt;&amp;nbsp;&amp;amp;
 
-<!--more-->
 
 #### index summary
 

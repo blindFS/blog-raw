@@ -38,8 +38,6 @@ echo "$(echo $bumble_temp | sed 's/\(\S\+\) C/          +\1.0°C/g')"
 {% endhighlight %}
 the _--no-xorg_ argument of optirun means "do not start secondary X server" and it just saves a lot of time to react
 
-<!--more-->
-
 #### blingbling/popup.lua
 
 Use the following to define a new popup with the name "cpusensors" and add gpu temp info to it

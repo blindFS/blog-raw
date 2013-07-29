@@ -17,6 +17,7 @@ tags: linux awesome shell
 但是这点小问题对于我这样最多只用5个桌面的人来说忽略不计。
 <br />
 下面那个很牛逼，就像是gnome下**mod+w**的预览功能。而且是对全部桌面下窗口的预览。像这样：
+
 ![revelation](http://awesome.naquadah.org/w/images/thumb/Revelation.png/600px-Revelation.png)
 
 这两个好东西还有个共同的有点就是配置及其简单。
@@ -31,8 +32,6 @@ tags: linux awesome shell
 前段时间不知道为啥，感觉chromium有内存泄露。看个长点的视频内存就用掉5,6个g。而这套配置的htop popup是针对cpu利用排序的，当鼠标浮动到
 cpu widget的时候会出来，但是mem widget时啥都没有，于是我添加了个针对mem利用排序的htop popup来方便观察异常状态。
 还是popup.lua，很简单，只需要给show_process_info这个函数加个参数来区分排列方法即可，其它东西都是现成的。
-
-<!--more-->
 
 {% highlight lua linenos %}
 local function show_process_info(inc_proc_offset, title_color,user_color, root_color, sort_order)

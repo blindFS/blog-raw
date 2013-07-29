@@ -75,7 +75,7 @@ let g:tagbar_type_html= {
 \ }
 {% endhighlight %}
 
-actually I don't use tagbar ofen,but sometimes it is more efficient than simple search.
+actually I don't use tagbar often,but sometimes it is more efficient than simple search.
 
 #### my first simple jekyll plugin ------ xiami tag for liquid template
 

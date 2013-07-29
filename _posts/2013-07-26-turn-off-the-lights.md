@@ -59,11 +59,11 @@ self.controller.Add_Loop_Conf(area,"morph",color2,'000000')
 self.controller.Add_Loop_Conf(area,"morph",'000000',color2)
 {% endhighlight %}
 
-<!--more-->
-
 这样之后，基本功能就可以实现了，比如on/off，还有选择几个常规颜色。
 我为什么说它是个烂摊子呢，主要是界面丑爆。
+
 ![screenshot](/assets/images/alienfx.png)
+
 这不科学的布局，这是在黑gtk么？
 值得一提的是indicator的图标我自己g了个，为了配合 [malys-uniblue](http://browse.deviantart.com/art/malys-uniblue-update-11-09-2012-298501868) 这个图标主题。
 这种方面我可能是有强迫症。ps：goldendict的图标g了但是不生效，可能是没找对位置。但是能locate到的goldendict的图标我都改了。这让我蛋疼不已

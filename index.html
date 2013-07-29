@@ -3,16 +3,20 @@ layout: page
 title: Don't panic!
 ---
 {% include JB/setup %}
-{% for post in site.posts limit:5 %}
-<h2><a class="post_title" href="{{post.url}}">{{post.title}}</a></h2>
+{% for post in site.posts limit:10 %}
 <div class="post-content">
-    {% if post.content contains '<!--more-->' %}
-    {{ post.content | split:'<!--more-->' | first }}
-    <br />
-    <a href='{{post.url}}'>read more</a>
-    {% else %}
+<h2><a class="post_title" href="{{post.url}}">{{post.title}}</a></h2>
     {{ post.content }}
-    {% endif %}
 </div>
-<br />
 {% endfor %}
+<script>
+    $('.post-content').each(function(){
+        $(this).css({'height': Math.floor(Math.random()*200)+700});
+    });
+    $('.post-content').wookmark({
+        autoResize: true,
+        container: $('.entry-content'),
+        flexibleWidth: 700,
+        offset: 6,
+    });
+</script>

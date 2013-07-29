@@ -2,7 +2,6 @@
 .cd-select {
     position: relative;
     display: block;
-    width: 194px;
     float: right;
     font-family: Moderno Rounded Regular;
 }
@@ -10,12 +9,14 @@
 
 .cd-dropdown > span {
     white-space: nowrap;
-    width: 100%;
+    width: 96%;
+    left:2%;
     height: 40px;
     line-height: 40px;
     color: #999;
     font-weight: 700;
     font-size: 17px;
+    background: rgb(40, 105, 126);
     background: rgba(40, 105, 126, 0.6);
     display: block;
     padding: 0 30px 0 10px;
@@ -31,7 +32,7 @@
 .cd-dropdown > span:after {
     content: '\25BC';
     position: absolute;
-    right: 0px;
+    right: 0;
     top: 15%;
     width: 50px;
     text-align: center;
@@ -41,7 +42,7 @@
     line-height: 24px;
 }
 
-.cd-dropdown.cd-active > span:after {
+.cd-dropdown .cd-active > span:after {
     content: '\25B2';
 }
 
@@ -59,7 +60,8 @@
 
 .cd-dropdown ul li span {
     white-space: nowrap;
-    width: 95%;
+    width: 96%;
+    background: rgb(40, 105, 126);
     background: rgba(40, 105, 126, 0.6);
     line-height: 40px;
     padding: 0 10px 0 10px;
@@ -79,9 +81,9 @@
     user-select: none;
 }
 .cd-dropdown ul li span:hover {
-    -webkit-box-shadow: 0px 0px 10px #309b36;
-    -moz-box-shadow: 0px 0px 10px #309b36;
-    box-shadow: 0px 0px 10px #309b36;
+    -webkit-box-shadow: 0 0 10px #309b36;
+    -moz-box-shadow: 0 0 10px #309b36;
+    box-shadow: 0 0 10 #309b36;
 }
 
 /* Select fallback styling */

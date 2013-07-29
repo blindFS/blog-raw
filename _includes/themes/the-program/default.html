@@ -19,6 +19,7 @@
     <script src="/js/jquery.smint.js"></script>
     <script src="/js/modernizr.min.js"></script>
     <script src="/js/jquery.dropdown.js"></script>
+    <script src="/js/jquery.wookmark.js"></script>
     <script src="/js/jquery.backstretch.min.js"></script>
     <script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
 </head>
@@ -32,7 +33,7 @@
                         <li class="hoverli">
                             <div class="logo">
                                 <a href="/">
-                                    <img src="/assets/themes/the-program/image/marvin.png" alt="logo" title="Homepage" width="200px">
+                                    <img src="/assets/themes/the-program/image/marvin.png" alt="logo" title="Homepage">
                                 </a>
                             </div>
                             <ul class="nav-menu">
@@ -68,9 +69,7 @@
     <div class="body" role="main">
         <div class="unit-body">
             <div class="unit-inner unit-body-inner">
-                <div class="entry-content">
-                    {{ content }}
-                </div>
+                {{ content }}
             </div><!-- unit-inner -->
         </div><!-- unit-body -->
     </div><!-- body -->
@@ -171,8 +170,12 @@
 <script>
     $("pre").mCustomScrollbar({
         horizontalScroll:true,
-        theme:"light",
         mouseWheel:false,
+        scrollInertia:300,
+        autoHideScrollbar:true,
+    });
+    $(".post-content").mCustomScrollbar({
+        mouseWheel:true,
         scrollInertia:300,
         autoHideScrollbar:true,
     });
@@ -189,6 +192,5 @@
         $(this).removeClass('animated swing');
     });
 </script>
-
 </body>
 </html>

@@ -19,26 +19,21 @@ audio,
 canvas,
 video {
     display: inline-block;
-             *display: inline;
-             *zoom: 1;
-         }
-         audio:not([controls]) {
-             display: none;
-         }
-         [hidden] {
-             display: none;
-         }
-         /*
-         Base from [HTML5 Boilerplate](http://j.mp/rP0wmY)
-         - Correct text resizing oddly in IE6/7 when body font-size is set using em units
-         - Force vertical scrollbar in non-IE
-         - Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
-         - Remove text-shadow in selection highlight: h5bp.com/i
-         - These selection declarations have to be separate
-         - Also: hot pink! (or customize the background color to match your design)
+}
+audio:not([controls]) {
+    display: none;
+}
+/*
+Base from [HTML5 Boilerplate](http://j.mp/rP0wmY)
+- Correct text resizing oddly in IE6/7 when body font-size is set using em units
+- Force vertical scrollbar in non-IE
+- Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+- Remove text-shadow in selection highlight: h5bp.com/i
+- These selection declarations have to be separate
+- Also: hot pink! (or customize the background color to match your design)
 
-         No styleguide reference.
-          */
+No styleguide reference.
+ */
 html {
     font-size: 100%;
     overflow-y: scroll;
@@ -68,6 +63,14 @@ textarea {
     color: #fff;
     text-shadow: none;
 }
+::scrollbar{
+    width: 0;
+    height: 0;
+}
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
 /*
 Links from [HTML5 Boilerplate](http://j.mp/rP0wmY)
 
@@ -85,10 +88,6 @@ a:hover {
 }
 a:focus {
     outline: thin dotted;
-}
-a:hover,
-a:active {
-    outline: 0;
 }
 /*
 Typography from [HTML5 Boilerplate](http://j.mp/rP0wmY)
@@ -112,7 +111,6 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
     margin: 1em 0;
     padding: 0;
 }
@@ -133,7 +131,6 @@ code,
 kbd,
 samp {
     font-family: monaco, monospace, serif;
-    _font-family: 'courier new', monospace;
 }
 /* Improve readability of pre-formatted text in all browsers */
 q {
@@ -229,7 +226,6 @@ label {
  */
 legend {
     border: 0;
-    *margin-left: -7px;
     padding: 0;
 }
 /*
@@ -244,7 +240,6 @@ textarea {
     font-size: 100%;
     margin: 0;
     vertical-align: baseline;
-    *vertical-align: middle;
 }
 /*
  * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
@@ -264,7 +259,7 @@ input[type="reset"],
 input[type="submit"] {
     cursor: pointer;
     -webkit-appearance: button;
-    *overflow: visible;
+    -moz-appearance: button;
 }
 /*
  * Consistent box sizing and appearance
@@ -276,12 +271,14 @@ input[type="radio"] {
 }
 input[type="search"] {
     -webkit-appearance: textfield;
+    -moz-appearance: textfield;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
 }
 input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
+    -moz-appearance: none;
 }
 /*
  * Remove inner padding and border in FF3/4: h5bp.com/l
@@ -338,7 +335,6 @@ No styleguide reference.
 .mod .ft,
 .mod .hd {
     overflow: hidden;
-    *overflow: visible;
     zoom: 1;
 }
 /*
@@ -357,7 +353,6 @@ No styleguide reference.
  */
 .media {
     overflow: hidden;
-    *overflow: visible;
     zoom: 1;
 }
 .media .media-left {
@@ -375,7 +370,6 @@ No styleguide reference.
 .media .ft,
 .media .hd {
     overflow: hidden;
-    *overflow: visible;
     zoom: 1;
 }
 /*
@@ -427,7 +421,6 @@ h2,
 .h2 {
     font-size: 30px;
     line-height: 52px;
-    margin-top: 52px;
     margin-bottom: 26px;
 }
 h3,
@@ -461,10 +454,11 @@ img.social {
 img.social:hover {
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
     -o-transform: scale(1.2);
     transform: scale(1.2);
 }
-img.back_to_top {
+.back_to_top {
     position: fixed;
     right: 0;
     bottom: 0;
@@ -476,11 +470,6 @@ img.back_to_top {
     -o-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
     z-index: 2;
-}
-img.back_to_top:hover {
-    -webkit-box-shadow: 0px 0px 7px #aaaaaa;
-    -moz-box-shadow: 0px 0px 7px #aaaaaa;
-    box-shadow: 0px 0px 7px #aaaaaa;
 }
 small,
 .small,
@@ -571,14 +560,12 @@ No styleguide reference.
  */
 .list-linear {
     letter-spacing: -0.31em;
-    *letter-spacing: normal;
     word-spacing: -0.43em;
     list-style: none;
     padding-left: 0;
 }
 .list-linear li {
     display: inline-block;
-    *display: inline;
     zoom: 1;
     line-height: normal;
     letter-spacing: normal;
@@ -596,18 +583,30 @@ No styleguide reference.
 html {
     color: #002b36;
 }
-#page {
-    /* background-color: #002b36; */
-}
 .body .unit-body {
+    border-top: 1px solid rgb(255, 255, 255);
     border-top: 1px solid rgba(255, 255, 255, 0.6);
-    padding: 26px;
+    padding: 25px;
 }
 .body .unit-body {
+    background-color: rgb(131, 148, 150);
     background-color: rgba(131, 148, 150, 0.8);
 }
-.body .unit-body img {
-    margin: 10px;
+
+.post-content {
+    overflow-y: scroll;
+    padding: 16px;
+    -webkit-box-shadow: 0 0 8px #002b36;
+    -moz-box-shadow: 0 0 8px #002b36;
+    box-shadow: 0 0 8px #002b36;
+}
+.post-content:hover{
+    -webkit-box-shadow: 0 0 15px #268bd2;
+    -moz-box-shadow: 0 0 15px #268bd2;
+    box-shadow: 0 0 15px #268bd2;
+}
+.entry-content{
+    position: relative;
 }
 /* LINK */
 a:link {
@@ -637,9 +636,9 @@ pre {
     margin-right: 0;
     padding: 1.625em;
     overflow: auto;
-    -webkit-box-shadow: 0px 0px 20px #b58900;
-    -moz-box-shadow: 0px 0px 20px #b58900;
-    box-shadow: 0px 0px 20px #b58900;
+    -webkit-box-shadow: 0 0 20px #b58900;
+    -moz-box-shadow: 0 0 20px #b58900;
+    box-shadow: 0 0 20px #b58900;
 }
 /* meta */
 /* HEADER
@@ -684,6 +683,7 @@ pre {
     position: fixed;
     bottom: 20px;
     left: 1%;
+    z-index: 1;
 }
 .the-header .wallpaper_controller img {
     -webkit-transition: all 0.5s ease-out;
@@ -692,9 +692,9 @@ pre {
     transition: all 0.5s ease-out;
 }
 .the-header .wallpaper_controller img:hover{
-    -webkit-box-shadow: 0px 0px 10px #2aa198;
-    -moz-box-shadow: 0px 0px 10px #2aa198;
-    box-shadow: 0px 0px 10px #2aa198;
+    -webkit-box-shadow: 0 0 10px #2aa198;
+    -moz-box-shadow: 0 0 10px #2aa198;
+    box-shadow: 0 0 10px #2aa198;
 }
 /* MAIN
 --------------------------------------------------------------------------------- */
@@ -708,42 +708,46 @@ pre {
     margin-top: 10px;
     margin-bottom: 20px;
 }
-.unit-article .entry-content h2,
-.unit-article .entry-content h3,
-.unit-article .entry-content h4,
-.unit-article .entry-content h5,
-.unit-article .entry-content h6 {
+/* .unit-article { */
+/*     position: relative; */
+/*     width: 100%; */
+/* } */
+.unit-article h2,
+.unit-article h3,
+.unit-article h4,
+.unit-article h5,
+.unit-article h6 {
     color: #002b36;
 }
-.unit-article .entry-content h2 a:link,
-.unit-article .entry-content h3 a:link,
-.unit-article .entry-content h4 a:link,
-.unit-article .entry-content h5 a:link,
-.unit-article .entry-content h6 a:link {
+.unit-article h2 a:link,
+.unit-article h3 a:link,
+.unit-article h4 a:link,
+.unit-article h5 a:link,
+.unit-article h6 a:link {
     color: #b83b20;
     border: 0;
 }
-.unit-article .entry-content h2 a:visited,
-.unit-article .entry-content h3 a:visited,
-.unit-article .entry-content h4 a:visited,
-.unit-article .entry-content h5 a:visited,
-.unit-article .entry-content h6 a:visited {
+.unit-article h2 a:visited,
+.unit-article h3 a:visited,
+.unit-article h4 a:visited,
+.unit-article h5 a:visited,
+.unit-article h6 a:visited {
     color: #b83b20;
     border: 0;
 }
-.unit-article .entry-content h2 a:hover,
-.unit-article .entry-content h3 a:hover,
-.unit-article .entry-content h4 a:hover,
-.unit-article .entry-content h5 a:hover,
-.unit-article .entry-content h6 a:hover {
+.unit-article h2 a:hover,
+.unit-article h3 a:hover,
+.unit-article h4 a:hover,
+.unit-article h5 a:hover,
+.unit-article h6 a:hover {
     color: #B58900;
     border: 0;
 }
-.unit-article .entry-content:first-child h2,
-.unit-article .entry-content:first-child h3,
-.unit-article .entry-content:first-child h4,
-.unit-article .entry-content:first-child h5,
-.unit-article .entry-content:first-child h6 {
+.unit-article first-child h2,
+.unit-article first-child h3,
+.unit-article first-child h4,
+.unit-article first-child h5,
+.unit-article first-child h6 {
     margin-top: 0;
 }
 .unit-article a {
@@ -758,18 +762,19 @@ pre {
 .unit-article a:visited {
     border-bottom: 2px solid #ad4346;
 }
-.unit-article .entry-content img {
+.unit-article img {
     -webkit-transition: all 0.5s ease-out;
     -moz-transition: all 0.5s ease-out;
     -o-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
 }
-.unit-article .entry-content a img:hover {
+.unit-article a img:hover {
     -webkit-box-shadow: 0 0 30px #e44c26;
     -moz-box-shadow: 0 0 30px #e44c26;
     box-shadow: 0 0 30px #e44c26;
 }
 .unit-article blockquote {
+    border-left: 1em solid rgb(21, 25, 25);
     border-left: 1em solid rgba(21, 25, 25, 0.8);
     padding-left: 1em;
 }
@@ -830,7 +835,7 @@ pre {
     white-space: nowrap;
     background-color: #fff04a;
 }
-.unit-article .entry-content img {
+.unit-article img {
     display: block;
     margin-right: auto;
     -webkit-box-shadow: 0 0 15px #002b36;
@@ -900,8 +905,8 @@ pre {
 }
 /* post & page */
 .tag_box {
-    right: 100px;
-    width: 300px;
+    right: 30px;
+    width: 550px;
     list-style: none;
     padding: 6px;
     -webkit-border-radius: 3px;
@@ -1026,9 +1031,9 @@ pre {
     color: #f0a6a8;
     border: 0;
 }
-.the-footer h4 {
-    margin-top: 0;
-}
+/* .the-footer h4 { */
+/*     margin-top: 0; */
+/* } */
 .the-footer .side_post_list a{
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -1045,17 +1050,19 @@ pre {
 .the-footer .side_post_list a:hover{
     color: #a5e560;
     padding: 0 10px 0 10px;
+    background-color: rgb(0, 24, 32);
     background-color: rgba(0, 24, 32, 0.66);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
     transform: scale(1.1);
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    -webkit-box-shadow: 0px 0px 10px #f3a682;
-    -moz-box-shadow: 0px 0px 10px #f3a682;
-    box-shadow: 0px 0px 10px #f3a682;
+    -webkit-box-shadow: 0 0 10px #f3a682;
+    -moz-box-shadow: 0 0 10px #f3a682;
+    box-shadow: 0 0 10px #f3a682;
 }
 /*
 Huge-screen layout
@@ -1070,13 +1077,14 @@ Huge-screen layout
     }
     .the-header .unit-head .nav-global {
         position: fixed;
-        width: 14%;
+        width: 12%;
         top: 15px;
         left: 1%;
-        padding: 8px;
+        padding-bottom: 6px;
         -webkit-border-radius: 6px;
         -moz-border-radius: 6px;
         border-radius: 6px;
+        background-color: rgb(101, 123, 131);
         background-color: rgba(101, 123, 131, 0.21);
         -webkit-box-shadow: 0 0 15px #aaaaaa;
         -moz-box-shadow: 0 0 15px #aaaaaa;
@@ -1113,7 +1121,7 @@ Huge-screen layout
 
     }
     .the-header .unit-head .nav-global .logo a {
-        padding: 10px 10px 10px 10px;
+        padding: 10px;
         position: relative;
     }
     .the-header .unit-head .nav-global .logo img {
@@ -1129,12 +1137,12 @@ Huge-screen layout
     }
     .the-header .unit-head .nav-global .logo a:hover {
         background: transparent;
-        -webkit-box-shadow: 0px 0px 30px #bbbbbb;
-        -moz-box-shadow: 0px 0px 30px #bbbbbb;
-        box-shadow: 0px 0px 30px #bbbbbb;
-        -webkit-border-radius: 102px;
-        -moz-border-radius: 102px;
-        border-radius: 102px;
+        -webkit-box-shadow: 0 0 30px #bbbbbb;
+        -moz-box-shadow: 0 0 30px #bbbbbb;
+        box-shadow: 0 0 30px #bbbbbb;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
     }
 
     .the-header .cd-dropdown,
@@ -1142,29 +1150,26 @@ Huge-screen layout
         width: 100%;
     }
     .body {
-        float: left;
-        width: 60%;
-        left: 16%;
-        right: 22%;
+        position: absolute;
+        width: 65%;
+        right: 21%;
     }
     .body .unit-body {
-        -webkit-box-shadow: 0px 0px 20px #aaaaaa;
-        -moz-box-shadow: 0px 0px 20px #aaaaaa;
-        box-shadow: 0px 0px 20px #aaaaaa;
-        padding: 26px 52px;
+        -webkit-box-shadow: 0 0 20px #aaaaaa;
+        -moz-box-shadow: 0 0 20px #aaaaaa;
+        box-shadow: 0 0 20px #aaaaaa;
         min-height: 1050px;
     }
     .the-footer h4 {
         font-size: 30px;
         line-height: 52px;
-        margin-top: 20px;
         margin-bottom: 10px;
     }
     .the-footer {
         color: #839496;
         position: absolute;
         float: right;
-        width: 22%;
+        width: 19%;
         top: 15px;
         right: 1%;
         -webkit-border-radius: 10px;
@@ -1173,10 +1178,6 @@ Huge-screen layout
         -webkit-box-shadow: 0 0 15px #aaaaaa;
         -moz-box-shadow: 0 0 15px #aaaaaa;
         box-shadow: 0 0 15px #aaaaaa;
-    }
-    .tag_box {
-        right: 26%;
-        width: 450px;
     }
 }
 /* Literal.Number.Integer.Long */
@@ -1196,15 +1197,9 @@ No styleguide reference.
     background-repeat: no-repeat;
     text-align: left;
     direction: ltr;
-    *line-height: 0;
 }
 .ir br {
     display: none;
-}
-/* Hide from both screenreaders and browsers: h5bp.com/u */
-.hidden {
-    display: none !important;
-    visibility: hidden;
 }
 /* Hide only visually, but have it available for screenreaders: h5bp.com/v */
 .visuallyhidden {
@@ -1218,8 +1213,8 @@ No styleguide reference.
     width: 1px;
 }
 /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+.visuallyhidden .focusable:active,
+.visuallyhidden .focusable:focus {
     clip: auto;
     height: auto;
     margin: 0;
@@ -1231,11 +1226,6 @@ No styleguide reference.
 .invisible {
     visibility: hidden;
 }
-/* Firefox had different box-sizing for hr. See: http://jsfiddle.net/sFgt7/ */
-hr {
-    -moz-box-sizing: content-box;
-}
-/* Contain floats: h5bp.com/q */
 .clearfix:before,
 .clearfix:after,
 .cf:before,
@@ -1258,20 +1248,4 @@ hr {
 .tag_box:after,
 #page:after {
     clear: both;
-}
-.clearfix,
-.cf,
-.hasGrid,
-.unit-inner,
-.tag_box,
-#page {
-    *zoom: 1;
-}
-.left {
-    *display: inline;
-    float: left;
-}
-.right {
-    *display: inline;
-    float: right;
 }
