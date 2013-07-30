@@ -1,7 +1,6 @@
 class XiaMi < Liquid::Tag
     Syntax = /^\s*(\d+_\d+)\s*/
     def initialize(tagName, markup, tokens)
-        super
         if markup =~ Syntax then
         @id = $1
         else

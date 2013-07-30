@@ -63,10 +63,6 @@ textarea {
     color: #fff;
     text-shadow: none;
 }
-::scrollbar{
-    width: 0;
-    height: 0;
-}
 ::-webkit-scrollbar {
     width: 0;
     height: 0;
@@ -441,7 +437,7 @@ ul,
 ol,
 dl {
     margin-top: 0;
-    margin-bottom: 1.625em;
+    margin-bottom: 1em;
 }
 img.social {
     float: right;
@@ -662,7 +658,7 @@ pre {
 .the-header .unit-head .nav-global .logo {
     display: block;
     width: auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .the-header .unit-head .nav-global .logo a {
     display: block;
@@ -674,7 +670,7 @@ pre {
 }
 .the-header .nav-menu {
     display: none;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 .the-header .navhover hr {
     border-top: 10px solid #839496
@@ -973,9 +969,9 @@ pre {
     background-color: #fafafa;
     padding: 1px 5px;
     margin-left: 3px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
     color: #1a1a1a;
     display: inline-block;
     position: relative;

@@ -103,8 +103,8 @@
         fjs.parentNode.insertBefore(js, fjs);
         };
     load('//platform.twitter.com/widgets.js', 'tweetjs');
-    load('https://apis.google.com/js/plusone.js', 'gplus1js'); // Checkout http://j.mp/ApDgMr for usage html for this is <div class="g-plusone" data-size="medium"></div>
-    // load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="{{ page.url }}" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+    load('https://apis.google.com/js/plusone.js', 'gplus1js');
+    load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk');
     }(document, 'script'));
 </script>
 <script>
@@ -138,7 +138,6 @@
     });
 </script>
 <script>
-    $.backstretch("/assets/images/Don't_panic.jpg");
     $.backstretch([
         "/assets/images/Don't_panic.jpg",
         "/assets/images/42.jpg",
@@ -151,6 +150,7 @@
         "/assets/images/bg7.jpg",
         "/assets/images/bg8.jpg"
     ], {fade: "slow", duration: "50000"});
+    $.backstretch("show", Math.floor(Math.random()*10));
 
     $('.next').click(function(){
         $.backstretch("next");

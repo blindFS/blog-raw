@@ -70,7 +70,7 @@ self.controller.Add_Loop_Conf(area,"morph",'000000',color2)
 
 如果只是这样，还是让我很不爽。应为，首先，界面太丑太丑，我根本不敢用，另外，我是终端控，能用cli解决的东西坚决不开gui。
 
-**Don't panic!**
+`Don't panic!`
 
 这种小事总是有办法的。写了个kbtoggle.py的简单脚本
 

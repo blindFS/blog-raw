@@ -23,7 +23,7 @@ I mean even if I forget some of them which generally speaking,are not commonly u
 #### vim syntastic css support
 
 I found out that the famous syntastic vim plugin has support for css.But ***csslint*** cli tool is needed.
-To installl it,simply execute **npm install -g csslint** as root.
+To installl it,simply execute `npm install -g csslint` as root.
 
 #### add css and html support for vim tagbar
 
@@ -80,7 +80,7 @@ actually I don't use tagbar often,but sometimes it is more efficient than simple
 #### my first simple jekyll plugin ------ xiami tag for liquid template
 
 I knew nothing about ruby,and I know almost nothing about ruby.But it doesn't bother to try something simple.
-Use something like this ***{% raw %}{% xiami musicid %}{% endraw %}*** to generate the following embeded music player.
+Use something like this `{{'{% xiami musicid'}} %}` to generate the following embeded music player.
 
 {% xiami 8137203_360063%}
 
@@ -94,7 +94,6 @@ Anyway,here's my xiami.rb:
 class XiaMi < Liquid::Tag
     Syntax = /^\s*(\d+_\d+)\s*/
     def initialize(tagName, markup, tokens)
-        super
         if markup =~ Syntax then
         @id = $1
         else

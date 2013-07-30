@@ -16,7 +16,7 @@ tags: vim powerline
 whatever，好歹人家提供了实现的方法。其实实现起来很简单，但是要符合powerline的那套声明语法并且不重不漏还是略费劲。
 总之有 [现成的代码](https://github.com/Lokaltog/vim-powerline/commit/d885f900acfde8094f408b53ab61774bd0b83b13) 可以抄对我来说总是件好事。
 
-但是其实以上的代码已经添加在最新的vim-powerline里了，但是却没有效果，细看发现需要在 **your-path/vim-powerline/autoload/Powerline/Themes/your-theme.vim** 中添加该segement到相应的位置，
+但是其实以上的代码已经添加在最新的vim-powerline里了，但是却没有效果，细看发现需要在 `your-path/vim-powerline/autoload/Powerline/Themes/your-theme.vim` 中添加该segement到相应的位置，
 就是所谓的'ws_marker',我喜欢把次要的东西放一边。
 
 {% highlight vim linenos %}
@@ -39,7 +39,7 @@ let g:Powerline#Themes#solarized256#theme = Pl#Theme#Create(
 
 神奇的是，这样之后还是没有效果，
 
-**Don't panic!**
+`Don't panic!`
 
 还需要一部操作就:PowerlineClearCache&lt;CR&gt;
 ps:这个地方卡了俺好久，囧。
