@@ -161,7 +161,7 @@ No styleguide reference.
 ul,
 ol {
     margin: 0;
-    padding: 0 0 0 40px;
+    padding: 0 0 0 30px;
 }
 dd {
     margin: 0 0 0 40px;
@@ -778,11 +778,6 @@ pre {
     margin-left: 0;
     margin-right: 0;
 }
-.unit-article ul,
-.unit-article ol,
-.unit-article dl {
-    padding-left: 10px;
-}
 .unit-article ul {
     list-style: square;
 }
@@ -827,8 +822,8 @@ pre {
 }
 .unit-article p code,
 .unit-article li code {
+    word-break: break-all;
     padding: 2px 5px;
-    white-space: nowrap;
     background-color: #fff04a;
 }
 .unit-article img {
@@ -902,9 +897,9 @@ pre {
 /* post & page */
 .tag_box {
     right: 30px;
-    width: 550px;
+    width: 500px;
     list-style: none;
-    padding: 6px;
+    padding: 10px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;

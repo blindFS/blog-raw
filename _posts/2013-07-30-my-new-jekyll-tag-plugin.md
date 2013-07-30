@@ -15,7 +15,7 @@ It crashes a lot,but I don't know why......Hopefully,they will find out and fix 
 
 #### vim plugin problem
 
-I also updated my vim-startify.But it,in my opinion just made downgrade instead of improvement.
+I also updated my vim-startify.But it,in my opinion,just made downgrade instead of improvement.
 
 `Don't panic!`<br/>
 they will be OK sooner or later.
@@ -24,7 +24,7 @@ they will be OK sooner or later.
 
 I haven't met this before.Every gems I try to install just "couldn't be found in any repository"!
 First of all,I checked **gem sources** and it showed [http://rubygems.org](http://rubygems.org) without any problem.
-So,I thought there might be something wrong with my gem configuration(actually,I haven't change anything).
+So,I thought there might be something wrong with my gem configuration(actually,I haven't changed anything).
 I stupidly **rm ~/.gem -rf**, reinstall **rubygems** with any version combination(1.9.3,1.9.1,1.8) and of cause nothing changed.
 Then I Unconsciously *ping rubygems.org*.Holy shit, 100% lost!I could even open the web page with direct connection.
 Problem solved.`gem install xxx --http-proxy=http://127.0.0.1:8087`

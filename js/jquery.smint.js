@@ -24,9 +24,9 @@ return $('.smint a').each( function() {
         var scrollTop = $(window).scrollTop();
         // if we scroll more than the navigation, change its position to fixed and add class 'fxd', otherwise change it back to absolute and remove the class
         if (scrollTop > stickyTop) {
-            $('.smint').css({ 'position': 'fixed', 'top':0, 'right': '23%' }).addClass('fxd');
+            $('.smint').css({ 'position': 'fixed', 'top':0, 'right': '21%', 'margin-right': '25px' }).addClass('fxd');
         } else {
-            $('.smint').css({ 'position': 'absolute', 'top': '30px', 'right': '7px' }).removeClass('fxd');
+            $('.smint').css({ 'position': 'absolute', 'top': '30px', 'right': 0 , 'margin-right': 0 }).removeClass('fxd');
         }
     };
     // run function
