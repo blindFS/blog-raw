@@ -10,6 +10,7 @@
     <meta name="author" content="{{ site.author.name }}">
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
     <link href='{{ ASSET_PATH }}/css/style.css' rel="stylesheet" media="all">
+    <link href='{{ ASSET_PATH }}/css/fonticon.css' rel="stylesheet" media="all">
     <link href='{{ ASSET_PATH }}/css/solarized.css' rel="stylesheet" media="all">
     <link href="/css/animate.css" rel="stylesheet" type="text/css" />
     <link href="/css/dropdown.css" rel="stylesheet" type="text/css" />
@@ -29,8 +30,7 @@
         <div class="unit-head">
             <div class="unit-inner unit-head-inner">
                 <nav class="nav-global">
-                    <ul class="hover">
-                        <li class="hoverli">
+                        <div class="hoverdiv">
                             <div class="logo">
                                 <a href="/">
                                     <img src="/assets/themes/the-program/image/marvin.png" alt="logo" title="Homepage">
@@ -42,8 +42,7 @@
                                 <li class="head_link"><a href="/categories.html">categories</a></li>
                                 <li class="head_link"><a href="/tags.html">tags</a></li>
                             </ul>
-                        </li>
-                    </ul>
+                        </div>
                     <div class="misc vcard">
                         <select id="cd-dropdown" class="cd-select">
                             <option value="-1" selected>follow me</option>
@@ -59,11 +58,12 @@
                 </nav>
             </div><!-- unit-inner -->
         </div><!-- unit-head -->
-        <div class="wallpaper_controller">
-            <img src='/assets/themes/the-program/image/previous.png' class='previous' alt='previous' width='35px' height='35px' />
-            <img src='/assets/themes/the-program/image/pause.png' class='pause' alt='pause' width='35px' height='35px' />
-            <img src='/assets/themes/the-program/image/resume.png' class='resume' alt='resume' width='35px' height='35px' />
-            <img src='/assets/themes/the-program/image/next.png' class='next' alt='next' width='35px' height='35px' />
+        <span class="control_toggle" aria-hidden="true" data-icon="!">  bg switch</span>
+        <div class="wallpaper_controller" style="display:none">
+            <div aria-hidden="true" data-icon="&" class="button previous"></div>
+            <div aria-hidden="true" data-icon="%" class="button pause"></div>
+            <div aria-hidden="true" data-icon="$" class="button resume"></div>
+            <div aria-hidden="true" data-icon="'" class="button next"></div>
         </div>
     </header>
     <div class="body" role="main">
@@ -81,32 +81,18 @@
                 <div class="side_post_list"><a class="post_title" href="{{post.url}}">&#10148;&nbsp;&nbsp;&nbsp;{{post.title}}</a></div>
                 {% endfor %}
                 <h4>licence</h4>
-                <p class="licence">
-                    <a href="http://www.w3.org/html/logo/">
-                        <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-graphics-multimedia-semantics.png" width="143" height="40" alt="HTML5 Powered with CSS3 / Styling, Graphics, 3D &amp; Effects, Multimedia, and Semantics" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D &amp; Effects, Multimedia, and Semantics">
-                    </a>
-                    <br />
+                <span class="licence" aria-hidden="true" data-icon="5">
                     Theme: <a href="http://themes.jekyllbootstrap.com/preview/the-program/">the-program</a> based on <a href="http://jekyllbootstrap.com/">Jekyll-bootstrap</a>.<br>
+                </span>
+                <span class="licence" aria-hidden="true" data-icon="3">
                     Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
-                </p>
+                </span>
                 <h4>visitors</h4>
                 <script src="http://jg.revolvermaps.com/2/1.js?i=61hmvugox2z&amp;s=220&amp;m=5&amp;v=true&amp;r=false&amp;b=000000&amp;n=false&amp;c=ff0000" async="async"></script>
             </div><!-- unit-foot-inner -->
         </div><!-- unit-foot -->
     </footer>
 </div><!-- page -->
-<script>
-    (function(d, s) {
-        var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.src = url; js.id = id;
-        fjs.parentNode.insertBefore(js, fjs);
-        };
-    load('//platform.twitter.com/widgets.js', 'tweetjs');
-    load('https://apis.google.com/js/plusone.js', 'gplus1js');
-    load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk');
-    }(document, 'script'));
-</script>
 <script>
     /*! A fix for the iOS orientationchange zoom bug.Script by @scottjehl, rebound by @wilto. MIT License.*/
     (function(j){var i=j.document;if(!i.querySelectorAll){return}var l=i.querySelectorAll("meta[name=viewport]")[0],a=l&&l.getAttribute("content"),h=a+", maximum-scale=1.0",d=a+", maximum-scale=10.0",g=true,c=j.orientation,k=0;if(!l){return}function f(){l.setAttribute("content",d);g=true}function b(){l.setAttribute("content",h);g=false}function e(m){c=Math.abs(j.orientation);k=Math.abs(m.gamma);if(k>8&&c===0){if(g){b()}}else{if(!g){f()}}}j.addEventListener("orientationchange",f,false);j.addEventListener("deviceorientation",e,false)})(this);
@@ -121,6 +107,15 @@
     $('a[href=#page]').click(function(){
             $('html, body').animate({scrollTop:0}, 'slow');
     });
+    $('.back_to_top').hide();
+    $(window).scroll(function(){
+        var y = $(window).scrollTop();
+        if( y > 800 ){
+            $('.back_to_top').fadeIn('slow');
+        } else {
+            $('.back_to_top').fadeOut('slow');
+        }
+    });
 </script>
 <script>
     $( '#cd-dropdown' ).dropdown( {
@@ -131,10 +126,13 @@
     } );
 </script>
 <script>
-    $(".hoverli").hover(function () {
-        $('ul.nav-menu').slideDown('medium');
+    $(".hoverdiv").hover(function () {
+        $('.nav-menu').slideDown('medium');
     },function () {
-        $('ul.nav-menu').slideUp('medium');
+        $('.nav-menu').slideUp('medium');
+    });
+    $(".control_toggle").click(function () {
+        $('.wallpaper_controller').slideToggle('slow');
     });
 </script>
 <script>

@@ -112,10 +112,10 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 }
 
 .animated.bounce {
-	-webkit-animation: bounce 2s infinite;
-	-moz-animation: bounce 2s infinite;
-	-o-animation: bounce 2s infinite;
-	animation: bounce 2s infinite;
+	-webkit-animation: bounce 2s;
+	-moz-animation: bounce 2s;
+	-o-animation: bounce 2s;
+	animation: bounce 2s;
 }
 @-webkit-keyframes tada {
 	0% {-webkit-transform: scale(1);}

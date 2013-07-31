@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'nopic';
+    src:url('/assets/themes/the-program/font/nopic.eot');
+    src:url('/assets/themes/the-program/font/nopic.eot?#iefix') format('embedded-opentype'),
+        url('/assets/themes/the-program/font/nopic.woff') format('woff'),
+        url('/assets/themes/the-program/font/nopic.ttf') format('truetype'),
+        url('/assets/themes/the-program/font/nopic.svg#nopic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+    font-family: 'nopic';
+    content: attr(data-icon);
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-spinner, .icon-spinner-2, .icon-spinner-3, .icon-play, .icon-pause, .icon-backward, .icon-forward, .icon-feed, .icon-google-plus, .icon-facebook, .icon-twitter, .icon-deviantart, .icon-tumblr, .icon-github, .icon-linkedin, .icon-lastfm, .icon-delicious, .icon-stumbleupon, .icon-html5, .icon-html5-2, .icon-css3, .icon-youtube, .icon-vimeo2, .icon-lanyrd, .icon-steam, .icon-blogger, .icon-flickr, .icon-picassa, .icon-dribbble {
+    font-family: 'nopic';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+.icon-spinner:before {
+    content: "\21";
+}
+.icon-spinner-2:before {
+    content: "\22";
+}
+.icon-spinner-3:before {
+    content: "\23";
+}
+.icon-play:before {
+    content: "\24";
+}
+.icon-pause:before {
+    content: "\25";
+}
+.icon-backward:before {
+    content: "\26";
+}
+.icon-forward:before {
+    content: "\27";
+}
+.icon-feed:before {
+    content: "\28";
+}
+.icon-google-plus:before {
+    content: "\29";
+}
+.icon-facebook:before {
+    content: "\2a";
+}
+.icon-twitter:before {
+    content: "\2b";
+}
+.icon-deviantart:before {
+    content: "\2c";
+}
+.icon-tumblr:before {
+    content: "\2d";
+}
+.icon-github:before {
+    content: "\2e";
+}
+.icon-linkedin:before {
+    content: "\2f";
+}
+.icon-lastfm:before {
+    content: "\30";
+}
+.icon-delicious:before {
+    content: "\31";
+}
+.icon-stumbleupon:before {
+    content: "\32";
+}
+.icon-html5:before {
+    content: "\33";
+}
+.icon-html5-2:before {
+    content: "\34";
+}
+.icon-css3:before {
+    content: "\35";
+}
+.icon-youtube:before {
+    content: "\36";
+}
+.icon-vimeo2:before {
+    content: "\37";
+}
+.icon-lanyrd:before {
+    content: "\38";
+}
+.icon-steam:before {
+    content: "\39";
+}
+.icon-blogger:before {
+    content: "\3a";
+}
+.icon-flickr:before {
+    content: "\3b";
+}
+.icon-picassa:before {
+    content: "\3c";
+}
+.icon-dribbble:before {
+    content: "\3d";
+}

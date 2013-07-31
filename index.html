@@ -3,6 +3,9 @@ layout: page
 title: Don't panic!
 ---
 {% include JB/setup %}
+<div class="loading">
+    <div class="loading_content"><img src='/assets/themes/the-program/image/loading.gif' alt='loading_img' class="loading_img" style="display:inline"/>&nbsp;&nbsp;grab your towel while loading</div>
+</div>
 {% for post in site.posts limit:10 %}
 <div class="post-content">
 <h2><a class="post_title" href="{{post.url}}">{{post.title}}</a></h2>
@@ -18,5 +21,8 @@ title: Don't panic!
         container: $('.entry-content'),
         flexibleWidth: 700,
         offset: 6,
+    });
+    $(window).load(function(){
+        $('.loading').delay(1000).fadeOut(1000);
     });
 </script>

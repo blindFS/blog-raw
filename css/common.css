@@ -3,7 +3,7 @@
     position: relative;
     display: block;
     float: right;
-    width: 150px;
+    width: 180px;
     font-family: Moderno Rounded Regular;
 }
 
@@ -61,7 +61,8 @@
 
 .cd-dropdown ul li span {
     white-space: nowrap;
-    width: 96%;
+    width: 85%;
+    margin-left: 20px;
     background: rgb(40, 105, 126);
     background: rgba(40, 105, 126, 0.6);
     line-height: 40px;
