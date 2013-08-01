@@ -101,21 +101,59 @@
 {% include JB/analytics %}
 
 <script>
-    $('.tag_box').smint({
-        'scrollSpeed' : 1000
-    });
-    $('a[href=#page]').click(function(){
-            $('html, body').animate({scrollTop:0}, 'slow');
-    });
-    $('.back_to_top').hide();
-    $(window).scroll(function(){
-        var y = $(window).scrollTop();
-        if( y > 800 ){
-            $('.back_to_top').fadeIn('slow');
-        } else {
-            $('.back_to_top').fadeOut('slow');
-        }
-    });
+    if ($(window).width() > 1279) {
+
+        /*! tag_box */
+        $('.tag_box').smint({
+            'scrollSpeed' : 1000
+        });
+
+        /*! back_to_top&head_link animation */
+        $('.back_to_top').hide();
+        $('.back_to_top').click(function(){
+                $('html, body').animate({scrollTop:0}, 'slow');
+        });
+        $(window).scroll(function(){
+            var y = $(window).scrollTop();
+            if( y > 800 ){
+                $('.back_to_top').fadeIn('slow');
+            } else {
+                $('.back_to_top').fadeOut('slow');
+            }
+        });
+        $('.back_to_top').hover(function(){
+            $(this).addClass('animated bounce');
+        },function(){
+            $(this).removeClass('animated bounce');
+        });
+        $('.head_link').hover(function(){
+            $(this).addClass('animated swing');
+        },function(){
+            $(this).removeClass('animated swing');
+        });
+
+        /*! scrollbar */
+        $("pre").mCustomScrollbar({
+            horizontalScroll:true,
+            mouseWheel:false,
+            scrollInertia:300,
+            autoHideScrollbar:true,
+        });
+        $(".post-content").mCustomScrollbar({
+            scrollInertia:300,
+            autoHideScrollbar:true,
+        });
+
+        /*! hover drop menu */
+        $(".hoverdiv").hover(function () {
+            $('.nav-menu').slideDown('medium');
+        },function () {
+            $('.nav-menu').slideUp('medium');
+        });
+    }
+    else {
+        $('.nav-menu').slideDown('fast');
+    }
 </script>
 <script>
     $( '#cd-dropdown' ).dropdown( {
@@ -124,16 +162,6 @@
         slidingIn : 100,
         random : true
     } );
-</script>
-<script>
-    $(".hoverdiv").hover(function () {
-        $('.nav-menu').slideDown('medium');
-    },function () {
-        $('.nav-menu').slideUp('medium');
-    });
-    $(".control_toggle").click(function () {
-        $('.wallpaper_controller').slideToggle('slow');
-    });
 </script>
 <script>
     $.backstretch([
@@ -164,29 +192,8 @@
         $.backstretch("resume");
         $.backstretch("show",randomNum);
     });
-</script>
-<script>
-    $("pre").mCustomScrollbar({
-        horizontalScroll:true,
-        mouseWheel:false,
-        scrollInertia:300,
-        autoHideScrollbar:true,
-    });
-    $(".post-content").mCustomScrollbar({
-        scrollInertia:300,
-        autoHideScrollbar:true,
-    });
-</script>
-<script>
-    $('.back_to_top').hover(function(){
-        $(this).addClass('animated bounce');
-    },function(){
-        $(this).removeClass('animated bounce');
-    });
-    $('.head_link').hover(function(){
-        $(this).addClass('animated swing');
-    },function(){
-        $(this).removeClass('animated swing');
+    $(".control_toggle").click(function () {
+        $('.wallpaper_controller').slideToggle('slow');
     });
 </script>
 </body>

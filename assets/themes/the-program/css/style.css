@@ -955,8 +955,7 @@ pre {
 }
 /* post & page */
 .tag_box {
-    right: 30px;
-    width: 500px;
+    width: 100%;
     list-style: none;
     padding: 10px;
     -webkit-border-radius: 3px;
@@ -1225,6 +1224,9 @@ Huge-screen layout
         -webkit-box-shadow: 0 0 15px #aaaaaa;
         -moz-box-shadow: 0 0 15px #aaaaaa;
         box-shadow: 0 0 15px #aaaaaa;
+    }
+    .tag_box {
+        width: 500px;
     }
 }
 /* Literal.Number.Integer.Long */
