@@ -15,6 +15,7 @@ tags: linux vim powerline
 * snipmate            - neosnippet
 * neocomplecache      - neocomplete
 * powerline           - airline
+* csscolor            - colorizer
 
 #### window to view tags
 
@@ -82,11 +83,11 @@ let g:tagbar_type_vhdl = {
 
 #### term with vim
 
-I don't use gvim much,So this one not necessary for me,but it's cool to have.
+I don't use gvim much,So this one is not necessary for me,but it's cool to have.
 Compared to 'conqueTerm','VimShell' is much faster,less buggy and better integrated with vim itself.
-For example,when you type `vim filename` inside 'VimShell' inside vim,it just open create another buffer.
+For example,when you type `vim filename` inside 'VimShell',it just open/create another buffer.
 And when you type `exit`,nothing else happens but current shell buffer closes.
-What's more, it use vim popup for shell complete.
+What's more,it uses vim popup for shell complete.
 
 **VimShell config**
 
@@ -102,10 +103,10 @@ let g:vimshell_temporary_directory = "~/tmp/vimshell"
 
 I have to say All of these 4 plugins are awesome,but the old ones are just as good as 'sublime' builtins.
 However,'CtrlP' and 'unite' are much more powerful and extensible,especially 'unite'.
-you can find a bunch of extensions for 'unite' [here](https://github.com/Shougo/unite.vim/wiki/unite-plugins).
-What I see is that 'unite' is really promising framework for vim plugin development.Maybe someday,when I come up with
-an idea beyond existing plugins,I probably will try something based on it.
-And I have maybe a overview look of less than 5% of it power,yet,I find 2 unique things really useful.
+You can find a bunch of extensions for 'unite' [here](https://github.com/Shougo/unite.vim/wiki/unite-plugins).
+What I see is that 'unite' is a really promising framework for vim plugin development.Maybe someday,when I come up with
+an idea beyond existing plugins,I will probably try something based on it.
+And I have a overview look of maybe less than 5% of its power,yet,I find 3 unique things really useful.
 
 * \:Unite output
     This one is awesome because it allow you to search through basically all of the info of your vim environment
@@ -119,8 +120,11 @@ And I have maybe a overview look of less than 5% of it power,yet,I find 2 unique
     'VimShell','unite','neosnippet' are from a single great vimer [Shougo](http://vinarian.blogspot.com/).
     That maybe why I choose 'neosnippet' over 'snipmate'.
 
+* \:Unite locate
+    This function comes from a extension,it uses the shell command 'locate' to fast find any file in the file system.
+
 Currently,I have not totally replace 'CtrlP' with 'unite' yet.Because I am used to search file/tag/function with 'CtrlP'.
-But I believe,someday in the future when I get used to the unite way,I'll remove the 'CtrlP' as well.
+But I believe,someday in the future when I get used to the unite way,I'll remove 'CtrlP' as well.
 
 **CtrlP/unite config**
 
@@ -137,15 +141,20 @@ nnoremap <F6> :CtrlPChange<CR>
 nnoremap <F7> :CtrlPTag<CR>
 set wildignore+=*/.cache/*,*/tmp/*,*/.git/*,*/.neocon/*,*.log,*.so,*.swp,*.zip,*.gz,*.bz2,*.bmp,*.ppt
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,*.dll
-command!  Mru :CtrlPMRUFiles<CR>
 
-let g:unite_enable_split_vertically = 1
-let g:unite_enable_ignore_case      = 1
-let g:unite_enable_smart_case       = 1
-let g:unite_winwidth                = 50
-let g:unite_data_directory          = $HOME.'/tmp/unite'
+let g:unite_enable_ignore_case  = 1
+let g:unite_enable_smart_case   = 1
+let g:unite_enable_start_insert = 1
+let g:unite_winheight           = 10
+let g:unite_split_rule          = 'botright'
+let g:unite_prompt              = '➤ '
+let g:unite_data_directory      = $HOME.'/tmp/unite'
+command!  Mru :Unite file_mru
+command!  Uhelp :Unite help
 nnoremap <leader><space>b :Unite -quick-match buffer<CR>
-nnoremap <leader><space>f :Unite file_rec/async<CR>
+nnoremap <leader><space>f :Unite file<CR>
+nnoremap <leader><space>l :Unite locate<CR>
+nnoremap <leader><space>u :Unite source<CR>
 {% endhighlight %}
 
 #### modern complete engine
@@ -184,11 +193,11 @@ endif
 
 #### just abandon the vim-powerline
 
-I found vim-airline a week ago.At first,I hate it because its default theme is really ugly.I thought it was useless to reinvent the wheel.
-But after a detailed glimpse,I realized that it's much better that the old deprecated vim-powerline.Its code is elegant,it also has many amazing themes(really not don't know
- why the author don't change the default one),and it is easy to create a theme and apply it.Most of all,it is much much faster than vim-powerline while accomplishing every single function of vim-powerline and plus.
+I found vim-airline a week ago.At first,I hate it because its default theme is really ugly.And I thought it was useless to reinvent the wheel.
+But after a detailed glimpse,I realized that it's much better that the old deprecated 'vim-powerline'.Its code is elegant.There are many amazing themes as well(really not don't know
+ why the author don't change the default one).And it is much easier to create a theme and apply it.Most of all,it is much much faster than 'vim-powerline' while accomplishing every single function of 'vim-powerline' and plus.
 
-If you have read [this article](/config/2013/07/25/trailing-whitespace-marker-segement-on-vim-powerline/),you may remember how much it bothers to just add a single additional section.
+If you have read [this article](/config/2013/07/25/trailing-whitespace-marker-segement-on-vim-powerline/),you may remember how much it bothers to just add a single additional section to 'vim-powerline'.
 However,with vim-airline,you only need 2 more lines in `bundle-path/vim-airline/autoload/airline.vim` ----- the last 2 lines in the following code block.
 
 {% highlight vim linenos %}
@@ -207,6 +216,6 @@ let sl.="%#Al3#"
 let sl.='%{g:airline_detect_white_space && search(" $","nw") ? " ✹ " : ""}'
 {% endhighlight %}
 
-The above one only indicate the color to use,so it's alternative which means just 1 line will be good to go.No need to autocmd,so it interacts synchronously(there is delay in vim-powerline).
+The first one only indicate the color to use,so it's alternative which means just 1 line will be good to go.No need to autocmd,so it interacts synchronously(there is delay in 'vim-powerline').
 It is also easy if you want that to become a entire section in order to insert the separator with a different color which in my opinion,is stupid.
-BTW,airline has a awesome specified statusline for 'unite' plugin which is the initial inspiration for me to try it.
+BTW,airline has an well specified version for 'unite' which is the initial inspiration for me to try it.
