@@ -306,9 +306,12 @@ No styleguide reference.
 table {
     border-collapse: collapse;
     border-spacing: 0;
+    margin-bottom: 20px;
 }
-td {
+th,td {
+    border: solid 1px #002b36;
     vertical-align: top;
+    padding: 3px 10px;
 }
 /*
 Base .mod module from http://j.mp/svs81k
