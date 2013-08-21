@@ -42,7 +42,7 @@ In my **.zshrc** I just set complete\_in\_word and auto\_menu
 #### \_jekyll
 I believe there is a better way to do this,but I just have dived so far.Anyway,it works.
 
-{% highlight bash linenos %}
+{% highlight sh linenos %}
 #compdef jekyll
 
 local ret=1 state

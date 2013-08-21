@@ -16,7 +16,7 @@ turn off display。但是等这么久是很折磨人的。
 
 找来找去找了个奇葩玩意叫vbetool，用法就是
 
-{% highlight bash %}
+{% highlight sh %}
 vbetool dpms on #turn on display
 vbetool dpms off #turn off display
 {% endhighlight %}
@@ -24,7 +24,7 @@ vbetool dpms off #turn off display
 说他奇葩是应为当turn off了以后你不能通过单一的按键或者移动鼠标来恢复而是必须要输入上头那个命令，而且是sudo，于是还要带密码。
 为了不那么痛苦，最简单的方法就是alias了吧
 
-{% highlight bash %}
+{% highlight sh %}
 alias von='sudo vbetool dpms on'
 alias voff='sudo vbetool dpms off'
 {% endhighlight %}

@@ -16,9 +16,9 @@ tags: linux shell
 | $0   | Pathname of the program being executed.                             |
 | $$   | Process id of current command.                                      |
 | $!   | Process id of the last job put into the background.                 |
-| "$@" | A list of the args is most commonly used.                           |
+| "$@" | A list of the args (most commonly used).                            |
 
-{% highlight bash %}
+{% highlight sh %}
 # access to all args
 count=1
 while [[ $# -gt 0 ]]; do
@@ -31,7 +31,7 @@ done
 #### If test ####
 
 * `if [test];then xxx;fi`
- _*man test*_ for detailed options
+  [_*man test*_](http://unixhelp.ed.ac.uk/CGI/man-cgi?test) for detailed options
 
 * `if((arithmetic exp));then xxx;fi`
 
@@ -72,7 +72,7 @@ done
 | `$((base#number))`                         | Number is in base.                                                                                                                                                                           |
 | `$(( a**b ))`                              | Exponentiation.                                                                                                                                                                              |
 | `${array[@]}`                              | All list items.                                                                                                                                                                              |
-| `${#a[@]}`                                 | Array length.                                                                                                                                                                                |
+| `${#array[@]}`                             | Array length.                                                                                                                                                                                |
 | `${!array[@]}`                             | All list indexes.                                                                                                                                                                            |
 | `{exp1; exp2; [exp3; ...]}`                | Group commands.Faster and require less memory comparing to subshell                                                                                                                          |
 | `(exp1; exp2; [exp3; ...])`                | Subshell commands which won't change environment variables.                                                                                                                                  |
@@ -88,7 +88,7 @@ done
 * `set -x #Turn on tracing` and `set +x #Turn off tracing`
 *  Embed a body of text into our script and feed it into the standard input of a command.If `<<-` is used instead of `<<`, leading tabs will be ignored.
 
-{% highlight bash %}
+{% highlight sh %}
 cat << EOF
     some text here
 EOF

@@ -37,7 +37,7 @@ And I have a habit of putting source code that I download/clone/checkout in this
 
 In order to keep them up to date,I wrote a zsh function to help me.And I just added **npm,gem,pear** support to it.
 
-{% highlight bash linenos %}
+{% highlight sh linenos %}
 function src-update () {
     eval curpath=$(pwd)
     eval gitpath=$(realpath $1)

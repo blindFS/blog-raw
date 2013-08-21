@@ -26,7 +26,7 @@ I choose to create a soft link of */usr/lib/nvidia-319/bin/nvidia-smi* to *~/bin
 
 So here is the script
 
-{% highlight bash linenos %}
+{% highlight sh linenos %}
 #!/bin/bash
 bumble_status=$(optirun --status|awk -F " " '{print $NF}')
 if [ "$bumble_status" = "off."  ]; then
