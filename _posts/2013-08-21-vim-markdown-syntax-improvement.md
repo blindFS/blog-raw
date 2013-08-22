@@ -13,9 +13,21 @@ tags: vim liquid
 * The entire syntax process is silent and fast enough.
 * Dynamic syntax when content changes.
 
+### Accomplished ###
+
+Dynamic syntax region highlighting according to specific language for both liquid/github_flavor
+
+    {% raw %}
+    {% highlight ft %}
+    ...
+    {% endhighlight %}
+    ```ft
+    ```
+    {% endraw %}
+
 ### Implement ###
 
-[git repo](http://https://github.com/farseer90718/vim-markdown)
+[git repo](https://github.com/farseer90718/vim-markdown)
 
 Most of the job is done by the following single function.
 
