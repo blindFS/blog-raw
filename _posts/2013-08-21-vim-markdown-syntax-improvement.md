@@ -15,19 +15,13 @@ tags: vim liquid
 
 ### Accomplished ###
 
-Dynamic syntax region highlighting according to specific language for both liquid/github_flavor
-
-    {% raw %}
-    {% highlight ft %}
-    ...
-    {% endhighlight %}
-    ```ft
-    ```
-    {% endraw %}
+* Dynamic syntax region highlighting for markdown/vimwiki.
+* Manual highlight selected block.
+* Allow users to create new rules.
 
 ### Implement ###
 
-[git repo](https://github.com/farseer90718/vim-markdown)
+[git repo](https://github.com/farseer90718/vim-regionsyntax)
 
 Most of the job is done by the following single function.
 
@@ -66,13 +60,11 @@ Solution:
 {% highlight vim linenos %}
 let g:rainbow_load_separately = [
 \   [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
-\   [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
-\   [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
-\   [ '*.{html,htm}' , [] ],
-\   [ '*.css' , [] ],
-\   [ '*.md', [] ],
-\   [ '*.mkd', [] ],
-\   [ '*.markdown', [] ],
+\   [ 'tex' , [['(', ')'], ['\[', '\]']] ],
+\   [ 'html' , [] ],
+\   [ 'css' , [] ],
+\   [ 'mkd', [] ],
+\   [ 'wiki', [] ]
 \   ]
 {% endhighlight %}
 
