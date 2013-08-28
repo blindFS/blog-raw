@@ -2,12 +2,12 @@
 layout: post
 title: "Use pygments with vimwiki"
 description: ""
-category: tweak config
+category: tweak
 tags: vim python vimwiki
 ---
 {% include JB/setup %}
 
-#### Why not using syntaxhighlighter ####
+## Why not using syntaxhighlighter ##
 
 vimwiki 官方推荐的高亮方式是通过[ 这个玩意 ](https://code.google.com/p/syntaxhighlighter/)。
 这玩意无比蛋疼。首先，不同的语言要引用不一样的js。如果要把全部的js引入模板就显得很傻逼。
@@ -21,7 +21,7 @@ vimwiki 官方推荐的高亮方式是通过[ 这个玩意 ](https://code.google
 既然pygments提供了方便的[ 命令行工具 ](http://pygments.org/docs/cmdline/)。
 那么我想，通过修改vimwiki的代码来试用它应该不困难。于是我尝试了一下。
 
-#### Solution ####
+## Solution ##
 
 [ Gist ](https://gist.github.com/farseer90718/6363367). BTW，gist这个玩意还真好用，gist.vim这个插件也非常牛叉。之前都没察觉...
 通过修改`autoload/vimwiki/html.vim` 下的**process_tag_pre**函数来达到效果。
