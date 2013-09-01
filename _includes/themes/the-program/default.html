@@ -19,6 +19,7 @@
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery.smint.js"></script>
     <script src="/js/modernizr.min.js"></script>
+    <script src="/js/konami.js"></script>
     <script src="/js/jquery.dropdown.js"></script>
     <script src="/js/jquery.wookmark.js"></script>
     <script src="/js/jquery.backstretch.min.js"></script>
@@ -33,7 +34,8 @@
                         <div class="hoverdiv">
                             <div class="logo">
                                 <a href="/">
-                                    <img src="/assets/themes/the-program/image/marvin.png" alt="logo" title="Homepage">
+                                    <img class="marvin" src="/assets/themes/the-program/image/marvin.png" alt="logo" title="Homepage">
+                                    <img class="kagura" src="/assets/images/kagura.gif" alt="logo" title="Homepage" style="display:none">
                                 </a>
                             </div>
                             <ul class="nav-menu">
@@ -100,6 +102,13 @@
 
 {% include JB/analytics %}
 
+<script>
+    var YouKnowTooMuch = function() {
+        $('.kagura').show();
+        $('.marvin').hide();
+    }
+    var konami = new Konami(YouKnowTooMuch);
+</script>
 <script>
     if ($(window).width() > 1279) {
 

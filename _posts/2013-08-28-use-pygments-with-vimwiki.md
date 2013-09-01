@@ -30,6 +30,8 @@ vimwiki 官方推荐的高亮方式是通过[ 这个玩意 ](https://code.google
 有各种乱七八糟的符号。万不得已，虽然恶心了点，但是安全。
 不贴代码的话文章貌似有点短...
 
+ps：为了配合我写的[这个插件](/config/2013/08/21/vim-markdown-syntax-improvement)，由于pygments里头的lexer名称跟vim下的syntax的名称不一定相同只好用一个字典来转换（11-13行）。
+
 {% highlight vim linenos %}
 {% raw %}
 function! s:process_tag_pre_pygments(line, pre)
@@ -41,8 +43,10 @@ function! s:process_tag_pre_pygments(line, pre)
   let processed = 0
   if !pre[0] && a:line =~ '^\s*{{{'
     let s:syntax = matchstr(a:line, 'class="\zs\w\+')
-    if s:syntax == ""
-      let s:syntax = "text"
+    let s:syntax = matchstr(a:line, 'class=.\zs\w\+')
+    let s:syntax = s:syntax == "" ? "text" : s:syntax
+    if exists("g:vimwiki_code_syntax_map['".s:syntax."']")
+      let s:syntax = g:vimwiki_code_syntax_map[s:syntax]
     endif
     let s:lines_pre = ""
     let pre = [1, len(matchstr(a:line, '^\s*\ze{{{'))]
