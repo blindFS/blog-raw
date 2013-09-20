@@ -103,6 +103,7 @@ JB :
     provider : google
     google :
         tracking_id : 'UA-40313156-2'
+        tracking_url : 'farseer90718.github.io'
     getclicky :
       site_id :
     mixpanel :
