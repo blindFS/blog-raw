@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "boring stuffs"
+title: "Boring stuffs"
 description: ""
 category: config
 tags: vim regexp ruby jekyll liquid music

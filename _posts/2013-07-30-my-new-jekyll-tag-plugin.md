@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "my new jekyll tag plugin"
+title: "My new jekyll tag plugin"
 description: ""
 category: jekyll
 tags: vim linux jekyll liquid regexp shell ツッコミ

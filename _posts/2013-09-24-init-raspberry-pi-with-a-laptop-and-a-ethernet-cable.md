@@ -94,4 +94,4 @@ Then `pacman -Syu` and wait wait wait......
 
 
 ### TODO ###
-Try to connect the ap-hotspot on startup.(the wpa_supplicant.service not helpful,looking for other approach.)
+Wifi auto connection.

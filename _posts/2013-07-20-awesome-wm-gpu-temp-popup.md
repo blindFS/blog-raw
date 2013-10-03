@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "awesome wm gpu temp popup"
+title: "Awesome wm gpu temp popup"
 description: ""
 category: config
 tags: awesome shell

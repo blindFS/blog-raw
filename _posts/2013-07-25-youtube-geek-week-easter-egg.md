@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "youtube geek week Easter egg"
+title: "Youtube geek week Easter egg"
 description: ""
 category: fun
 tags: ツッコミ youtube

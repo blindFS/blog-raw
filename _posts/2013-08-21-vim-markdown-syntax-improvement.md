@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "vim markdown syntax improvement"
+title: "Vim markdown syntax improvement"
 description: ""
 category: config
 tags: vim liquid

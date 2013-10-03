@@ -3,6 +3,7 @@ HTML5 display definitions from [HTML5 Boilerplate](http://j.mp/rP0wmY)
 
 No styleguide reference.
  */
+
 article,
 aside,
 details,
@@ -74,7 +75,7 @@ No styleguide reference.
  */
 a {
     color: #00e;
-    font-family: trackregular;
+    font-family: 'Aldrich';
 }
 a:visited {
     color: #551a8b;
@@ -407,7 +408,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Moderno Rounded Regular, monaco, monospace;
+    font-family: 'Kite One', monaco, monospace;
 }
 h1,
 .h1 {
@@ -525,26 +526,6 @@ No styleguide reference.
     url('/assets/themes/the-program/font/monaco-webfont.woff') format('woff'),
     url('/assets/themes/the-program/font/monaco-webfont.ttf') format('truetype'),
     url('/assets/themes/the-program/font/monaco-webfont.svg#monacoregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Moderno Rounded Regular";
-    src: url("/assets/themes/the-program/font/moderno_rounded.eot?") format("eot"),
-    url("/assets/themes/the-program/font/moderno_rounded.woff") format("woff"),
-    url("/assets/themes/the-program/font/moderno_rounded.ttf") format("truetype"),
-    url("/assets/themes/the-program/font/moderno_rounded.svg#Moderno-Rounded") format("svg");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "trackregular";
-    src: url("/assets/themes/the-program/font/track-webfont.eot?") format("eot"),
-    url("/assets/themes/the-program/font/track-webfont.woff") format("woff"),
-    url("/assets/themes/the-program/font/track-webfont.ttf") format("truetype"),
-    url("/assets/themes/the-program/font/track-webfont.svg#trackregular") format("svg");
     font-weight: normal;
     font-style: normal;
 }
@@ -699,7 +680,7 @@ pre {
     position: fixed;
     left: 0;
     bottom: 160px;
-    font-family: trackregular;
+    font-family: 'Aldrich';
     padding: 4px 5px 0 5px;
     border:2px solid #111;
     background-color: transparent;
@@ -1084,7 +1065,7 @@ pre {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    font-size: 1.3em;
+    font-size: 1.5em;
     line-height: 2.5em;
     color: #859900;
     display: block;

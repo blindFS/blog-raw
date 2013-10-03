@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "something about jekyll"
+title:  "Something about jekyll"
 date:   19 Jul 2013
 categories: jekyll
 tags: liquid jekyll

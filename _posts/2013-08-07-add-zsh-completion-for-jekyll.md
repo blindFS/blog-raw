@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "add zsh completion for jekyll"
+title: "Add zsh completion for jekyll"
 description: ""
 category: jekyll
 tags: linux shell jekyll

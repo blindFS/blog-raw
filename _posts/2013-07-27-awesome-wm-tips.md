@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "awesome wm tips"
+title: "Awesome wm tips"
 description: ""
 category: config
 tags: linux awesome shell

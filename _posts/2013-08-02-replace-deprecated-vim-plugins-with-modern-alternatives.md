@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "replace deprecated vim plugins with modern alternatives"
+title: "Replace deprecated vim plugins with modern alternatives"
 description: ""
 category: config
 tags: linux vim powerline

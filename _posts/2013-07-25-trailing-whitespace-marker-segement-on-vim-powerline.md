@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "trailing whitespace marker segement on vim powerline"
+title: "Trailing whitespace marker segement on vim powerline"
 description: ""
 category: config
 tags: vim powerline

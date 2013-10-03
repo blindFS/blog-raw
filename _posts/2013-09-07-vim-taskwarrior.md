@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "vim taskwarrior"
+title: "Vim taskwarrior"
 description: ""
 category: tweak
 tags: linux vim taskwarrior

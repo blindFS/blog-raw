@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "turn off the lights"
+title: "Turn off the lights"
 description: ""
 category: fun
 tags: linux python
