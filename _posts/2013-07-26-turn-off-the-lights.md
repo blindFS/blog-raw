@@ -62,7 +62,7 @@ self.controller.Add_Loop_Conf(area,"morph",'000000',color2)
 这样之后，基本功能就可以实现了，比如on/off，还有选择几个常规颜色。
 我为什么说它是个烂摊子呢，主要是界面丑爆。
 
-![screenshot](/assets/images/alienfx.png)
+![screenshot](/assets/images/article/alienfx.png)
 
 这不科学的布局，这是在黑gtk么？
 值得一提的是indicator的图标我自己g了个，为了配合 [malys-uniblue](http://browse.deviantart.com/art/malys-uniblue-update-11-09-2012-298501868) 这个图标主题。

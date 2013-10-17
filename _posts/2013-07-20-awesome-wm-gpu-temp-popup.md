@@ -8,7 +8,7 @@ tags: awesome shell
 {% include JB/setup %}
 #### final effect
 
-![screenshot](/assets/images/gpu_popup.png)
+![screenshot](/assets/images/article/gpu_popup.png)
 
 Taken by "shutter -s=1200,1,400,200 -e"
 

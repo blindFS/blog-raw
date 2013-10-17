@@ -14,7 +14,7 @@ The code is hosted on [github](https://github.com/farseer90718/vim-taskwarrior).
 
 Feel like this:
 
-![vim-taskwarrior](/assets/images/vim-taskwarrior.png)
+![vim-taskwarrior](/assets/images/article/vim-taskwarrior.png)
 
 The reason that I write this plugin is that I can't got [vit](http://taskwarrior.org/projects/1/wiki/Vit) working on my computer.
 Plus I dislike the way vit highlights tasks.
