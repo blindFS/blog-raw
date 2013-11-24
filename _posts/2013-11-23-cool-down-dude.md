@@ -3,7 +3,7 @@ layout: post
 title: "Cool down dude!"
 description: ""
 category: tweak
-tags: linux arch cpu
+tags: linux arch cpu ツッコミ
 ---
 {% include JB/setup %}
 
@@ -57,9 +57,25 @@ max_freq="3GHz"
 那哥们说他找不着powertop的切换report的按键。
 manpage里头的确也没写，后来我找了好久，终于发现是ctrl+tab。
 
+## 其它
+
+powertop 会有一些tuning的建议，但是用sysctl修改的话，重启之后又会恢复。
+之前不知道什么是udev rules。但是照着[这篇](https://wiki.archlinux.org/index.php/Power_saving)照样画葫芦就能解决问题。
+不知道用TLP是不是能直接搞定。我得仔细看看sysctl.d和udev rules的相关内容。
+
 ## 效果
 
-完事之后，在我写这篇博客的时候，cpu temp一直稳定在50一下。我还是很满意的，虽然powertop还建议修改一些pci的配置，
-但是作为一个懒人，写service还是太麻烦了。而且这些选项的影响应该非常小。暂时忽略吧。
+完事之后，在我写这篇博客的时候，cpu temp一直稳定在50一下。我还是很满意的。
 
-我得抓紧把我本子的电池给修好......神烦，外星人就是个坑，等以后有钱了妥妥换mac。再坚持坚持吧。
+我得抓紧把我本子的电池给修好......神烦，aw就是个坑，等以后有钱了妥妥换mac。再坚持坚持吧。
+
+## 吐槽
+
+尼玛刚刚给客服打电话，那客服实在是太2了，整整浪费了我将近20分钟时间，最后还是按一开始我描述的方式处理了。
+aw的保修期是3年，但是尼玛坑爹的电池保修期是1年（于是就莫名其妙的过保了），aw的电池型号特殊，根本不是标准件。这摆明了是坑你。客服说
+新的电池要价700-800，我去年买了个登山包，超耐磨。后来我看某宝的普遍价格是300左右，实在是要换电池的话，又得给马老板创收了。
+
+## 参考
+
+* [sysctl.d]( http://0pointer.de/public/systemd-man/sysctl.d.html )
+* [udev rules]( http://www.reactivated.net/writing_udev_rules.html )
