@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ctags &gt;cscope &gt;gtags"
+title: "ctags &lt; cscope &lt; gtags"
 description: ""
 category: config
 tags: vim linux
