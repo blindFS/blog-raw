@@ -26,6 +26,13 @@ Tweaked a [little bit](https://gist.github.com/farseer90718/8037645).
 
 What I did is simply add another item with *dlabel* and *dcmd* in the list called *menu*.
 
+And these lines allow me to set focus to a specific monitor with my keyboard:
+
+{% highlight lua %}
+awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end),
+awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_relative(-1) end),
+{% endhighlight %}
+
 ### XF86 keys
 
 I can't bind that xrandr function to the **XF86Display** which is 'fn+F1' on my laptop.
@@ -51,6 +58,4 @@ Disable that, everything is fine now.
 
 I flushed my phone with [this rom](http://forum.xda-developers.com/showthread.php?t=2525906) yesterday.
 It's extremely fast.
-Glade to know that this device is still quite usable.
-
-
+Glad to know that this device is still quite usable.
