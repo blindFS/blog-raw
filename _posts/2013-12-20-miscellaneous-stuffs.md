@@ -54,6 +54,10 @@ ACTION=="add", SUBSYSTEM=="usb", TEST=="power/autosuspend", ATTR{power/autosuspe
 
 Disable that, everything is fine now.
 
+## grub-mkconfig error(out of memory)
+
+Add this line `GRUB-DISABLE-SUBMENU=y` to /etc/default/grub.
+
 ## About Android 4.4 kitkat
 
 I flushed my phone with [this rom](http://forum.xda-developers.com/showthread.php?t=2525906) yesterday.
