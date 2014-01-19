@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "awesome wm tips 2"
+title: "Awesome wm tips 2"
 description: ""
 category: tweak
 tags: linux awesome xdotool
