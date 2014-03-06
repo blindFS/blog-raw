@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Awesome wm client & gtk.window"
+title: "Awesome wm client and gtk.window"
 description: ""
 category: tweak
 tags: awesome linux gtk
