@@ -103,8 +103,8 @@ JB :
   analytics :
     provider : google
     google :
-        tracking_id : 'UA-40313156-2'
-        tracking_url : 'farseer90718.github.io'
+        tracking_id : 'UA-40313156-5'
+        tracking_url : 'farseer.cn'
     getclicky :
       site_id :
     mixpanel :
