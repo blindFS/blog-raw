@@ -1,6 +1,7 @@
 # This is the default format.
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink: /:categories/:year/:month/:day/:title
+port: 4001
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 markdown: rdiscount
@@ -120,6 +121,7 @@ JB :
   #
   sharing :
     provider : false
+
 
   # Settings for all other include helpers can be defined by creating
   # a hash with key named for the given helper. ex:
