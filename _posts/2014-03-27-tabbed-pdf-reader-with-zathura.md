@@ -61,6 +61,10 @@ fi
 
 前边的部分就是保证tabbed正常运行，然后通过wmctrl找到tabbed窗口的xid，然后用zathura的-e参数将新产生的窗口嵌入到tabbed的内部。
 
+值得一提的是以上的实现方法通过terminal或者awesome的prompt，或者gnome的prompt都能正常工作。
+但是用gmrun却不行，问题出在第一步，`wmctrl -x -a`就不能work。看了下pstree，觉得应该有更深层次的理由。
+但其实gmrun对我来说诱惑力很有限，淡定地删除之。
+
 ## XLFD
 
 虽说tabbed这货很实用，但是外观相当不友善，而且最奇葩的是，配置只能通过修改config.h并重新编译来改变。
