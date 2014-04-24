@@ -30,7 +30,7 @@ tags: IM linux
 我需要做的修改主要是:
 
 * 切换至简体：按*Ctril+~*即可切换
-* 添加一些模糊音的规则（前后鼻音部分真的亚历山大）：修改`/usr/share/rime-data/luna_pinyin.schema.yaml`，添加类如
+* 添加一些模糊音的规则（前后鼻音不分真的亚历山大）：修改`/usr/share/rime-data/luna_pinyin.schema.yaml`，添加类如
 
 {% highlight text %}
 - derive/([ei])n$/$1ng/
