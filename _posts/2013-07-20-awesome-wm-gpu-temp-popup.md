@@ -3,7 +3,7 @@ layout: post
 title: "Awesome wm gpu temp popup"
 description: ""
 category: config
-tags: awesome shell
+tags: awesome shell gpu
 ---
 {% include JB/setup %}
 #### final effect

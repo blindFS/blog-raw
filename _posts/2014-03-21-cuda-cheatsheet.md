@@ -3,7 +3,7 @@ layout: post
 title: "CUDA cheatsheet"
 description: ""
 category: notes
-tags: CUDA
+tags: CUDA gpu
 ---
 {% include JB/setup %}
 

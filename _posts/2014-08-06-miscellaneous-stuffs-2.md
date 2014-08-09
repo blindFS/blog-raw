@@ -3,7 +3,7 @@ layout: post
 title: "Miscellaneous stuffs 2"
 description: ""
 category: Config
-tags: arch linux awesome compton gtk ツッコミ
+tags: arch linux im awesome compton gtk gpu ツッコミ
 ---
 {% include JB/setup %}
 
@@ -180,5 +180,14 @@ couth 做如下修改:
 
 * 有个问题是，mpd 如果设置了开机自动启动，然后自动恢复之前播放曲目的话，当时的音量是不受 couth，或者说 amixer -c0 控制的。
 需要停止，再次启动。我猜测是 asound 的配置在 mpd 启动那会还没有生效，或者是 pulseaudio 还没启动。小问题，不要紧...
+
+## Disable NVIDIA card on system startup
+
+不知道从哪次内核更新或者是显卡驱动更新之后，反正已经好久了，开机后N卡的状态默认是开着的。
+这让我很是郁闷，我找到了 bbswitch 的 [README](https://github.com/Bumblebee-Project/bbswitch)。
+试了下其中的方法(kmod & systemd)... 但是不管用，估计是加载 nvidia 驱动模块的时候又自动 on 了。
+
+搜索到的解决办法如下<del> [gist](https://gist.github.com/farseer90718/24f5c200524dd05a20c3) </del>
+在 `/etc/bumblebee/bumblebee.conf` 中修改 TurnCardOffAtExit 为 true.
 
 综上所述，最近的日子不太平。小毛病不断，我确实想换 mac 了，但是又觉得略麻烦...
