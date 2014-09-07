@@ -18,7 +18,7 @@ tags: arch linux im awesome compton gtk gpu ツッコミ
 
 我之前使用openvpn来科学上网，openvpn是作为一个systemd service启动的，
 顺便提一下，默认的service脚本有点小问题，如果openvpn的service在
-network 的一些service，比如dhcpd之前启动，则是无效的，因此最好在 [Unit]
+network 的一些service，比如dhcpcd之前启动，则是无效的，因此最好在 [Unit]
 中加入 `After=network.target`。
 对于之前版本的 nm， 用这个方法来连接非常的完美。
 但是升级之后就不是这样了，虽然隧道是建好了，但是报文不走隧道。
