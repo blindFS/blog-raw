@@ -38,7 +38,7 @@ tags: game art
 
 ### Polyhedron Combo
 
-有人说，艾达之前偷走了许多几何图形，而这个游戏剧情的主线是艾达归还失物，寻求救赎的过程。不论怎样，每一关的最后，艾达都会从自己的帽子中掏出一个规则的几何图形。下图是资料片Forgotten Shores的图形集合。
+有人说，艾达之前偷走了许多几何图形，而这个游戏剧情的主线是艾达归还失物，寻求救赎的过程。不论怎样，每一关的最后，艾达都会从自己的帽子中掏出一个规则的几何图形。下图是资料篇Forgotten Shores的图形集合。
 
 ![mvstar](/assets/images/article/Escher/mv_stars.png =500x)
 
@@ -55,7 +55,7 @@ tags: game art
 
 上面描述到的第二种图形始终给我一种强烈的违和感，我总觉得它的美感要逊色于其它图形，但是从对称性上来说，它的确是中心对称的，这点上甚至强过正四面体，那么我意识中的美感欠缺到底来自何处呢？
 
-于此相关的一个有趣的词条叫做[Uniform polyhedron compound](http://en.wikipedia.org/wiki/Uniform_polyhedron_compound)，不过里面的图形的约束条件要强很多："The symmetry group of the compound acts transitively on the compound's vertices."，跟踪链接后发现此处的"transitively"指的是对于任意的两个顶点A、B，存在一个图形顶点的置换，在其作用下，A被置换为B。那么一个简单的推论就是：每个点的度必须相同。
+与此相关的一个有趣的词条叫做[Uniform polyhedron compound](http://en.wikipedia.org/wiki/Uniform_polyhedron_compound)，不过里面的图形的约束条件要强很多："The symmetry group of the compound acts transitively on the compound's vertices."，跟踪链接后发现此处的"transitively"指的是对于任意的两个顶点A、B，存在一个图形顶点的置换，在其作用下，A被置换为B。那么一个简单的推论就是：每个点的度必须相同。
 
 ### Impossible Objects
 
@@ -64,13 +64,16 @@ tags: game art
 
 上面这句话源自纪念碑谷中的NPC。从这句话来说，上面提到的那种对游戏剧情的解读或许是说的通的。而这句话出现的地方，正是下文中将要提到的彭罗思三角形出现的地方。
 
-那么造成这种[不可能出现的图形](http://en.wikipedia.org/wiki/Impossible_object)的原因是什么？我想本质上，这与之后我们会看到的各种错觉现象一样，来自三维物体在二维投影中的信息缺失。我们没有办法从二维的图像中还原三维物体的全部空间信息，换句话说，为了还原物体，我们需要对我们所见到的信息用想象进行补全。而这个想象，恰恰是不靠谱的......
+那么造成这种[不可能出现的图形](http://en.wikipedia.org/wiki/Impossible_object)的原因是什么？我想本质上，这与之后我们会看到的各种错觉现象一样，来自三维物体在二维投影中的信息缺失。我们没有办法从二维的图像中还原三维物体的全部空间信息，换句话说，为了还原物体，我们需要对我们所见到的信息用想象进行补全。而想象会很容易地被光影等因素引导，进而产生矛盾。
 
 #### Penrose Triangle
 
 ![pt](/assets/images/article/Escher/mv_triangle.png =500x)
 
-这个图形就是著名的[彭罗思三角形](http://en.wikipedia.org/wiki/Penrose_triangle)。而这个图形的创作者彭罗思[父](http://en.wikipedia.org/wiki/Lionel_Penrose)[子](http://en.wikipedia.org/wiki/Roger_Penrose)，也是十分了得的人物。那么这和埃舍尔又有什么关系呢？
+这个图形就是著名的[彭罗思三角形](http://en.wikipedia.org/wiki/Penrose_triangle)。
+维基中提到这是一个"3-loop Möbius strip"，注意观察三个乌鸦人的行走路线便能理解这句话的意思了。
+
+这个图形的传扬者彭罗思[父](http://en.wikipedia.org/wiki/Lionel_Penrose)[子](http://en.wikipedia.org/wiki/Roger_Penrose)，也是十分了得的人物。那么这和埃舍尔又有什么关系呢？
 
 答案在维基词条中一目了然，让我们来欣赏下埃舍尔的作品 Ascending and Descending(1960)中的[彭罗思阶梯](http://en.wikipedia.org/wiki/Penrose_stairs)。
 
@@ -106,7 +109,11 @@ tags: game art
 
 ![wf](/assets/images/article/Escher/waterfall.jpg =500x)
 
-然而这幅杰作还有其它的两点，注意图中两个柱子上的图形。第一个图形恰似Stars中的图形一般，是由[3个正方体组成](http://mathworld.wolfram.com/Cube3-Compound.html)的。
+然而这幅杰作还有其它的亮点。
+
+注意水渠和立柱，如果根据高度将其分为三层，那么每层中的组合都可看做一个彭罗思三角形！
+
+另，注意图中两个柱子上的图形。第一个图形恰似Stars中的图形一般，是由[3个正方体组成](http://mathworld.wolfram.com/Cube3-Compound.html)的。
 
 ![3c](/assets/images/article/Escher/3cubes.png =300x)
 
@@ -120,7 +127,7 @@ tags: game art
 * 可以用3个相同的大八面体组合而成
 * 用它可以既无重复又无遗漏地填满整个空间!
 
-我对这两幅破布做如下解读：水流从深度低的地方流向深度高的地方，正是这样的深度差转化为高度差，从而推动水轮机永动。
+我对这两幅瀑布做如下解读：水流从深度低的地方流向深度高的地方，正是这样的深度差转化为高度差，从而推动水轮机永动。
 
 那么有没有高度换深度的呢？我们来看下面这一组图。
 
@@ -146,7 +153,7 @@ Convex and Concave(1955)
 
 ## Postscript
 
-两者的同构之处也许远多于我的描述，这款游戏我玩了两次，包括Original和Forgotten Shores，遗憾的是红丝带特别关(限时购买)我再无法体验了。我相信我还会再玩第三遍，第四遍(如果它不出新的资料片的话)......如果我有新的发现，会添加到这里。
+两者的同构之处也许远多于我的描述，这款游戏我玩了两次，包括Original和Forgotten Shores，遗憾的是红丝带特别关(限时购买)我再无法体验了。我相信我还会再玩第三遍，第四遍(如果它不出新的资料篇的话)......如果我有新的发现，会添加到这里。
 
 埃舍尔的作品确实像GEB作者侯世达所说的那样是一块瑰宝。其中不乏极具思想性的作品，如：画手、画廊、拿着反光球的手。这些都没有在本文中出现，仅仅是因为我还没有在MV这款游戏中找到它们的身影。顺便提一下，MV中的音乐也很不错，虽然跟赋格是两码事。
 
