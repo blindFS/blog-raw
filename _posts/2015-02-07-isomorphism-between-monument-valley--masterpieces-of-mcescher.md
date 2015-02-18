@@ -64,13 +64,14 @@ tags: game art
 
 上面这句话源自纪念碑谷中的NPC。从这句话来说，上面提到的那种对游戏剧情的解读或许是说的通的。而这句话出现的地方，正是下文中将要提到的彭罗思三角形出现的地方。
 
-那么造成这种[不可能出现的图形](http://en.wikipedia.org/wiki/Impossible_object)的原因是什么？我想本质上，这与之后我们会看到的各种错觉现象一样，来自三维物体在二维投影中的信息缺失。我们没有办法从二维的图像中还原三维物体的全部空间信息，换句话说，为了还原物体，我们需要对我们所见到的信息用想象进行补全。而想象会很容易地被光影等因素引导，进而产生矛盾。
+那么造成这种[不可能出现的图形](http://en.wikipedia.org/wiki/Impossible_object)的原因是什么？我想本质上，这与之后我们会看到的各种错觉现象一样，来自三维物体在二维投影中的信息缺失。我们没有办法从二维的图像中还原三维物体的全部空间信息，换句话说，为了还原物体，我们需要对我们所见到的信息用想象进行补全。而想象会很容易地被光影、参照物等因素引导，进而产生矛盾。
 
 #### Penrose Triangle
 
 ![pt](/assets/images/article/Escher/mv_triangle.png =500x)
 
 这个图形就是著名的[彭罗思三角形](http://en.wikipedia.org/wiki/Penrose_triangle)。
+GEB的英文原著的封面正是此图形，另外theverge.com的logo也是由此而来。
 维基中提到这是一个"3-loop Möbius strip"，注意观察三个乌鸦人的行走路线便能理解这句话的意思了。
 
 这个图形的传扬者彭罗思[父](http://en.wikipedia.org/wiki/Lionel_Penrose)[子](http://en.wikipedia.org/wiki/Roger_Penrose)，也是十分了得的人物。那么这和埃舍尔又有什么关系呢？
