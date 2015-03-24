@@ -32,9 +32,6 @@ zle-line-init () {
     auto-fu-init
 }
 zle -N zle-line-init
-zle -N zle-keymap-select
-# 在complete menu中进行选择
-zle -N auto-fu-zle-keymap-select
 {% endhighlight %}
 
 auto-fu的skip规则，比较复杂，具体参见文档，我还没有仔细探究。
@@ -53,18 +50,21 @@ zstyle ':completion:*:warnings' format $' \e[30;41m No Match Found \e[0m\e[31m�
 zstyle ':auto-fu:var' postdisplay ''
 
 # prompt中的vimod字段
-auto-fu-zle-keymap-select () {
+function zle-keymap-select {
+# afu所需
     afu-track-keymap "$@" afu-adjust-main-keymap
-    if [[ $KEYMAP = "afu-vicmd" ]]; then
+    if [[ $KEYMAP =~ "vicmd" ]]; then
         vimod=$vimodcmd
     else
         vimod=$vimodins
     fi
     zle reset-prompt
+    zle -R
 }
+zle -N zle-keymap-select
 {% endhighlight %}
 
-我在prompt中添加了`$vimod`提示，具体[内容](https://github.com/farseer90718/zsh-funcs/blob/master/powerline.zsh)见链接。于是需要覆盖掉这个widget，注意这时的 keymap 的值是auto-fu提供的 *afu-vicmd* 和 *afu-vicmd* 。
+我在prompt中添加了`$vimod`提示，具体[内容](https://github.com/farseer90718/zsh-funcs/blob/master/powerline.zsh)见链接。这个函数在每次keymap发生变化时调用，注意这时的 keymap 的值可能是auto-fu提供的 *afu-viins* 和 *afu-vicmd* ，所以判断的时候采取 `=~`。
 这样之后还有个问题，就是自动纠错时会产生不必要的消息，导致如下情况：
 
 ![afu](/assets/images/article/auto-fu.png)
