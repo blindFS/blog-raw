@@ -3,7 +3,7 @@ layout: post
 title: "Proof of normalization property in STLC"
 description: ""
 category: notes
-tags: Coq logic
+tags: Coq logic lambda-calculus
 ---
 {% include JB/setup %}
 
