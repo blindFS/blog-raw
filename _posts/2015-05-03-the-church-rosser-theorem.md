@@ -77,11 +77,11 @@ N和\\(M\_n\\)之间的关系有两种情况：
 
 \\(\triangleright\\) 定义如下：
 
-1. \\(\frac{}{x \triangleright x}\\)
-2. \\(\frac{P \triangleright P' \ \ N \triangleright N'}{PN \triangleright P'N'}\\)
-3. \\(\frac{N \triangleright N'}{\lambda x.N \triangleright \lambda x.N'}\\)
-4. \\(\frac{Q \triangleright Q' \ \ N \triangleright N'}{(\lambda x.Q)N \triangleright Q'[N'/x]}\\)
-5. \\(\frac{P \triangleright P', where\ x \notin FV(P)}{\lambda x.Px \triangleright P'}\\)
+1. \\(\overline{M \triangleright M}\\)
+2. \\(\dfrac{P \triangleright P' \ \ N \triangleright N'}{PN \triangleright P'N'}\\)
+3. \\(\dfrac{N \triangleright N'}{\lambda x.N \triangleright \lambda x.N'}\\)
+4. \\(\dfrac{Q \triangleright Q' \ \ N \triangleright N'}{(\lambda x.Q)N \triangleright Q'[N'/x]}\\)
+5. \\(\dfrac{P \triangleright P', where\ x \notin FV(P)}{\lambda x.Px \triangleright P'}\\)
 
 ### Lemma1
 
@@ -148,6 +148,8 @@ Q.E.D
 回忆下c属性的描述： 若\\(M \triangleright N \land M \triangleright P\\)，则存在Z满足 \\(N \triangleright Z \land P \triangleright Z\\)。
 
 这里只需要使 Z = M\* ，根据**Lemma3**，结论显然。至此，结合前文的铺垫，Church-Rosser定理便得到了证明。
+
+对于beta-reduction，只需要调整构造，将对应的规则5都删去即可。
 
 ## 叹为观止
 
