@@ -3,7 +3,7 @@ layout: post
 title: "About FLP Proof"
 description: ""
 category: notes
-tags: cloud paper
+tags: distributed paper
 ---
 {% include JB/setup %}
 
