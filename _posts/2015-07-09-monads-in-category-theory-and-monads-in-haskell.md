@@ -42,7 +42,7 @@ class Functor (f :: * -> *) where
 
 fmap对应了上述定义中从C中的morphism到D中的morphism之间的映射。那么C和D究竟是什么呢？
 
-C这个范畴被称为Hask，它的objects为Haskell中的所有类型，morphisms为所有Haskell函数，haskell中的函数满足结合律，所以它是一个cat。这里Haskell中的类型不仅仅包括集合，还有一些高阶的类型，故Hask和Set这个cat是不等价的。
+C这个范畴被称为Hask，它的objects为haskell中的所有类型，morphisms为所有haskell函数，haskell中的函数满足结合律，所以它是一个cat。这里haskell中的类型不仅仅包括集合，还有一些高阶的类型，故Hask和Set这个cat是不等价的。
 
 至于D嘛，就要看你的functor是做什么的了，比如对应的是list，那么D就是由所有list类型组成的category。此时的fmap就是我们熟知的lisp中的map函数。
 
@@ -78,7 +78,7 @@ C这个范畴被称为Hask，它的objects为Haskell中的所有类型，morphis
 
 这些endofunctors中，可以被称作monad的那些，必须满足上一节描述的条件，而这些条件正是称为上述范畴中的一个monoid object的条件。这里的monoid object，或者简称monoid，也是范畴论中的概念，是群论中“么半群”的扩展，Set(集合这个范畴)中的monoid object就是群论中的monoid。
 
-我不想被monoid object这个概念再绕进去了，我们直接对跟么半群进行比较吧，一个monoid就是一个缺少逆的群，包括：
+我不想被monoid object这个概念再绕进去了，我们直接跟么半群进行比较吧，一个monoid就是一个缺少逆的群，包括：
 
 1. 一个集合S
 2. 一个S上的二元运算 \\(S \cdot S \to S\\)
@@ -104,7 +104,7 @@ class Functor m => Monad m where
   (>>=)  :: m a -> (a -> m b) -> m b
 {% endhighlight %}
 
-满足：
+需要满足：
 
 1. Left unit: `(return a) >>= k = k a`
 2. Right unit: `m >>= return = m`
@@ -144,7 +144,7 @@ x >>= f = join(fmap f x)
 * 后六条规则中的5和6来自functor的约束，无需多加说明
 * 对于规则1，对应上图左侧，等式左边对应路径：右->下，右边对应路径：下->右
 * 对于规则2，对应上图右侧，等式左边对应路径：下->右，等式中间对应路径：右->下
-* 对于3-4，可以通过下面的示意图说明，假设f为C上的morphism \\(f: A \to B\\)
+* 对于3-4，可以通过下面的示意图说明，假设f为C上的morphism \\(f: A \to B\\)，A和B均为C中的Objects
 
 ![monad](/assets/images/article/monad_law3.png)
 
