@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Proof of normalization property in STLC"
+title: "Proof of weak normalization property in STLC"
 description: ""
 category: notes
 tags: Coq logic lambda-calculus
@@ -9,7 +9,7 @@ tags: Coq logic lambda-calculus
 
 ## 动机
 
-十多天前我在software fundation的练习中过了一遍有关STLC的normalization性质的[证明](https://github.com/farseer90718/Software-Foundations-Solutions/blob/master/Norm.v)。
+十多天前我在software fundation的练习中过了一遍有关STLC的weak normalization性质的[证明](https://github.com/farseer90718/Software-Foundations-Solutions/blob/master/Norm.v)。
 当时有些任务心态，想着把上面留的坑填完就完事了，好多大段的引理证明不仅没仔细看，也没有细想引理的用处。
 
 前几天无意中翻到了王垠的[一篇老文](http://www.yinwang.org/blog-cn/2013/04/26/reason-and-proof/)，于是试图回忆这个定理的证明过程，却发现脑中是空白的，无奈翻出之前的形式化证明从头屡一屡。
@@ -18,9 +18,9 @@ tags: Coq logic lambda-calculus
 
 ## 准备工作
 
-### 什么是normalization ?
+### 什么是weak normalization ?
 
-简单来说，在STLC中的良构(指的是well-typed)表达式，在\\(\beta-reduction\\)的操作语义下，必定停机(halts)。
+简单来说，在STLC中的良构(指的是well-typed)表达式，在\\(\beta-reduction\\)的操作语义下，能够停机(halts)。
 此处停机指的是无法继续reduction，那么根据STLC的progress特性，即：任何非value的良构表达式都能够继续执行reduction，可以得到normalization特性的另一个描述。
 
 任何STLC中的well-typed-term，可以经过有限步骤的reduction操作，得到一个value。此处略去关于value的解释若干...
@@ -150,9 +150,9 @@ end.
 有了msubst_R之后，通过取c和e为空list，便能得出“任意具有类型T的闭合表达式t满足`R T t`”这个结论，
 从而，STLC的Norm属性得到了最终的证明。
 
-回过头整理整个证明，似乎并没有发现所谓的“随着程序运行减小的特征值”。
 证明的思路是围绕对类型作归纳展开的，整个思路是将初始的类型T一层层地剥开，直到基础类型。
-或许特征值是另一种证明思路，或许是我对这个证明还没有理解透彻，没有抓住本质。
+
+事实上STLC更强的性质，即strong normalization，说的是任何良构表达式必定停机，它的证明留到以后有时间再读吧...
 
 写困了，就这样吧...
 
