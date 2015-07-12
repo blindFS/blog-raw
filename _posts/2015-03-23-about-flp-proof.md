@@ -143,6 +143,6 @@ PS: 之所以做这种毫无技术含量的翻译，一方面是出于笔记整�
 
 ## References
 
-* [http://en.wikipedia.org/wiki/Consensus_(computer_science)](http://en.wikipedia.org/wiki/Consensus_(computer_science))
-* [http://en.wikipedia.org/wiki/Paxos_(computer_science)](http://en.wikipedia.org/wiki/Paxos_(computer_science))
+* [Consensus_(computer_science)](http://en.wikipedia.org/wiki/Consensus_(computer_science\))
+* [Paxos_(computer_science)](http://en.wikipedia.org/wiki/Paxos_(computer_science\))
 * Michael J. Fischer, Nancy Lynch, Mike Paterson, "Impossiblity of Distributed Consensus with One Faulty Process".
