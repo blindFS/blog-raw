@@ -7,6 +7,11 @@ tags: scala spark ml
 ---
 {% include JB/setup %}
 
+## Clarification
+
+写完之后我突然发现这个标题看上去貌似有“以下实现是由本人完成的”这样的误导，所以特此澄清，下文出现的代码统统摘自
+ [apache/spark](https://github.com/apache/spark.git).
+
 ## SVD++ Intro
 
 首先简单介绍 SVD++ 算法在协同过滤中的应用及其数学直觉。
@@ -288,6 +293,13 @@ g = gJoinT3
 * 这里有个问题，看到17行的代码，你可能会想，如果节点没有收到 msg，i.e. 这个电影没有人进行评价，那么它的属性4会保留原值，追溯代码发现这个原值在 Initialization 的第27行被定义，那么按说这个节点没人评价就没有连线，那么在 init 的时候也并不能收到消息，所以27行中的 msg 应该是 None，直接调用 get 难道不会抛出异常么？
     * 事实上回忆图 g 的生成过程，它是通过一个包含所有边的 RDD 生成的，调用的是 fromEdges 方法，用这个方法生成的图中是不会有孤立点存在的，所以27行这么写是安全的，而这里的17行其实可以不进行条件判断，这样一边存在判断，另一边没有判断的做法反而让人困惑，Whatever...
 
+### Misc
+
+* 算法中的 materialize 函数在该文件中定义，写作两个 count 操作，为的是触发对应的顶点和边 RDD 的生成，我比较纳闷的是，materialize 随后 cache 应该是属于常见操作，为什么 RDD 不提供对应的接口通用呢？
+  * 单独调用 cache 方法只是说在该 RDD 被第一次真正计算的时候再进行 cache，是个 lazy 的操作，并不触发计算任务
+* 我认为用图的方式对该算法进行抽象是复合直觉的，因为算法中涉及到对 N(u) 集合的计算，对应了图中的邻节点的概念，如果用普通的 RDD 操作，则需要涉及到一系列的 filter，直觉上性能是有损失的，当然具体的性能我没有调研，所以其实我只是瞎扯蛋。
+
 ## Referrences
 
 * Koren, Yehuda. "Factorization meets the neighborhood: a multifaceted collaborative filtering model." Proceedings of the 14th ACM SIGKDD international conference on Knowledge discovery and data mining. ACM, 2008.
+* [GraphX](http://spark.apache.org/docs/latest/graphx-programming-guide.html)
