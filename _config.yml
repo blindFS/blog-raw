@@ -13,8 +13,8 @@ highlighter: 'pygments'
 title : Don't panic!
 author :
   name : Farseer He
-  email : farseer90718@gmail.com
-  github : farseer90718
+  email : admin@farseer.cn
+  github : blindFS
   twitter : farseersee2012
   facebook : farseer.he
   tumblr : farseer2012
@@ -29,7 +29,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://farseer90718.github.com
+production_url : http://blindFS.github.io
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
