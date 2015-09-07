@@ -125,7 +125,86 @@ D\_{k+1} = (V\_k ^TV\_{k-1} ^T \cdots V\_{k-m+1} ^T)D\_{k-m+1}(V\_{k-m+1} \cdots
 
 于是只需要对 \\(D\_{k-m+1}\\) 作出估计即可近似地计算出牛顿方向，通常取 \\(D\_{k-m+1} = \frac{s\_k ^T y\_k}{y\_k ^T y\_k} I\\).
 
+## Conjugate Gradient Method
+
+既然提到了拟牛顿法，就顺便提一下另一种高效的非线性优化算法——共轭梯度法。
+
+### Steepest Gradient Descent
+
+最 Naive 的非线性优化思路是：
+
+1. 寻找函数在点 X 的梯度 \\(\nabla f(X)\\)
+2. 沿梯度反方向作 line search，寻找更新步长 \\(argmin\_{\lambda} f(X - \lambda \nabla f(X))\\)
+3. 根据2的结果更新 X，重复1-2直至收敛
+
+这个算法的低效源于：在极值点附近，梯度方向往往并不指向极值（存在某种形变），对应与下图中的绿色折线。
+
+![sgd](/assets/images/article/Conjugate_gradient.png =300x)
+
+所以共轭梯度法的基本思路就是将这样的形变考虑在内，通过变化更新方向来抵消影响, 如上图中的红线。
+
+### Approximate Linear Equation
+
+由于任意的二阶可导函数在极值点附近近似为一个二次型（通过泰勒展开容易得到），而这样的二次型近似可以大致捕获上边描述的形变，因此我们首先来考虑二次型的极小值问题：
+
+\\[
+f(X) = \frac12 X ^\mathrm{T} \mathbf{A}X - X ^\mathrm{T} \mathbf{b} , \quad X\in\mathbf{R} ^n.
+\\]
+
+令其梯度为0，我们得到极值点方程：
+
+\\[
+\mathbf{AX\_\*} = \mathbf{b}\tag{2}\label{eq2}
+\\].
+
+### A-conjugate Vectors
+
+将向量的内积进行扩展，定义 A-dot: \\(\mathbf{u}^\mathrm{T} \mathbf{A} \mathbf{v}\\). 向量 u, v 被称为 A-conjugate iff 其 A-dot 为零，或称 A-orthogonal, 显然这个二元关系满足交换律。下面考虑这个定义在上述优化问题中的意义。
+
+设 \\(X\_\*\\) 为待求的上述目标函数的极小值点，则 \\(f(X) = \frac12 (X - X\_\*) ^{\mathrm{T}} \mathbf{A} (X - X\_\*)\\)
+
+考虑极值点附近的等势图（如上图），对于 \\(X\_1\\)，它是从 \\(X\_0\\) 出发作 line search 之后得到的最小值点，则向量 \\(\mathbf{u} = X\_1 - X\_0\\) 必与某个等势线相切，\\(X\_1\\) 为切点。由于该处的梯度向量为 \\(\nabla{f(X\_1)} = \mathbf{A} (X\_1 - X\_\*) = \mathbf{A v}\\)，得到相切关系方程：\\(\mathbf{u}^\mathrm{T} \mathbf{A} \mathbf{v} = 0\\). 换句话说，沿某个方向（如梯度反方向）找到极小值点之后，下一步更新的方向应该选其共轭方向。对于二维，二次型函数，这样的两步更新必能找到极值点；同理对于 N 维的情形，只需 N 步，更新方向两两共轭，这一点稍后会简要分析。
+
+所以，从上面的分析可以看出，共轭方向的实质是引导更新方向重新指向极值点，从而减少更新步骤，提高效率。那么接下来的问题是：
+
+1. 如何选择共轭方向？
+2. 如何计算每一步的更新步长？
+
+### Iterative Method
+
+首先，不失一致性（座标平移），设 \\(X\_0 = 0\\). 下面回答上边提出的两个问题：
+
+1. 方向选择
+    1. 初始时，我们选取的更新方向为 \\(\mathbf{p}\_0 = -\nabla{f(X\_0)} = \mathbf{b} - \mathbf{A} X\_0\\)，
+    2. 之后将依次选择接近于 \\(\mathbf{r}\_k = \nabla{f(X\_k)}\\), 且与之前的更新方向均共轭的方向 \\(\mathbf{p}\_k\\)
+    3. 更新的方法类似于正交基的选取，\\(\mathbf{p}\_{k} = \mathbf{r}\_{k} - \sum\_{i < k}\frac{\mathbf{p}\_i ^\mathrm{T} \mathbf{A} \mathbf{r}\_{k}}{\mathbf{p}\_i ^\mathrm{T}\mathbf{A} \mathbf{p}\_i} \mathbf{p}\_i\\), 即需要从负梯度方向中减去它在之前各个更新方向中的 A-projection. 参见 [Gram–Schmidt process](https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process).
+2. 更新步长
+    1. 由于初始点选为 0 点，所以有 \\(X\_k = \sum\limits\_{i < k} \lambda\_k \mathbf{p}\_k\\), 于是 \\(\mathbf{p\}\_k ^{\mathrm{T}} \mathbf{A} X\_k = 0\\). 即每一步的更新方向与此刻 X 所在的方向共轭。
+    2. 计算 \\(argmin\_{\lambda\_k} - \frac12 (X\_k + \lambda\_k \mathbf{p}\_k) ^{\mathrm{T}} A (X\_k + \lambda\_k \mathbf{p}\_k) + \mathbf{b}(X\_k + \lambda\_k \mathbf{p}\_k)\\)
+    3. 令上式对 \\(\lambda\_k\\) 的偏导为0，并结合1中得出的共轭结论，容易得到更新步长的解析解：
+
+\\[
+\lambda\_{k} = \frac{\mathbf{p}\_k ^\mathrm{T} \mathbf{b}}{\mathbf{p}\_k ^\mathrm{T} \mathbf{A} \mathbf{p}\_k} = \frac{\mathbf{p}\_k ^\mathrm{T} (\mathbf{r}\_{k-1}+\mathbf{Ax}\_{k-1})}{\mathbf{p}\_{k} ^\mathrm{T} \mathbf{A} \mathbf{p}\_{k}} = \frac{\mathbf{p}\_{k} ^\mathrm{T} \mathbf{r}\_{k-1}}{\mathbf{p}\_{k} ^\mathrm{T} \mathbf{A} \mathbf{p}\_{k}}
+\\]
+
+根据上式可以看出，每一步的更新量为向量 **b** 在 \\(\mathbf{p}\_k\\) 方向上的 A-projection. 恰好初始点为0，又极值点满足 \\(\eqref{eq2}\\), 因此各个更新量正好构成了 \\(X\_\*\\) 在 \\({\mathbf{p}\_k}\\) 这组共轭正交基上的分解，因此只需至多 N 步更新即可找到极值点，具体的形式化推导参见维基百科。
+
+### Tuning
+
+上面的算法存在的问题在于，计算新方向时，需要记录各个共轭方向的历史信息，当 N 很大时，消耗过多的存储资源，因此共轭梯度法在实际应用时采用某种近似的手段来进行优化，使得只需要记录最近一次的3个向量\\(X\_k, \mathbf{p}\_k, \mathbf{r}\_k\\)，如 Fletcher–Reeves 算法，其推导及相关公式参见维基百科。对于一般的非线性优化问题，通用的算法框架如下：
+
+1. 计算负梯度方向
+2. 根据 Fletcher-Reever 公式（或其它变种）计算方向变化量
+3. 根据1,2的结果以及“上一个共轭方向”计算新的共轭方向
+4. 在新的方向上作 line search 找到合适步长
+5. 更新 X
+6. 重复 1-5 直至收敛
+
+与拟牛顿法相较而言，共轭梯度法的收敛速度要慢一些，但依然比普通的梯度下降法要迅速得多，因而不失为一个好的选择。而且由于它所需的存储资源远小于拟牛顿法（即便是 L-BFGS 也需要 O(2mN)), 格外适用于维度极大的优化问题。
+
 ## References
 
 * [Quasi-Newton method](https://en.wikipedia.org/wiki/Quasi-Newton_method)
 * [Broyden–Fletcher–Goldfarb–Shanno algorithm](https://en.wikipedia.org/wiki/Broyden–Fletcher–Goldfarb–Shanno_algorithm)
+* [Conjugate gradient method](https://en.wikipedia.org/wiki/Conjugate_gradient_method)
+* [Nonlinear conjugate gradient method](https://en.wikipedia.org/wiki/Nonlinear_conjugate_gradient_method)
