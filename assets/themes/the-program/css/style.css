@@ -392,8 +392,7 @@ No styleguide reference.
  */
 body {
     font-family: monospace, monaco;
-    font-size: 0.8em;
-    line-height: 1.625em;
+    line-height: 1.8em;
 }
 /*
 Font size setting
@@ -1065,7 +1064,7 @@ pre {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    font-size: 1.5em;
+    font-size: 1.1em;
     line-height: 2.5em;
     color: #859900;
     display: block;
