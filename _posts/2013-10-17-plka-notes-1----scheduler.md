@@ -2,7 +2,7 @@
 layout: post
 title:  "PLKA notes 1 -- scheduler1"
 date:   2013-10-17
-categories: notes
+categories: OS
 tags: kernel linux
 ---
 

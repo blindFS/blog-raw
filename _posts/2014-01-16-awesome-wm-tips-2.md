@@ -2,7 +2,7 @@
 layout: post
 title: "Awesome wm tips 2"
 description: ""
-category: tweak
+category: tips
 tags: linux awesome xdotool
 ---
 {% include JB/setup %}

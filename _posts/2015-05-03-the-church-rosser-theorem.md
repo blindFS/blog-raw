@@ -2,7 +2,7 @@
 layout: post
 title: "The Church-Rosser Theorem"
 description: ""
-category: notes
+category: PLT
 tags: logic lambda-calculus
 ---
 {% include JB/setup %}

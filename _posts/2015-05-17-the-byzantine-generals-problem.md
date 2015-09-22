@@ -2,7 +2,7 @@
 layout: post
 title: "The Byzantine Generals Problem"
 description: ""
-category: notes
+category: TCS
 tags: distributed paper
 ---
 {% include JB/setup %}

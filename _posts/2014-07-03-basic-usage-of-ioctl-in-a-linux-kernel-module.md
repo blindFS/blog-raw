@@ -2,7 +2,7 @@
 layout: post
 title: "Basic usage of ioctl in a linux kernel module"
 description: ""
-category: notes
+category: OS
 tags: ツッコミ linux kernel
 ---
 {% include JB/setup %}

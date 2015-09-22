@@ -2,7 +2,7 @@
 layout: post
 title: "Monads in Category Theory and Monads in Haskell"
 description: ""
-category: notes
+category: PLT
 tags: haskell
 ---
 {% include JB/setup %}

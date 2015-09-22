@@ -2,7 +2,7 @@
 layout: post
 title: "Notes about non-blocking IO in linux"
 description: ""
-category: notes
+category: OS
 tags: linux kernel
 ---
 {% include JB/setup %}

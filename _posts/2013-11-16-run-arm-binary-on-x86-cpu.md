@@ -2,7 +2,7 @@
 layout: post
 title: "Run arm binary on x86 cpu"
 description: ""
-category: embedded_system
+category: notes
 tags: arm assembly qemu
 ---
 {% include JB/setup %}

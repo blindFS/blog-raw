@@ -2,7 +2,7 @@
 layout: post
 title: "Vimperator tips 2"
 description: ""
-category: tweak
+category: tips
 tags: vimperator javascript
 ---
 {% include JB/setup %}
@@ -47,7 +47,7 @@ student pack包括DO的100刀，就架了个SS server。SS当然要配合
 
 一个自然的需求，另外因为轻微强迫症的关系，蛋疼地把statusline
 改成了powerline风格了，代码过于丑陋就不贴了，
-可以在[这里](https://github.com/farseer90718/dotfiles/blob/master/.vimperatorrc)找到它们。
+可以在[这里](https://github.com/blindFS/dotfiles/blob/master/.vimperatorrc)找到它们。
 
 截个图展示一下:
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Coprime probabilities"
 description: ""
-category: notes
+category: fun
 tags: math
 ---
 {% include JB/setup %}

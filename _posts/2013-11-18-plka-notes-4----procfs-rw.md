@@ -2,7 +2,7 @@
 layout: post
 title: "PLKA notes 4 -- procfs rw"
 description: ""
-category: notes
+category: OS
 tags: linux kernel
 ---
 {% include JB/setup %}

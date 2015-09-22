@@ -2,7 +2,7 @@
 layout: post
 title: "About FLP Proof"
 description: ""
-category: notes
+category: TCS
 tags: distributed paper
 ---
 {% include JB/setup %}

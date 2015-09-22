@@ -2,7 +2,7 @@
 layout: post
 title: "What the hell are Monads?"
 description: ""
-category: notes
+category: PLT
 tags: Haskell
 ---
 {% include JB/setup %}

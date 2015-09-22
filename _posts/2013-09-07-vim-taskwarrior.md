@@ -10,7 +10,7 @@ tags: linux vim taskwarrior
 ## Another vim plugin I wrote ##
 
 It's a vim interface for [taskwarrior](http://taskwarrior.org) --- A powerful cli todo list manager.
-The code is hosted on [github](https://github.com/farseer90718/vim-taskwarrior).
+The code is hosted on [github](https://github.com/blindFS/vim-taskwarrior).
 
 Feel like this:
 

@@ -64,7 +64,7 @@ function zle-keymap-select {
 zle -N zle-keymap-select
 {% endhighlight %}
 
-我在prompt中添加了`$vimod`提示，具体[内容](https://github.com/farseer90718/zsh-funcs/blob/master/powerline.zsh)见链接。这个函数在每次keymap发生变化时调用，注意这时的 keymap 的值可能是auto-fu提供的 *afu-viins* 和 *afu-vicmd* ，所以判断的时候采取 `=~`。
+我在prompt中添加了`$vimod`提示，具体[内容](https://github.com/blindFS/zsh-funcs/blob/master/powerline.zsh)见链接。这个函数在每次keymap发生变化时调用，注意这时的 keymap 的值可能是auto-fu提供的 *afu-viins* 和 *afu-vicmd* ，所以判断的时候采取 `=~`。
 这样之后还有个问题，就是自动纠错时会产生不必要的消息，导致如下情况：
 
 ![afu](/assets/images/article/auto-fu.png)

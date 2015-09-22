@@ -2,7 +2,7 @@
 layout: post
 title: "Memorize memory!"
 description: ""
-category: notes
+category: OS
 tags: linux memory regexp
 ---
 {% include JB/setup %}

@@ -187,7 +187,7 @@ couth 做如下修改:
 这让我很是郁闷，我找到了 bbswitch 的 [README](https://github.com/Bumblebee-Project/bbswitch)。
 试了下其中的方法(kmod & systemd)... 但是不管用，估计是加载 nvidia 驱动模块的时候又自动 on 了。
 
-搜索到的解决办法如下<del> [gist](https://gist.github.com/farseer90718/24f5c200524dd05a20c3) </del>
+搜索到的解决办法如下<del> [gist](https://gist.github.com/blindFS/24f5c200524dd05a20c3) </del>
 在 `/etc/bumblebee/bumblebee.conf` 中修改 TurnCardOffAtExit 为 true.
 
 综上所述，最近的日子不太平。小毛病不断，我确实想换 mac 了，但是又觉得略麻烦...

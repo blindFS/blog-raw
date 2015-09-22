@@ -2,7 +2,7 @@
 layout: post
 title: "Awesome wm tips"
 description: ""
-category: config
+category: tips
 tags: linux awesome shell
 ---
 {% include JB/setup %}

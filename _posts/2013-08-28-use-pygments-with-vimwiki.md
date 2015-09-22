@@ -23,7 +23,7 @@ vimwiki 官方推荐的高亮方式是通过[ 这个玩意 ](https://code.google
 
 ## Solution ##
 
-[ Gist ](https://gist.github.com/farseer90718/6363367). BTW，gist这个玩意还真好用，gist.vim这个插件也非常牛叉。之前都没察觉...
+[ Gist ](https://gist.github.com/blindFS/6363367). BTW，gist这个玩意还真好用，gist.vim这个插件也非常牛叉。之前都没察觉...
 通过修改`autoload/vimwiki/html.vim` 下的**process_tag_pre**函数来达到效果。
 该文件中的函数主要用于将wiki转成html。由于不想改变这个函数的调用方式(逐行)，新的函数显得有些2，当读到非头非尾的行时，只是将其加到一个全局变量，而返回空的list。只有遇到结束标记
 的时候才调用pygmentize。这样看上去很不环保，但是这整个过程的速度还是非常的快，所以也没啥说的。至于为啥非得用一个临时文件来存放代码块的内容，我感觉用其他的方法不太安全，毕竟代码块内部

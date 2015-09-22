@@ -2,7 +2,7 @@
 layout: post
 title: "Quosi Newton Methods"
 description: ""
-category: notes
+category: PRML
 tags: ml math
 ---
 {% include JB/setup %}

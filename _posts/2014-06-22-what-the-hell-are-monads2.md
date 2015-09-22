@@ -2,7 +2,7 @@
 layout: post
 title: "Useful instances of Monad"
 description: ""
-category: notes
+category: PLT
 tags: Haskell
 ---
 {% include JB/setup %}

@@ -2,7 +2,7 @@
 layout: post
 title: "CPS and Monads"
 description: ""
-category: notes
+category: PLT
 tags: haskell
 ---
 {% include JB/setup %}

@@ -187,7 +187,7 @@ First of all, evil is evil.
 
 Finally I need to export all of my previous notes from vimwiki to org-mode.
 I tried `pandoc --from=mediawiki --to=org xxx`, not much what I need.
-Here's the [script](https://gist.github.com/farseer90718/a897fa23ce12b673b223) that works for me.
+Here's the [script](https://gist.github.com/blindFS/a897fa23ce12b673b223) that works for me.
 
 It works fine in general for:
 

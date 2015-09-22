@@ -2,7 +2,7 @@
 layout: post
 title: "PLKA notes 2 -- semphores"
 description: ""
-category: notes
+category: OS
 tags: linux kernel
 ---
 {% include JB/setup %}

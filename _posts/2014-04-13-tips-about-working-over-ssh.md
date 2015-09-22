@@ -2,7 +2,7 @@
 layout: post
 title: "Tips about working over ssh"
 description: ""
-category: tweak
+category: tips
 tags: shell tmux
 ---
 {% include JB/setup %}

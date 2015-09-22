@@ -2,7 +2,7 @@
 layout: post
 title: "Hammersley Clifford Theorem"
 description: ""
-category: notes
+category: PRML
 tags: ml math
 ---
 {% include JB/setup %}
@@ -111,7 +111,7 @@ f\_s(X\_s = x\_s) = \prod\limits\_{z \subset s} P(X\_z = x\_z, X\_{G/z} = 0) ^{-
 容易直到，如果能够证明如下两个性质，则 \\(\phi\_c(X\_c) = f\_c(X\_c)\\) 即满足条件。
 
 1. \\(\prod\_{s \subset G} f\_s(X\_s) = P(X)\\)
-2. 若 s 不是团，则 \\(f\_s{X\_s} = 1\\)
+2. 若 s 不是团，则 \\(f\_s(X\_s) = 1\\)
 
 对于性质1，考虑某个 \\(z \subset G\\), 考虑 \\(\Delta = P(X\_z, X\_{G/z} = 0)\\) 在1的左边出现的所有因子。它在 \\(f\_z(X\_z)\\) 中出现过，对应的指数为 1，对应的因子为 \\(\Delta\\); 又它出现在 \\(C\_{|G| - |z|} ^1\\) 个“恰包含了 z 以及另1个元素的子集”的函数值中，对应的因子的积为 \\(\Delta ^{- C\_{|G| - |z|} ^1}\\); 又它出现在 \\(C\_{|G| - |z|} ^2\\) 个“恰包含了 z 以及另外2个元素的子集”的函数值中，对应的因子的积为 \\(\Delta ^{C\_{|G| - |z|} ^2}\\) ...... 由于 \\(0 = (1 - 1) ^K = C\_K ^0 - C\_K ^1 + C\_K ^2 + \cdots + (-1) ^K C\_K ^K\\), 1中左侧各个子集 z 对应的因子的总乘积为1，除非 z 取 G，对应的因子即为 \\(P(X)\\).
 

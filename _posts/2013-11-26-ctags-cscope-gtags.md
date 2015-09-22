@@ -12,7 +12,7 @@ tags: vim linux
 2 month ago, I thought ctags was totally enough for navigating through c codes.
 There is a plugin called [unite-tags](https://github.com/tsukkee/unite-tag) which takes advantage of the power of Unite.vim.
 Also the ctags is very handy in other programming languages.
-You can even DIY your own rules of tags generating with the configuration file [.ctags](https://gist.github.com/farseer90718/6315911).
+You can even DIY your own rules of tags generating with the configuration file [.ctags](https://gist.github.com/blindFS/6315911).
 
 However, problems with ctags:
 

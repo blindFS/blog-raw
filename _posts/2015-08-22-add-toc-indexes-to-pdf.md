@@ -2,7 +2,7 @@
 layout: post
 title: "Add TOC indexes to PDF"
 description: ""
-category: tweaks
+category: tweak
 tags: vim EVA 中二病
 ---
 {% include JB/setup %}

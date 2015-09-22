@@ -22,7 +22,7 @@ However, the provided function does not include the duplicate option which is us
 
 `Don't panic!`
 
-Tweaked a [little bit](https://gist.github.com/farseer90718/8037645).
+Tweaked a [little bit](https://gist.github.com/blindFS/8037645).
 
 What I did is simply add another item with *dlabel* and *dcmd* in the list called *menu*.
 

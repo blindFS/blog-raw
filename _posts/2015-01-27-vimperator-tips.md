@@ -2,7 +2,7 @@
 layout: post
 title: "Vimperator tips"
 description: ""
-category: tweak
+category: tips
 tags: vimperator javascript vim
 ---
 {% include JB/setup %}
@@ -15,7 +15,7 @@ tags: vimperator javascript vim
 vimperator 是一个firefox扩展，有很强的可定制性，很好玩，神器，以上。
 类似的东西有[Pentadactyl](http://5digits.org/pentadactyl/)(不支持最新的ff),[VimFx](https://github.com/akhodakivskiy/VimFx)(功能比较简单)。
 
-好吧，接下来我分享一些vimperator的[配置](https://github.com/farseer90718/dotfiles/blob/master/.vimperatorrc)。
+好吧，接下来我分享一些vimperator的[配置](https://github.com/blindFS/dotfiles/blob/master/.vimperatorrc)。
 
 ## 个人偏好options设置
 
