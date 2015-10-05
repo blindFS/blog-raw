@@ -3,7 +3,7 @@ layout: post
 title: "Vim reveal"
 description: ""
 category: tweak
-tags: vim html5 reveal.js LaTeX
+tags: vim LaTeX
 ---
 {% include JB/setup %}
 
