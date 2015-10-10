@@ -83,7 +83,7 @@ Add 1 line to .vimperatorrc.
 autocmd PageLoad 192\\.168\\.* js window.content.document.getElementsByTagName("input")[0].onchange()
 {% endhighlight %}
 
-Works well but may cause error messages when opening other local pages. Of cause, we can fix this by a js function with some checking inside, not elegant then.
+Works well but may cause error messages when opening other local pages. Of course, we can fix this by a js function with some checking inside, not elegant then.
 
 ### Override the Attribute
 
